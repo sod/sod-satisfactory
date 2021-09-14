@@ -13,4 +13,9 @@ ng g c planner/Default
 https://ngrx.io/guide/schematics
 
 ## create effect
+
 ng generate effect store/app/App --skip-tests --module app.module.ts
+
+## create store
+
+ng generate store State
