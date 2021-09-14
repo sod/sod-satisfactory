@@ -1,21 +1,39 @@
 <nz-card nzSize="small">
     <app-production-input-or-output [production]="production" [target]="'inputs'"></app-production-input-or-output>
     <app-production-input-or-output [production]="production" [target]="'outputs'"></app-production-input-or-output>
-    <nz-card nzTitle="Clock Speed" nzSize="small" nzBorderless>
+    <nz-card nzTitle="Modifier" nzSize="small" nzBorderless>
+        <nz-input-group nzCompact [nzAddOnAfter]="'Machines'" class="mb-2">
+            <nz-input-number
+                [nzMin]="1"
+                style="width: 100%"
+                [ngModel]="production.machines"
+                (ngModelChange)="updateProduction(production, {machines: $event || undefined})"
+            ></nz-input-number>
+        </nz-input-group>
+        <br />
         <nz-input-group nzCompact [nzAddOnAfter]="'% from Slugs'" class="mb-2">
             <nz-input-number
+                [nzMin]="1"
                 style="width: 100%"
                 [ngModel]="production.clockSpeed1"
-                (ngModelChange)="updateProduction({clockSpeed1: $event || undefined})"
+                (ngModelChange)="updateProduction(production, {clockSpeed1: $event || undefined})"
             ></nz-input-number>
         </nz-input-group>
         <br />
         <nz-input-group nzCompact [nzAddOnAfter]="'% from MK Upgrade'">
             <nz-input-number
+                [nzMin]="1"
                 style="width: 100%"
                 [ngModel]="production.clockSpeed2"
-                (ngModelChange)="updateProduction({clockSpeed2: $event || undefined})"
+                (ngModelChange)="updateProduction(production, {clockSpeed2: $event || undefined})"
             ></nz-input-number>
         </nz-input-group>
     </nz-card>
+
+    <nz-divider></nz-divider>
+
+    <button nz-button [nzType]="'default'" nzDanger (click)="removeProduction(production)">
+        <i nz-icon nzType="delete" nzTheme="outline"></i>
+        Remove
+    </button>
 </nz-card>

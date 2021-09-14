@@ -4,4 +4,5 @@ export interface ProductionDto {
     recipe: RecipeDto;
     clockSpeed1?: number;
     clockSpeed2?: number;
+    machines?: number;
 }

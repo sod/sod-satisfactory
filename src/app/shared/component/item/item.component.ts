@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Store} from '@ngrx/store';
+import {itemNames} from 'src/app/shared/entities/item-names';
 import {ItemPackage} from 'src/app/shared/entities/item-package';
 import {Recipe} from 'src/app/shared/entities/recipe';
 import {RecipeTarget} from 'src/app/shared/entities/recipe-dto';
@@ -15,7 +16,7 @@ export class ItemComponent {
     @Input() recipe!: Recipe;
     @Input() target!: RecipeTarget;
     @Input() itemPackage?: ItemPackage;
-    items: string[] = ['Water', 'Empty Canister'];
+    items: typeof itemNames = itemNames;
 
     constructor(public store: Store, public trackByService: TrackByService) {}
 

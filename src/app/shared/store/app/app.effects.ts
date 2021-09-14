@@ -13,9 +13,9 @@ import {
     editProductionClicked,
     plannerStoreRestored,
     removeItemPackage,
-    removeProduction,
+    removeProductionClicked,
     updateItemPackage,
-    updateProduction,
+    updateProductionClicked,
 } from '../planner/planner.actions';
 import {plannerFeatureKey} from '../planner/planner.reducer';
 
@@ -26,13 +26,13 @@ export class AppEffects {
             this.actions$.pipe(
                 ofType(
                     addProduction,
-                    removeProduction,
                     clearProduction,
                     addItemPackage,
                     removeItemPackage,
                     updateItemPackage,
-                    updateProduction,
+                    updateProductionClicked,
                     editProductionClicked,
+                    removeProductionClicked,
                 ),
                 switchMapTo(this.store.pipe(take(1))),
                 tap((store: GlobalState) => {

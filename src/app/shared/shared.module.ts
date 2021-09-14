@@ -5,10 +5,12 @@ import {EffectsModule} from '@ngrx/effects';
 import {StoreModule} from '@ngrx/store';
 import {ActionAddProductionComponent} from 'src/app/shared/component/action-add-production/action-add-production.component';
 import {ActionClearProductionComponent} from 'src/app/shared/component/action-clear-production/action-clear-production.component';
+import {AmountWithModifiersPipe} from 'src/app/shared/pipe/amount-with-modifiers.pipe';
 import {SharedNgZorroModule} from '../shared-ng-zorro/shared-ng-zorro.module';
 import {ItemPackageComponent} from './component/item-package/item-package.component';
 import {ItemComponent} from './component/item/item.component';
 import {ProductionInputOrOutputComponent} from './component/production-input-or-output/production-input-or-output.component';
+import {ProductionOverviewComponent} from './component/production-overview/production-overview.component';
 import {ProductionComponent} from './component/production/production.component';
 import {RecipeComponent} from './component/recipe/recipe.component';
 import {FilterCaseInsensitivePipe} from './pipe/filter-case-insensitive.pipe';
@@ -17,8 +19,6 @@ import {AppEffects} from './store/app/app.effects';
 import * as fromApp from './store/app/app.reducer';
 import {PlannerEffects} from './store/planner/planner.effects';
 import * as fromPlanner from './store/planner/planner.reducer';
-import { AmountWithClockSpeedPipe } from './pipe/amount-with-clock-speed.pipe';
-import { ProductionOverviewComponent } from './component/production-overview/production-overview.component';
 
 @NgModule({
     declarations: [
@@ -31,7 +31,7 @@ import { ProductionOverviewComponent } from './component/production-overview/pro
         ProductionInputOrOutputComponent,
         FilterCaseInsensitivePipe,
         PlusOneUndefinedPipe,
-        AmountWithClockSpeedPipe,
+        AmountWithModifiersPipe,
         ProductionOverviewComponent,
     ],
     imports: [
@@ -54,7 +54,7 @@ import { ProductionOverviewComponent } from './component/production-overview/pro
         ProductionInputOrOutputComponent,
         FilterCaseInsensitivePipe,
         PlusOneUndefinedPipe,
-        AmountWithClockSpeedPipe,
+        AmountWithModifiersPipe,
         ProductionOverviewComponent,
     ],
 })

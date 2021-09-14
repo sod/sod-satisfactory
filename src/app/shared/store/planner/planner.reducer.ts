@@ -32,9 +32,10 @@ export const reducer = createReducer(
         productions: state.productions.concat(Production.createDto()),
     })),
 
-    on(PlannerActions.removeProduction, (state, {production}) => ({
+    on(PlannerActions.removeProductionClicked, (state, {relation}) => ({
         ...state,
-        productions: without(state.productions, production),
+        edit: undefined,
+        productions: without(state.productions, relation.production),
     })),
 
     on(PlannerActions.clearProduction, () => ({
@@ -57,7 +58,7 @@ export const reducer = createReducer(
         })),
     })),
 
-    on(PlannerActions.updateProduction, (state, action) => ({
+    on(PlannerActions.updateProductionClicked, (state, action) => ({
         ...state,
         productions: Production.update(state.productions, action.relation, (production) => ({
             ...production,
@@ -76,6 +77,6 @@ export const reducer = createReducer(
 
     on(PlannerActions.editProductionClicked, (state, action) => ({
         ...state,
-        edit: {index: action.index},
+        edit: action.index === state.edit?.index ? undefined : {index: action.index},
     })),
 );

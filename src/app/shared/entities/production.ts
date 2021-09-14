@@ -7,6 +7,7 @@ export class Production {
     readonly recipe: Recipe = new Recipe(this.dto.recipe, this);
     readonly clockSpeed1?: number = this.dto.clockSpeed1 ?? 100;
     readonly clockSpeed2?: number = this.dto.clockSpeed2 ?? 100;
+    readonly machines?: number = this.dto.machines ?? 1;
 
     constructor(private dto: ProductionDto, public readonly index: number) {}
 
