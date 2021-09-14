@@ -5,6 +5,7 @@ import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {EffectsModule} from '@ngrx/effects';
 import {StoreModule} from '@ngrx/store';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {en_US, NZ_I18N} from 'ng-zorro-antd/i18n';
@@ -25,6 +26,7 @@ registerLocaleData(en);
         HttpClientModule,
         BrowserAnimationsModule,
         StoreModule.forRoot(reducers, {metaReducers}),
+        EffectsModule.forRoot(),
         SharedModule,
         !environment.production ? StoreDevtoolsModule.instrument() : [],
     ],

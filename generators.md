@@ -8,14 +8,8 @@ ng g m planner --routing
 
 ng g c planner/Default
 
-# ngrx
+# ngrx - https://ngrx.io/guide/schematics
 
-https://ngrx.io/guide/schematics
+## create feature
 
-## create effect
-
-ng generate effect store/app/App --skip-tests --module app.module.ts
-
-## create store
-
-ng generate store State
+ng generate feature shared/store/app/App --module shared/shared.module.ts --skip-tests --defaults
