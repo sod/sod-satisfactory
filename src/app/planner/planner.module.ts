@@ -1,8 +1,7 @@
-import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-
-import {PlannerRoutingModule} from './planner-routing.module';
+import {NgModule} from '@angular/core';
 import {DefaultComponent} from './default/default.component';
+import {PlannerRoutingModule} from './planner-routing.module';
 
 @NgModule({
     declarations: [DefaultComponent],
