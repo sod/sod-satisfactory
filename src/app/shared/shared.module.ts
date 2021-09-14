@@ -9,9 +9,10 @@ import {AppEffects} from './store/app/app.effects';
 import * as fromApp from './store/app/app.reducer';
 import {PlannerEffects} from './store/planner/planner.effects';
 import * as fromPlanner from './store/planner/planner.reducer';
+import { ProductionComponent } from './component/production/production.component';
 
 @NgModule({
-    declarations: [RecipeComponent, AddProductionComponent],
+    declarations: [RecipeComponent, AddProductionComponent, ProductionComponent],
     imports: [
         CommonModule,
         SharedNgZorroModule,
@@ -19,6 +20,6 @@ import * as fromPlanner from './store/planner/planner.reducer';
         StoreModule.forFeature(fromPlanner.plannerFeatureKey, fromPlanner.reducer),
         StoreModule.forFeature(fromApp.appFeatureKey, fromApp.reducer),
     ],
-    exports: [SharedNgZorroModule, RecipeComponent, AddProductionComponent],
+    exports: [SharedNgZorroModule, RecipeComponent, AddProductionComponent, ProductionComponent],
 })
 export class SharedModule {}

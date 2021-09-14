@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
+import {Store} from '@ngrx/store';
+import {addProduction} from '../../store/planner/planner.actions';
 
 @Component({
-  selector: 'app-add-production',
-  templateUrl: './add-production.component.html',
-  styleUrls: ['./add-production.component.scss']
+    selector: 'app-add-production',
+    templateUrl: './add-production.component.html',
+    styleUrls: ['./add-production.component.scss'],
 })
-export class AddProductionComponent implements OnInit {
+export class AddProductionComponent {
+    addProduction = addProduction;
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+    constructor(public store: Store) {}
 }
