@@ -5,10 +5,10 @@ import {updateInArray} from 'src/app/shared/function/update-in-array';
 
 export class Production {
     readonly recipe: Recipe = new Recipe(this.dto.recipe, this);
-    readonly modifier: number = this.dto.modifier;
-    readonly note: string = this.dto.note;
+    readonly clockSpeed1?: number = this.dto.clockSpeed1 ?? 100;
+    readonly clockSpeed2?: number = this.dto.clockSpeed2 ?? 100;
 
-    constructor(private dto: ProductionDto) {}
+    constructor(private dto: ProductionDto, public readonly index: number) {}
 
     unwrap(): ItemParentRelationForProduction {
         return {production: this.dto};
@@ -25,8 +25,6 @@ export class Production {
     static createDto(): ProductionDto {
         return {
             recipe: {inputs: [], outputs: []},
-            modifier: 1,
-            note: '',
         };
     }
 }

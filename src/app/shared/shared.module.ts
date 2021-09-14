@@ -17,6 +17,8 @@ import {AppEffects} from './store/app/app.effects';
 import * as fromApp from './store/app/app.reducer';
 import {PlannerEffects} from './store/planner/planner.effects';
 import * as fromPlanner from './store/planner/planner.reducer';
+import { AmountWithClockSpeedPipe } from './pipe/amount-with-clock-speed.pipe';
+import { ProductionOverviewComponent } from './component/production-overview/production-overview.component';
 
 @NgModule({
     declarations: [
@@ -29,6 +31,8 @@ import * as fromPlanner from './store/planner/planner.reducer';
         ProductionInputOrOutputComponent,
         FilterCaseInsensitivePipe,
         PlusOneUndefinedPipe,
+        AmountWithClockSpeedPipe,
+        ProductionOverviewComponent,
     ],
     imports: [
         CommonModule,
@@ -50,6 +54,8 @@ import * as fromPlanner from './store/planner/planner.reducer';
         ProductionInputOrOutputComponent,
         FilterCaseInsensitivePipe,
         PlusOneUndefinedPipe,
+        AmountWithClockSpeedPipe,
+        ProductionOverviewComponent,
     ],
 })
 export class SharedModule {}

@@ -1,0 +1,29 @@
+<ng-container *ngIf="{edit: edit$ | async} as state">
+    <nz-card
+        [nzTitle]="production.index + 1 + '. Modifier: ' + production.clockSpeed1 + ' + ' + production.clockSpeed2"
+        nzSize="small"
+        class="mb-3"
+        [class.border-primary]="state.edit?.index === production.index"
+        [nzExtra]="extraTemplate"
+    >
+        <div *ngIf="production.recipe.inputs.length">
+            Inputs:
+            <ul>
+                <li *ngFor="let value of production.recipe.inputs">{{ value | amountWithClockSpeed }}x {{ value.itemName }}</li>
+            </ul>
+        </div>
+        <div *ngIf="production.recipe.outputs.length">
+            Outputs:
+            <ul>
+                <li *ngFor="let value of production.recipe.outputs">{{ value | amountWithClockSpeed }}x {{ value.itemName }}</li>
+            </ul>
+        </div>
+    </nz-card>
+</ng-container>
+
+<ng-template #extraTemplate>
+    <button nz-button nzType="link" (click)="edit(production.index)">
+        <i nz-icon nzType="edit" nzTheme="outline"></i>
+        Edit
+    </button>
+</ng-template>

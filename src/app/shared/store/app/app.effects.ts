@@ -10,10 +10,12 @@ import {
     addItemPackage,
     addProduction,
     clearProduction,
+    editProductionClicked,
     plannerStoreRestored,
     removeItemPackage,
     removeProduction,
     updateItemPackage,
+    updateProduction,
 } from '../planner/planner.actions';
 import {plannerFeatureKey} from '../planner/planner.reducer';
 
@@ -22,7 +24,16 @@ export class AppEffects {
     persist$ = createEffect(
         () =>
             this.actions$.pipe(
-                ofType(addProduction, removeProduction, clearProduction, addItemPackage, removeItemPackage, updateItemPackage),
+                ofType(
+                    addProduction,
+                    removeProduction,
+                    clearProduction,
+                    addItemPackage,
+                    removeItemPackage,
+                    updateItemPackage,
+                    updateProduction,
+                    editProductionClicked,
+                ),
                 switchMapTo(this.store.pipe(take(1))),
                 tap((store: GlobalState) => {
                     this.persistAppService.persist(pick(store, [plannerFeatureKey]));

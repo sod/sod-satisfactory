@@ -10,10 +10,12 @@ import * as PlannerActions from './planner.actions';
 export const plannerFeatureKey = 'planner';
 
 export interface PlannerState {
+    edit?: {index: number};
     productions: ProductionDto[];
 }
 
 export const initialState: PlannerState = {
+    edit: undefined,
     productions: [],
 };
 
@@ -26,6 +28,7 @@ export const reducer = createReducer(
 
     on(PlannerActions.addProduction, (state) => ({
         ...state,
+        edit: {index: state.productions.length},
         productions: state.productions.concat(Production.createDto()),
     })),
 
@@ -34,9 +37,8 @@ export const reducer = createReducer(
         productions: without(state.productions, production),
     })),
 
-    on(PlannerActions.clearProduction, (state) => ({
-        ...state,
-        productions: [],
+    on(PlannerActions.clearProduction, () => ({
+        ...initialState,
     })),
 
     on(PlannerActions.addItemPackage, (state, action) => ({
@@ -55,6 +57,14 @@ export const reducer = createReducer(
         })),
     })),
 
+    on(PlannerActions.updateProduction, (state, action) => ({
+        ...state,
+        productions: Production.update(state.productions, action.relation, (production) => ({
+            ...production,
+            ...action.production,
+        })),
+    })),
+
     on(PlannerActions.removeItemPackage, (state, action) => ({
         ...state,
         productions: Recipe.update(state.productions, action.relation, (recipe) => ({
@@ -62,5 +72,10 @@ export const reducer = createReducer(
             inputs: removeFromArray(recipe.inputs, action.relation.itemPackage),
             outputs: removeFromArray(recipe.outputs, action.relation.itemPackage),
         })),
+    })),
+
+    on(PlannerActions.editProductionClicked, (state, action) => ({
+        ...state,
+        edit: {index: action.index},
     })),
 );

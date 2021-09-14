@@ -1,4 +1,11 @@
 <nz-input-group nzCompact>
     <app-item [itemPackage]="itemPackage" [recipe]="recipe" [target]="target"></app-item>
-    <nz-input-number [ngModel]="itemPackage?.amount ?? null" [nzDisabled]="!itemPackage" [nzMin]="1" [nzStep]="1"></nz-input-number>
+    <nz-input-number
+        [ngModel]="itemPackage?.amount ?? null"
+        [nzDisabled]="!itemPackage"
+        [nzMin]="1"
+        [nzStep]="1"
+        (ngModelChange)="itemPackage && updateItemPackageAmount($event, itemPackage)"
+    ></nz-input-number>
+    <input nz-input disabled [ngModel]="itemPackage | amountWithClockSpeed" style="width: 70px" />
 </nz-input-group>
