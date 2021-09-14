@@ -1,18 +1,41 @@
 import {Injectable} from '@angular/core';
 import {Actions, createEffect, ofType} from '@ngrx/effects';
-import {EMPTY, Observable} from 'rxjs';
-import {concatMap} from 'rxjs/operators';
-import * as AppActions from './app.actions';
+import {Store} from '@ngrx/store';
+import {pick} from 'lodash-es';
+import {EMPTY, of} from 'rxjs';
+import {mergeMap, switchMapTo, take, tap} from 'rxjs/operators';
+import {PersistAppService} from '../../service/persist-app.service';
+import {GlobalState} from '../global-state';
+import {addProduction, clearProduction, plannerStoreRestored, removeProduction} from '../planner/planner.actions';
+import {plannerFeatureKey} from '../planner/planner.reducer';
 
 @Injectable()
 export class AppEffects {
-    loadApps$ = createEffect(() => {
-        return this.actions$.pipe(
-            ofType(AppActions.loadApps),
-            /** An EMPTY observable only emits completion. Replace with your own observable API request */
-            concatMap(() => EMPTY as Observable<{type: string}>),
-        );
-    });
+    persist$ = createEffect(
+        () =>
+            this.actions$.pipe(
+                ofType(addProduction, removeProduction, clearProduction),
+                switchMapTo(this.store.pipe(take(1))),
+                tap((store: GlobalState) => {
+                    this.persistAppService.persist(pick(store, [plannerFeatureKey]));
+                }),
+            ),
+        {dispatch: false},
+    );
 
-    constructor(private actions$: Actions) {}
+    restore$ = createEffect(() =>
+        of('once').pipe(
+            mergeMap(() => {
+                const data = this.persistAppService.restore();
+
+                if (!data) {
+                    return EMPTY;
+                }
+
+                return [plannerStoreRestored({state: data[plannerFeatureKey]})];
+            }),
+        ),
+    );
+
+    constructor(private actions$: Actions, private store: Store<GlobalState>, private persistAppService: PersistAppService) {}
 }
