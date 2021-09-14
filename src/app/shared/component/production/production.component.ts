@@ -1,6 +1,5 @@
 import {Component, Input} from '@angular/core';
 import {Production} from 'src/app/shared/entities/production';
-import {TrackByService} from 'src/app/shared/service/track-by-service';
 
 @Component({
     selector: 'app-production',
@@ -9,6 +8,4 @@ import {TrackByService} from 'src/app/shared/service/track-by-service';
 })
 export class ProductionComponent {
     @Input() production!: Production;
-
-    constructor(public trackByService: TrackByService) {}
 }

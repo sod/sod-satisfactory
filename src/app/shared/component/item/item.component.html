@@ -1,7 +1,18 @@
-<input placeholder="Item" nz-input [ngModel]="itemPackage.itemName" (ngModelChange)="updateItemName($event)" [nzAutocomplete]="auto" />
+<input
+    placeholder="Item"
+    nz-input
+    [ngModel]="itemPackage?.itemName ?? null"
+    (ngModelChange)="itemPackage ? updateItemName($event, itemPackage) : addItemName($event)"
+    (blur)="itemPackage?.itemName === '' && remove(itemPackage!)"
+    [nzAutocomplete]="auto"
+/>
 
 <nz-autocomplete #auto>
-    <nz-auto-option *ngFor="let option of filteredItems; trackBy: trackByService.index" [nzValue]="option" [nzLabel]="option">
+    <nz-auto-option
+        *ngFor="let option of items | filterCaseInsensitive: itemPackage?.itemName; trackBy: trackByService.index"
+        [nzValue]="option"
+        [nzLabel]="option"
+    >
         {{ option }}
     </nz-auto-option>
 </nz-autocomplete>

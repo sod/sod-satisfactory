@@ -41,9 +41,9 @@ export const reducer = createReducer(
 
     on(PlannerActions.addItemPackage, (state, action) => ({
         ...state,
-        productions: Production.update(state.productions, action.relation, (production) => ({
-            ...production,
-            recipe: {...production.recipe, [action.target]: production.recipe[action.target].concat(ItemPackage.createDto())},
+        productions: Recipe.update(state.productions, action.relation, (recipe) => ({
+            ...recipe,
+            [action.target]: recipe[action.target].concat({...ItemPackage.createDto(), ...(action.itemPackage ?? {})}),
         })),
     })),
 

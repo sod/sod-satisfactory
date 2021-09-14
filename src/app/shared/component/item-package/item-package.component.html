@@ -1,7 +1,4 @@
 <nz-input-group nzCompact>
-    <button nz-button [nzType]="'default'" nzDanger (click)="remove()" class="mr-2">
-        <i nz-icon nzType="delete" nzTheme="outline"></i>
-    </button>
-    <nz-input-number [ngModel]="itemPackage.amount" [nzMin]="1" [nzStep]="1"></nz-input-number>
-    <app-item [itemPackage]="itemPackage"></app-item>
+    <app-item [itemPackage]="itemPackage" [recipe]="recipe" [target]="target"></app-item>
+    <nz-input-number [ngModel]="itemPackage?.amount ?? null" [nzDisabled]="!itemPackage" [nzMin]="1" [nzStep]="1"></nz-input-number>
 </nz-input-group>

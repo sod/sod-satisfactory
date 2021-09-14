@@ -8,13 +8,15 @@ import {ActionClearProductionComponent} from 'src/app/shared/component/action-cl
 import {SharedNgZorroModule} from '../shared-ng-zorro/shared-ng-zorro.module';
 import {ItemPackageComponent} from './component/item-package/item-package.component';
 import {ItemComponent} from './component/item/item.component';
+import {ProductionInputOrOutputComponent} from './component/production-input-or-output/production-input-or-output.component';
 import {ProductionComponent} from './component/production/production.component';
 import {RecipeComponent} from './component/recipe/recipe.component';
+import {FilterCaseInsensitivePipe} from './pipe/filter-case-insensitive.pipe';
+import {PlusOneUndefinedPipe} from './pipe/plus-one-undefined.pipe';
 import {AppEffects} from './store/app/app.effects';
 import * as fromApp from './store/app/app.reducer';
 import {PlannerEffects} from './store/planner/planner.effects';
 import * as fromPlanner from './store/planner/planner.reducer';
-import { ActionAddItemPackageComponent } from './component/action-add-item-package/action-add-item-package.component';
 
 @NgModule({
     declarations: [
@@ -24,7 +26,9 @@ import { ActionAddItemPackageComponent } from './component/action-add-item-packa
         ActionClearProductionComponent,
         ItemComponent,
         ItemPackageComponent,
-        ActionAddItemPackageComponent,
+        ProductionInputOrOutputComponent,
+        FilterCaseInsensitivePipe,
+        PlusOneUndefinedPipe,
     ],
     imports: [
         CommonModule,
@@ -43,7 +47,9 @@ import { ActionAddItemPackageComponent } from './component/action-add-item-packa
         FormsModule,
         ItemComponent,
         ItemPackageComponent,
-        ActionAddItemPackageComponent,
+        ProductionInputOrOutputComponent,
+        FilterCaseInsensitivePipe,
+        PlusOneUndefinedPipe,
     ],
 })
 export class SharedModule {}

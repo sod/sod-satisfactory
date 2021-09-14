@@ -1,6 +1,10 @@
 import {createAction, props} from '@ngrx/store';
 import {ItemPackage} from 'src/app/shared/entities/item-package';
-import {ItemParentRelationForItemPackage, ItemParentRelationForProduction} from 'src/app/shared/entities/item-parent-relations';
+import {
+    ItemParentRelationForItemPackage,
+    ItemParentRelationForProduction,
+    ItemParentRelationForRecipe,
+} from 'src/app/shared/entities/item-parent-relations';
 import {RecipeTarget} from 'src/app/shared/entities/recipe-dto';
 import {PlannerState} from './planner.reducer';
 
@@ -12,7 +16,7 @@ export const clearProduction = createAction('[Planner] Clear Production');
 
 export const addItemPackage = createAction(
     '[Planner] Add Item Package',
-    props<{relation: ItemParentRelationForProduction; target: RecipeTarget}>(),
+    props<{relation: ItemParentRelationForRecipe; target: RecipeTarget; itemPackage?: Partial<ItemPackage>}>(),
 );
 export const updateItemPackage = createAction(
     '[Planner] Update Item Package',

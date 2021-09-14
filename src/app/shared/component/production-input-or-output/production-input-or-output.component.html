@@ -1,0 +1,5 @@
+<nz-card [nzTitle]="title[target]" nzSize="small" nzBorderless>
+    <div class="mb-2" *ngFor="let input of production.recipe[target] | plusOneUndefined; trackBy: trackByService.index">
+        <app-item-package [itemPackage]="input" [recipe]="production.recipe" [target]="target"></app-item-package>
+    </div>
+</nz-card>

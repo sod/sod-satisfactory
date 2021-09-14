@@ -1,20 +1,10 @@
 <nz-card nzTitle="Production" nzSize="small">
     <div class="row">
         <div class="col-6">
-            <nz-card nzTitle="Input" nzSize="small" nzBorderless>
-                <div class="mb-2" *ngFor="let input of production.recipe.inputs; trackBy: trackByService.index">
-                    <app-item-package [itemPackage]="input"></app-item-package>
-                </div>
-                <app-action-add-item-package [production]="production" [target]="'inputs'"></app-action-add-item-package>
-            </nz-card>
+            <app-production-input-or-output [production]="production" [target]="'inputs'"></app-production-input-or-output>
         </div>
         <div class="col-6">
-            <nz-card nzTitle="Output" nzSize="small" nzBorderless>
-                <div class="mb-2" *ngFor="let input of production.recipe.outputs; trackBy: trackByService.index">
-                    <app-item-package [itemPackage]="input"></app-item-package>
-                </div>
-                <app-action-add-item-package [production]="production" [target]="'outputs'"></app-action-add-item-package>
-            </nz-card>
+            <app-production-input-or-output [production]="production" [target]="'outputs'"></app-production-input-or-output>
         </div>
     </div>
 </nz-card>
