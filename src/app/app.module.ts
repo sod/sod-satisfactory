@@ -9,10 +9,12 @@ import {EffectsModule} from '@ngrx/effects';
 import {StoreModule} from '@ngrx/store';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {en_US, NZ_I18N} from 'ng-zorro-antd/i18n';
+import {NzIconModule} from 'ng-zorro-antd/icon';
 import {environment} from '../environments/environment';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {metaReducers, reducers} from './reducers';
+import {ngZorroIcons} from './shared-ng-zorro/shared-ng-zorro.module';
 import {SharedModule} from './shared/shared.module';
 
 registerLocaleData(en);
@@ -28,6 +30,7 @@ registerLocaleData(en);
         StoreModule.forRoot(reducers, {metaReducers}),
         EffectsModule.forRoot(),
         SharedModule,
+        NzIconModule.forRoot(ngZorroIcons),
         !environment.production ? StoreDevtoolsModule.instrument() : [],
     ],
     providers: [{provide: NZ_I18N, useValue: en_US}],

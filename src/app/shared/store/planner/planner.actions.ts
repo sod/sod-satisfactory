@@ -1,3 +1,5 @@
-import {createAction} from '@ngrx/store';
+import {createAction, props} from '@ngrx/store';
+import {Production} from '../../entities/production';
 
-export const loadPlanners = createAction('[Planner] Load Planners');
+export const addProduction = createAction('[Planner] Add Production');
+export const removeProduction = createAction('[Planner] Remove Production', props<{production: Production}>());

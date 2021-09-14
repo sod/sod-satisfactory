@@ -3,9 +3,9 @@ import * as AppActions from './app.actions';
 
 export const appFeatureKey = 'app';
 
-export interface State {}
+export interface AppState {}
 
-export const initialState: State = {};
+export const initialState: AppState = {};
 
 export const reducer = createReducer(
     initialState,
