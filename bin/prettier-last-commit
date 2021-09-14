@@ -1,0 +1,3 @@
+#!/bin/bash
+
+node_modules/.bin/prettier --write $(git diff-tree --no-commit-id --name-only -r HEAD | grep -E '\.(ts|md|json|html|scss)$' | xargs)
