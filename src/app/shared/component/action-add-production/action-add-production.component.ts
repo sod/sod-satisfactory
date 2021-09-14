@@ -3,11 +3,11 @@ import {Store} from '@ngrx/store';
 import {addProduction} from '../../store/planner/planner.actions';
 
 @Component({
-    selector: 'app-add-production',
-    templateUrl: './add-production.component.html',
-    styleUrls: ['./add-production.component.scss'],
+    selector: 'app-action-add-production',
+    templateUrl: './action-add-production.component.html',
+    styleUrls: ['./action-add-production.component.scss'],
 })
-export class AddProductionComponent {
+export class ActionAddProductionComponent {
     addProduction = addProduction;
 
     constructor(public store: Store) {}

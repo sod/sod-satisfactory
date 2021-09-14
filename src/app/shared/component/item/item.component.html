@@ -1,0 +1,7 @@
+<input placeholder="Item" nz-input [ngModel]="itemPackage.itemName" (ngModelChange)="updateItemName($event)" [nzAutocomplete]="auto" />
+
+<nz-autocomplete #auto>
+    <nz-auto-option *ngFor="let option of filteredItems; trackBy: trackByService.index" [nzValue]="option" [nzLabel]="option">
+        {{ option }}
+    </nz-auto-option>
+</nz-autocomplete>

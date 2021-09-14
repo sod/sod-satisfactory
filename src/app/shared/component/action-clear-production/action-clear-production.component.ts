@@ -3,11 +3,11 @@ import {Store} from '@ngrx/store';
 import {clearProduction} from '../../store/planner/planner.actions';
 
 @Component({
-    selector: 'app-clear-production',
-    templateUrl: './clear-production.component.html',
-    styleUrls: ['./clear-production.component.scss'],
+    selector: 'app-action-clear-production',
+    templateUrl: './action-clear-production.component.html',
+    styleUrls: ['./action-clear-production.component.scss'],
 })
-export class ClearProductionComponent {
+export class ActionClearProductionComponent {
     clearProduction = clearProduction;
 
     constructor(public store: Store) {}

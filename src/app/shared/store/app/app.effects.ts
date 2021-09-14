@@ -6,7 +6,15 @@ import {EMPTY, of} from 'rxjs';
 import {mergeMap, switchMapTo, take, tap} from 'rxjs/operators';
 import {PersistAppService} from '../../service/persist-app.service';
 import {GlobalState} from '../global-state';
-import {addProduction, clearProduction, plannerStoreRestored, removeProduction} from '../planner/planner.actions';
+import {
+    addItemPackage,
+    addProduction,
+    clearProduction,
+    plannerStoreRestored,
+    removeItemPackage,
+    removeProduction,
+    updateItemPackage,
+} from '../planner/planner.actions';
 import {plannerFeatureKey} from '../planner/planner.reducer';
 
 @Injectable()
@@ -14,7 +22,7 @@ export class AppEffects {
     persist$ = createEffect(
         () =>
             this.actions$.pipe(
-                ofType(addProduction, removeProduction, clearProduction),
+                ofType(addProduction, removeProduction, clearProduction, addItemPackage, removeItemPackage, updateItemPackage),
                 switchMapTo(this.store.pipe(take(1))),
                 tap((store: GlobalState) => {
                     this.persistAppService.persist(pick(store, [plannerFeatureKey]));

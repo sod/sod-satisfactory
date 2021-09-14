@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {Store} from '@ngrx/store';
+import {TrackByService} from 'src/app/shared/service/track-by-service';
 import {GlobalState} from '../../../shared/store/global-state';
 import {selectProductions} from '../../../shared/store/planner/planner.selectors';
 
@@ -11,5 +12,5 @@ import {selectProductions} from '../../../shared/store/planner/planner.selectors
 export class DefaultComponent {
     public productions$ = this.store.select(selectProductions);
 
-    constructor(private store: Store<GlobalState>) {}
+    constructor(private store: Store<GlobalState>, public trackByService: TrackByService) {}
 }
