@@ -6,7 +6,7 @@ ng g m planner --routing
 
 ## create component
 
-ng g c planner/Default
+ng g c shared/component/Foo
 
 # ngrx - https://ngrx.io/guide/schematics
 

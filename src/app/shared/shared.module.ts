@@ -2,13 +2,14 @@ import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
 import {EffectsModule} from '@ngrx/effects';
 import {StoreModule} from '@ngrx/store';
+import {RecipeComponent} from './component/recipe/recipe.component';
 import {AppEffects} from './store/app/app.effects';
 import * as fromApp from './store/app/app.reducer';
 import {PlannerEffects} from './store/planner/planner.effects';
 import * as fromPlanner from './store/planner/planner.reducer';
 
 @NgModule({
-    declarations: [],
+    declarations: [RecipeComponent],
     imports: [
         CommonModule,
         EffectsModule.forFeature([AppEffects, PlannerEffects, PlannerEffects, AppEffects]),
