@@ -1739,6 +1739,63 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ngrx/effects@npm:^12.4.0":
+  version: 12.4.0
+  resolution: "@ngrx/effects@npm:12.4.0"
+  dependencies:
+    tslib: ^2.0.0
+  peerDependencies:
+    "@angular/core": ^12.0.0
+    "@ngrx/store": 12.4.0
+    rxjs: ^6.5.3
+  checksum: 39c8fc98b151242ed7cfe8b6d2dc02a97f3d671959ff29494e654672b0abe71d62eb9ac483b00c9512c300a3053da440c370e7d87fc5009e002e4149be48f6a9
+  languageName: node
+  linkType: hard
+
+"@ngrx/entity@npm:^12.4.0":
+  version: 12.4.0
+  resolution: "@ngrx/entity@npm:12.4.0"
+  dependencies:
+    tslib: ^2.0.0
+  peerDependencies:
+    "@angular/core": ^12.0.0
+    "@ngrx/store": 12.4.0
+    rxjs: ^6.5.3
+  checksum: 388fdf3c51867331d752b218a22c90c263800065fa9187ad871bda8e8449df2a50993b7daebed449d9a5741ffc81801327953e74f9a1bb84d24e16c4d4206491
+  languageName: node
+  linkType: hard
+
+"@ngrx/schematics@npm:^12.4.0":
+  version: 12.4.0
+  resolution: "@ngrx/schematics@npm:12.4.0"
+  checksum: c461c91972e1a181600a4fab2c25f971a497e7662473d49921bd96d2d9a554b12ed2db1e28af36e38357cfc89a66b9b510dd996382536f254b9e6261d7b0d84d
+  languageName: node
+  linkType: hard
+
+"@ngrx/store-devtools@npm:^12.4.0":
+  version: 12.4.0
+  resolution: "@ngrx/store-devtools@npm:12.4.0"
+  dependencies:
+    tslib: ^2.0.0
+  peerDependencies:
+    "@ngrx/store": 12.4.0
+    rxjs: ^6.5.3
+  checksum: a79f177865684b09b7bd847a051dae8bf802c0fa77c78d317bee28e1e1c6e24c67e2b0b48cb9a384369349b836f2a16d1e831fa8e529cce8562f8c33ba7269d5
+  languageName: node
+  linkType: hard
+
+"@ngrx/store@npm:^12.4.0":
+  version: 12.4.0
+  resolution: "@ngrx/store@npm:12.4.0"
+  dependencies:
+    tslib: ^2.0.0
+  peerDependencies:
+    "@angular/core": ^12.0.0
+    rxjs: ^6.5.3
+  checksum: 0129db830a1f7aec0758f8aac094346cdbe7d1797c264f331fa8ebedcfcb7315120bc17b88e22c6d76dfb9c1eb5a27af3480e5f6b223d64803435ff89d4d613b
+  languageName: node
+  linkType: hard
+
 "@ngtools/webpack@npm:12.2.5":
   version: 12.2.5
   resolution: "@ngtools/webpack@npm:12.2.5"
@@ -9031,6 +9088,11 @@ fsevents@~2.3.2:
     "@angular/platform-browser": ~12.2.0
     "@angular/platform-browser-dynamic": ~12.2.0
     "@angular/router": ~12.2.0
+    "@ngrx/effects": ^12.4.0
+    "@ngrx/entity": ^12.4.0
+    "@ngrx/schematics": ^12.4.0
+    "@ngrx/store": ^12.4.0
+    "@ngrx/store-devtools": ^12.4.0
     "@types/node": ^12.11.1
     ng-zorro-antd: 12.0.1
     prettier: ^2.4.0
