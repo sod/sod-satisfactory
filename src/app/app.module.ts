@@ -1,17 +1,8 @@
-import {registerLocaleData} from '@angular/common';
-import {HttpClientModule} from '@angular/common/http';
-import en from '@angular/common/locales/en';
-import {NgModule} from '@angular/core';
-import {FormsModule} from '@angular/forms';
-import {BrowserModule} from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {StoreModule} from '@ngrx/store';
-import {StoreDevtoolsModule} from '@ngrx/store-devtools';
-import {en_US, NZ_I18N} from 'ng-zorro-antd/i18n';
-import {environment} from '../environments/environment';
-import {AppRoutingModule} from './app-routing.module';
-import {AppComponent} from './app.component';
-import {metaReducers, reducers} from './reducers';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { metaReducers,reducers } from './reducers';
+import { AppEffects } from './store/app/app.effects';
 
 registerLocaleData(en);
 
@@ -25,6 +16,7 @@ registerLocaleData(en);
         BrowserAnimationsModule,
         StoreModule.forRoot(reducers, {metaReducers}),
         !environment.production ? StoreDevtoolsModule.instrument() : [],
+        EffectsModule.forFeature([AppEffects]),
     ],
     providers: [{provide: NZ_I18N, useValue: en_US}],
     bootstrap: [AppComponent],
