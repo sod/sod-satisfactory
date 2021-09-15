@@ -26,7 +26,7 @@ export class ItemPackage {
         });
     }
 
-    static createDto(): ItemPackageDto {
-        return {itemName: '', amount: 1};
+    static createDto(dto?: Partial<ItemPackageDto>): ItemPackageDto {
+        return {itemName: '', amount: 1, ...(dto ?? {})};
     }
 }

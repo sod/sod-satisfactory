@@ -9,6 +9,7 @@ import {GlobalState} from '../global-state';
 import {
     addItemPackage,
     addProduction,
+    addProductionWithOutputNameClicked,
     clearProduction,
     editProductionClicked,
     plannerStoreRestored,
@@ -33,6 +34,7 @@ export class AppEffects {
                     updateProductionClicked,
                     editProductionClicked,
                     removeProductionClicked,
+                    addProductionWithOutputNameClicked,
                 ),
                 switchMapTo(this.store.pipe(take(1))),
                 tap((store: GlobalState) => {

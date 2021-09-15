@@ -1,9 +1,9 @@
 <ng-container *ngIf="{edit: edit$ | async} as state">
     <nz-card
-        [nzTitle]="production.machines + ' Machine(s) at ' + production.clockSpeed1 + '% + ' + production.clockSpeed2 + '%'"
+        [nzTitle]="production | productionTitle"
         nzSize="small"
         class="mb-3"
-        [class.border-primary]="state.edit?.index === production.index"
+        [class.shadow]="state.edit?.index === production.index"
         [nzExtra]="extraTemplate"
     >
         <div *ngIf="production.recipe.inputs.length">
@@ -19,11 +19,15 @@
             </ul>
         </div>
     </nz-card>
-</ng-container>
 
-<ng-template #extraTemplate>
-    <button nz-button nzType="link" (click)="edit(production.index)">
-        <i nz-icon nzType="edit" nzTheme="outline"></i>
-        Edit
-    </button>
-</ng-template>
+    <ng-template #extraTemplate>
+        <button
+            nz-button
+            [nzType]="state.edit && production.index === state.edit.index ? 'primary' : 'link'"
+            (click)="edit(production.index)"
+        >
+            <i nz-icon nzType="edit" nzTheme="outline"></i>
+            Edit
+        </button>
+    </ng-template>
+</ng-container>

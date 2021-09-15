@@ -32,6 +32,12 @@ export const reducer = createReducer(
         productions: state.productions.concat(Production.createDto()),
     })),
 
+    on(PlannerActions.addProductionWithOutputNameClicked, (state, action) => ({
+        ...state,
+        edit: {index: state.productions.length},
+        productions: state.productions.concat(Production.createDto(action.itemPackage)),
+    })),
+
     on(PlannerActions.removeProductionClicked, (state, {relation}) => ({
         ...state,
         edit: undefined,

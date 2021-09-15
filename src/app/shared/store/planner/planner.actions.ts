@@ -12,6 +12,10 @@ import {PlannerState} from './planner.reducer';
 export const plannerStoreRestored = createAction('[Planner] Store Restored', props<{state: PlannerState}>());
 
 export const addProduction = createAction('[Planner] Add Production');
+export const addProductionWithOutputNameClicked = createAction(
+    '[Planner] Add Production With Output Name Clicked',
+    props<{itemPackage: Partial<ItemPackageDto>}>(),
+);
 export const removeProductionClicked = createAction(
     '[Planner] Remove Production Clicked',
     props<{relation: ItemParentRelationForProduction}>(),

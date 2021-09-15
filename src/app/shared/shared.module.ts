@@ -19,6 +19,9 @@ import {AppEffects} from './store/app/app.effects';
 import * as fromApp from './store/app/app.reducer';
 import {PlannerEffects} from './store/planner/planner.effects';
 import * as fromPlanner from './store/planner/planner.reducer';
+import { ProductionTitlePipe } from './pipe/production-title.pipe';
+import { ProductionInputTodoComponent } from './component/production-input-todo/production-input-todo.component';
+import { ResolveProductionPipe } from './pipe/resolve-production.pipe';
 
 @NgModule({
     declarations: [
@@ -33,6 +36,9 @@ import * as fromPlanner from './store/planner/planner.reducer';
         PlusOneUndefinedPipe,
         AmountWithModifiersPipe,
         ProductionOverviewComponent,
+        ProductionTitlePipe,
+        ProductionInputTodoComponent,
+        ResolveProductionPipe,
     ],
     imports: [
         CommonModule,
@@ -56,6 +62,9 @@ import * as fromPlanner from './store/planner/planner.reducer';
         PlusOneUndefinedPipe,
         AmountWithModifiersPipe,
         ProductionOverviewComponent,
+        ProductionTitlePipe,
+        ProductionInputTodoComponent,
+        ResolveProductionPipe,
     ],
 })
 export class SharedModule {}

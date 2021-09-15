@@ -1,12 +1,13 @@
 <h1>Satisfactory Production Planner</h1>
 
-<div class="row">
+<div class="row my-3">
     <div class="col-6" *ngIf="productions$ | async as productions">
         <ng-container *ngFor="let production of productions; trackBy: trackByService.index; let index = index">
             <app-production-overview [production]="production"></app-production-overview>
         </ng-container>
 
         <nz-divider></nz-divider>
+        <app-production-input-todo [productions]="productions"></app-production-input-todo>
         <app-action-add-production class="mr-2"></app-action-add-production>
         <app-action-clear-production></app-action-clear-production>
     </div>
