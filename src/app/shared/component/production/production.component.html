@@ -18,7 +18,9 @@
             <br />
             <nz-input-group nzCompact [nzAddOnAfter]="'% from Slugs'" class="mb-2">
                 <nz-input-number
-                    [nzMin]="1"
+                    [nzMin]="50"
+                    [nzStep]="50"
+                    [nzMax]="250"
                     style="width: 100%"
                     [ngModel]="production.clockSpeed1"
                     (ngModelChange)="updateProduction(production, {clockSpeed1: $event || undefined})"
@@ -27,7 +29,8 @@
             <br />
             <nz-input-group nzCompact [nzAddOnAfter]="'% from MK Upgrade'">
                 <nz-input-number
-                    [nzMin]="1"
+                    [nzMin]="50"
+                    [nzStep]="50"
                     style="width: 100%"
                     [ngModel]="production.clockSpeed2"
                     (ngModelChange)="updateProduction(production, {clockSpeed2: $event || undefined})"
