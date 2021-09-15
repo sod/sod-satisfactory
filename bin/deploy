@@ -7,8 +7,9 @@ if [[ ! -f "package.json" ]] || [[ ! -d ".git" ]] || [[ "$(basename `pwd`)" != "
     exit 1
 fi
 
-rm -rf production
+rm -rf docs
 yarn run build
-cp -R dist/sod-satisfactory production
-git add production
+cp -R dist/sod-satisfactory docs
+git add docs
 git commit -m "new release"
+git push
