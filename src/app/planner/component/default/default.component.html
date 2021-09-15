@@ -2,13 +2,22 @@
 
 <div class="row my-3" *ngIf="productions$ | async as productions">
     <div class="col-6">
-        <app-production-input-todo [productions]="productions"></app-production-input-todo>
-
-        <ng-container *ngFor="let production of productions; trackBy: trackByService.index; let index = index">
-            <app-production-overview [production]="production"></app-production-overview>
+        <ng-container *ngIf="productions | resolveProduction as productionInputs">
+            <ng-container *ngIf="productionInputs.length">
+                <h5 class="my-3">Inputs</h5>
+                <app-production-input-todo [productionInputs]="productionInputs"></app-production-input-todo>
+            </ng-container>
         </ng-container>
 
-        <nz-divider></nz-divider>
+        <ng-container *ngIf="productions.length">
+            <h5 class="my-3">Belts and Machines</h5>
+            <ng-container *ngFor="let production of productions; trackBy: trackByService.index; let index = index">
+                <app-production-overview [production]="production" class="mb-3 d-block"></app-production-overview>
+            </ng-container>
+
+            <nz-divider></nz-divider>
+        </ng-container>
+
         <app-action-add-production class="mr-2"></app-action-add-production>
         <app-action-clear-production></app-action-clear-production>
     </div>

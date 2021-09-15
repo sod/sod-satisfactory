@@ -1,48 +1,41 @@
-<nz-table
-    #fixedTable
-    [nzData]="productions | resolveProduction"
-    nzTableLayout="fixed"
-    [nzShowPagination]="false"
-    nzSize="small"
-    *ngIf="{edit: edit$ | async} as state"
->
-    <thead>
-        <tr>
-            <th>Diff</th>
-            <th>Input</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let data of fixedTable.data; trackBy: trackByService.index">
-            <td [class.complete]="data.amount <= 0" [class.missing]="data.amount > 0">
-                <i nz-icon [nzType]="data.amount > 0 ? 'close-circle' : 'check-circle'" nzTheme="outline"></i>
-                {{ data.amount.toFixed(1) }}
-            </td>
-            <td [class.complete]="data.amount <= 0">{{ data.itemName }}</td>
-            <td>
-                <ng-container [ngSwitch]="data.outputProductionIndex">
-                    <ng-container *ngSwitchCase="undefined">
-                        <button nz-button nzType="link" (click)="addProduction(data.itemName, data.amount)" *ngIf="data.amount > 0">
-                            <i nz-icon nzType="plus" nzTheme="outline"></i>
-                            Add
-                        </button>
-                    </ng-container>
+<ng-container *ngIf="{edit: edit$ | async} as state">
+    <nz-table #fixedTable [nzData]="productionInputs" nzTableLayout="fixed" [nzShowPagination]="false" nzSize="small">
+        <thead>
+            <tr>
+                <th>Diff</th>
+                <th>Input</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of fixedTable.data; trackBy: trackByService.index">
+                <td [class.complete]="data.amount <= 0" [class.missing]="data.amount > 0">
+                    <i nz-icon [nzType]="data.amount > 0 ? 'close-circle' : 'check-circle'" nzTheme="outline"></i>
+                    {{ data.amount.toFixed(1) }}
+                </td>
+                <td [class.complete]="data.amount <= 0">{{ data.itemName }}</td>
+                <td>
+                    <ng-container [ngSwitch]="data.outputProductionIndex">
+                        <ng-container *ngSwitchCase="undefined">
+                            <button nz-button nzType="link" (click)="addProduction(data.itemName, data.amount)" *ngIf="data.amount > 0">
+                                <i nz-icon nzType="plus" nzTheme="outline"></i>
+                                Add
+                            </button>
+                        </ng-container>
 
-                    <ng-container *ngSwitchDefault>
-                        <button
-                            nz-button
-                            [nzType]="state.edit && data.outputProductionIndex === state.edit.index ? 'primary' : 'link'"
-                            (click)="editProduction(data.outputProductionIndex!)"
-                        >
-                            <i nz-icon nzType="edit" nzTheme="outline"></i>
-                            Edit
-                        </button>
+                        <ng-container *ngSwitchDefault>
+                            <button
+                                nz-button
+                                [nzType]="state.edit && data.outputProductionIndex === state.edit.index ? 'primary' : 'link'"
+                                (click)="editProduction(data.outputProductionIndex!)"
+                            >
+                                <i nz-icon nzType="edit" nzTheme="outline"></i>
+                                Edit
+                            </button>
+                        </ng-container>
                     </ng-container>
-                </ng-container>
-            </td>
-        </tr>
-    </tbody>
-</nz-table>
-
-<nz-divider></nz-divider>
+                </td>
+            </tr>
+        </tbody>
+    </nz-table>
+</ng-container>

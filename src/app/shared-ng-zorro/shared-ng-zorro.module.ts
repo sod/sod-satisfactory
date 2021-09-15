@@ -16,12 +16,14 @@ import {NzDividerModule} from 'ng-zorro-antd/divider';
 import {NzIconModule} from 'ng-zorro-antd/icon';
 import {NzInputModule} from 'ng-zorro-antd/input';
 import {NzInputNumberModule} from 'ng-zorro-antd/input-number';
+import {NzPageHeaderModule} from 'ng-zorro-antd/page-header';
 import {NzTableModule} from 'ng-zorro-antd/table';
 
 const modules = [
     NzButtonModule,
     NzIconModule,
     NzInputModule,
+    NzPageHeaderModule,
     NzInputNumberModule,
     NzCardModule,
     NzDividerModule,

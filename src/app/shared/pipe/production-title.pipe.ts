@@ -5,7 +5,7 @@ import {Production} from 'src/app/shared/entities/production';
     name: 'productionTitle',
 })
 export class ProductionTitlePipe implements PipeTransform {
-    transform(production: Production): string {
+    transform(production: Production): {title: string; subtitle: string} {
         const clockSpeed = [];
 
         if (production.clockSpeed1 !== 100) {
@@ -15,13 +15,12 @@ export class ProductionTitlePipe implements PipeTransform {
             clockSpeed.push(production.clockSpeed2 + '%');
         }
 
-        const type = production.recipe.inputs.length ? 'Machine' : 'Belt';
-        let title = production.machines + ' ' + type + (production.machines >= 2 ? 's' : '');
+        const machineTitle = production.machines + ' Machine' + (production.machines >= 2 ? 's' : '');
+        const outputLength = production.recipe.outputs.length;
+        const inputLength = production.recipe.inputs.length;
+        const title = inputLength || production.machines >= 2 || clockSpeed.length ? machineTitle : outputLength ? 'Belt' : 'Empty';
+        const subtitle = clockSpeed.length ? 'at ' + clockSpeed.join(' + ') : '';
 
-        if (clockSpeed.length) {
-            title += ' at ' + clockSpeed.join(' + ');
-        }
-
-        return title;
+        return {title, subtitle};
     }
 }

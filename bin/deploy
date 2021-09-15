@@ -8,7 +8,7 @@ if [[ ! -f "package.json" ]] || [[ ! -d ".git" ]] || [[ "$(basename `pwd`)" != "
 fi
 
 rm -rf docs
-yarn run build
+yarn run build --baseHref="/sod-satisfactory/"
 cp -R dist/sod-satisfactory docs
 git add docs
 git commit -m "new release"

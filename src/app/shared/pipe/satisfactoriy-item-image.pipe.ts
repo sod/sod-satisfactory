@@ -1,4 +1,5 @@
 import {Pipe, PipeTransform} from '@angular/core';
+import {trimEnd, trimStart} from 'lodash-es';
 import {itemImage} from 'src/app/shared/entities/item-names';
 import {ItemPackage} from 'src/app/shared/entities/item-package';
 
@@ -7,6 +8,14 @@ import {ItemPackage} from 'src/app/shared/entities/item-package';
 })
 export class SatisfactoriyItemImagePipe implements PipeTransform {
     transform(value: ItemPackage): string | undefined {
-        return itemImage.get(value.itemName);
+        const source = itemImage.get(value.itemName);
+
+        if (!source) {
+            return undefined;
+        }
+
+        const baseUrl = document.baseURI;
+
+        return trimEnd(baseUrl, '/') + '/' + trimStart(source, '/');
     }
 }
