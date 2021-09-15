@@ -5,6 +5,7 @@
         "ng": "ng",
         "start": "ng serve",
         "build": "ng build",
+        "deploy": "bin/deploy",
         "watch": "ng build --watch --configuration development",
         "pret": "bin/prettier-changed"
     },

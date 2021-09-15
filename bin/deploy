@@ -1,8 +1,14 @@
 #!/bin/bash
 
-if [[ ! -f "package.json" ]] || [[ ! -f "angular.json" ]]; then
-    echo what
+cd "$(dirname $0)/.."
+
+if [[ ! -f "package.json" ]] || [[ ! -d ".git" ]] || [[ "$(basename `pwd`)" != "sod-satisfactory" ]]; then
+    echo Not in the root directory. Exit.
+    exit 1
 fi
 
-
-# rm -r production; ng build;
+rm -rf production
+yarn run build
+cp -R dist/sod-satisfactory production
+git add production
+git commit -m "new release"
