@@ -1,18 +1,18 @@
 <h1 class="my-3">Satisfactory Production Planner</h1>
 
-<div class="row my-3">
-    <div class="col-6" *ngIf="productions$ | async as productions">
+<div class="row my-3" *ngIf="productions$ | async as productions">
+    <div class="col-6">
         <ng-container *ngFor="let production of productions; trackBy: trackByService.index; let index = index">
             <app-production-overview [production]="production"></app-production-overview>
         </ng-container>
 
         <nz-divider></nz-divider>
-        <app-production-input-todo [productions]="productions"></app-production-input-todo>
         <app-action-add-production class="mr-2"></app-action-add-production>
         <app-action-clear-production></app-action-clear-production>
     </div>
 
-    <div class="col-6" *ngIf="edit$ | async as production">
-        <app-production [production]="production"></app-production>
+    <div class="col-6">
+        <app-production-input-todo [productions]="productions"></app-production-input-todo>
+        <app-production [production]="production" *ngIf="edit$ | async as production"></app-production>
     </div>
 </div>

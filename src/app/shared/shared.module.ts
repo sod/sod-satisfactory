@@ -24,6 +24,8 @@ import * as fromApp from './store/app/app.reducer';
 import {PlannerEffects} from './store/planner/planner.effects';
 import * as fromPlanner from './store/planner/planner.reducer';
 import { SatisfactoryItemImageComponent } from './component/satisfactory-item-image/satisfactory-item-image.component';
+import { SatisfactoryItemComponent } from './component/satisfactory-item/satisfactory-item.component';
+import { SatisfactoryItemsComponent } from './component/satisfactory-items/satisfactory-items.component';
 
 @NgModule({
     declarations: [
@@ -43,6 +45,8 @@ import { SatisfactoryItemImageComponent } from './component/satisfactory-item-im
         ResolveProductionPipe,
         SatisfactoriyItemImagePipe,
         SatisfactoryItemImageComponent,
+        SatisfactoryItemComponent,
+        SatisfactoryItemsComponent,
     ],
     imports: [
         CommonModule,
@@ -71,6 +75,8 @@ import { SatisfactoryItemImageComponent } from './component/satisfactory-item-im
         ResolveProductionPipe,
         SatisfactoriyItemImagePipe,
         SatisfactoryItemImageComponent,
+        SatisfactoryItemComponent,
+        SatisfactoryItemsComponent,
     ],
 })
 export class SharedModule {}

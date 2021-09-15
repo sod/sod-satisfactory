@@ -1,7 +1,14 @@
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
 import {IconDefinition} from '@ant-design/icons-angular';
-import {CheckCircleOutline, CloseCircleOutline, DeleteOutline, EditOutline, PlusOutline} from '@ant-design/icons-angular/icons';
+import {
+    ArrowRightOutline,
+    CheckCircleOutline,
+    CloseCircleOutline,
+    DeleteOutline,
+    EditOutline,
+    PlusOutline,
+} from '@ant-design/icons-angular/icons';
 import {NzAutocompleteModule} from 'ng-zorro-antd/auto-complete';
 import {NzButtonModule} from 'ng-zorro-antd/button';
 import {NzCardModule} from 'ng-zorro-antd/card';
@@ -21,7 +28,14 @@ const modules = [
     NzAutocompleteModule,
     NzTableModule,
 ];
-export const ngZorroIcons: IconDefinition[] = [PlusOutline, DeleteOutline, EditOutline, CheckCircleOutline, CloseCircleOutline];
+export const ngZorroIcons: IconDefinition[] = [
+    PlusOutline,
+    DeleteOutline,
+    EditOutline,
+    CheckCircleOutline,
+    CloseCircleOutline,
+    ArrowRightOutline,
+];
 
 @NgModule({
     declarations: [],

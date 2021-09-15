@@ -2,35 +2,21 @@
     <nz-card
         [nzTitle]="production | productionTitle"
         nzSize="small"
+        nzBorderless
         class="mb-3"
         [class.shadow]="state.edit?.index === production.index"
         [nzExtra]="extraTemplate"
     >
-        <div *ngIf="production.recipe.inputs.length">
-            <div>
-                <app-satisfactory-item-image
-                    [itemPackage]="value"
-                    *ngFor="let value of production.recipe.inputs"
-                ></app-satisfactory-item-image>
+        <div class="row position-relative">
+            <div class="text-center arrow-center" *ngIf="production.recipe.inputs.length && production.recipe.outputs.length">
+                <i nz-icon nzType="arrow-right" nzTheme="outline"></i>
             </div>
-
-            Inputs:
-            <ul>
-                <li *ngFor="let value of production.recipe.inputs">{{ value | amountWithModifiers }}x {{ value.itemName }}</li>
-            </ul>
-        </div>
-        <div *ngIf="production.recipe.outputs.length">
-            <div class="float-right">
-                <app-satisfactory-item-image
-                    [itemPackage]="value"
-                    *ngFor="let value of production.recipe.outputs"
-                ></app-satisfactory-item-image>
+            <div class="col-6">
+                <app-satisfactory-items [values]="production.recipe.inputs" align="left"></app-satisfactory-items>
             </div>
-
-            Outputs:
-            <ul>
-                <li *ngFor="let value of production.recipe.outputs">{{ value | amountWithModifiers }}x {{ value.itemName }}</li>
-            </ul>
+            <div class="col-6">
+                <app-satisfactory-items [values]="production.recipe.outputs" align="right"></app-satisfactory-items>
+            </div>
         </div>
     </nz-card>
 
