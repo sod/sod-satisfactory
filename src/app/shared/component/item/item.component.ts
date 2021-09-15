@@ -1,11 +1,13 @@
 import {Component, Input} from '@angular/core';
 import {Store} from '@ngrx/store';
+import {recipesData} from 'src/app/generated/recipes-data';
 import {itemNames} from 'src/app/shared/entities/item-names';
 import {ItemPackage} from 'src/app/shared/entities/item-package';
 import {Recipe} from 'src/app/shared/entities/recipe';
+import {RecipeDataDto} from 'src/app/shared/entities/recipe-data-item-dto';
 import {RecipeTarget} from 'src/app/shared/entities/recipe-dto';
 import {TrackByService} from 'src/app/shared/service/track-by-service';
-import {addItemPackage, removeItemPackage, updateItemPackage} from 'src/app/shared/store/planner/planner.actions';
+import {addItemPackage, recipeSelected, removeItemPackage, updateItemPackage} from 'src/app/shared/store/planner/planner.actions';
 
 @Component({
     selector: 'app-item',
@@ -17,18 +19,29 @@ export class ItemComponent {
     @Input() target!: RecipeTarget;
     @Input() itemPackage?: ItemPackage;
     items: typeof itemNames = itemNames;
+    recipesData: typeof recipesData = recipesData;
 
     constructor(public store: Store, public trackByService: TrackByService) {}
 
-    updateItemName(itemName: string, itemPackage: ItemPackage): void {
-        this.store.dispatch(updateItemPackage({relation: itemPackage.unwrap(), itemPackage: {itemName}}));
-    }
+    itemSelected(itemName: string | RecipeDataDto, itemPackage?: ItemPackage): void {
+        if (typeof itemName !== 'string') {
+            this.store.dispatch(recipeSelected({relation: this.recipe.unwrap(), recipe: itemName}));
+            return;
+        }
 
-    addItemName(itemName: string): void {
+        if (itemPackage) {
+            this.store.dispatch(updateItemPackage({relation: itemPackage.unwrap(), itemPackage: {itemName}}));
+            return;
+        }
+
         this.store.dispatch(addItemPackage({relation: this.recipe.unwrap(), target: this.target, itemPackage: {itemName}}));
     }
 
     remove(itemPackage: ItemPackage): void {
         this.store.dispatch(removeItemPackage({relation: itemPackage.unwrap()}));
+    }
+
+    stringifyRecipe(object?: RecipeDataDto): string {
+        return 'Recipe ' + object?.outputs?.map((output) => output.itemName).join(' ') ?? 'unknown';
     }
 }

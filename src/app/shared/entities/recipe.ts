@@ -2,6 +2,7 @@ import {ItemPackage} from 'src/app/shared/entities/item-package';
 import {ItemParentRelationForRecipe} from 'src/app/shared/entities/item-parent-relations';
 import {Production} from 'src/app/shared/entities/production';
 import {ProductionDto} from 'src/app/shared/entities/production-dto';
+import {RecipeDataDto} from 'src/app/shared/entities/recipe-data-item-dto';
 import {RecipeDto} from 'src/app/shared/entities/recipe-dto';
 
 export class Recipe {
@@ -22,5 +23,12 @@ export class Recipe {
         return Production.update(productions, unwrapped, (dto) => {
             return {...dto, recipe: updateFn(dto.recipe)};
         });
+    }
+
+    static fromRecipeDataDto(dto: RecipeDataDto): RecipeDto {
+        return {
+            inputs: dto.inputs ?? [],
+            outputs: dto.outputs ?? [],
+        };
     }
 }

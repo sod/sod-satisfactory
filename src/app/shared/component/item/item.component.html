@@ -2,17 +2,28 @@
     [placeholder]="'Add more ' + target"
     nz-input
     [ngModel]="itemPackage?.itemName ?? null"
-    (ngModelChange)="itemPackage ? updateItemName($event, itemPackage) : addItemName($event)"
+    (ngModelChange)="itemSelected($event, itemPackage)"
     (blur)="itemPackage?.itemName === '' && remove(itemPackage!)"
     [nzAutocomplete]="auto"
 />
 
-<nz-autocomplete #auto>
+<nz-autocomplete #auto [nzWidth]="400">
     <nz-auto-option
         *ngFor="let option of items | filterCaseInsensitive: itemPackage?.itemName; trackBy: trackByService.index"
         [nzValue]="option"
         [nzLabel]="option"
     >
         {{ option }}
+    </nz-auto-option>
+    <nz-auto-option
+        *ngFor="
+            let option of recipesData | filterCaseInsensitive: itemPackage?.itemName:$any(stringifyRecipe);
+            trackBy: trackByService.index
+        "
+        [nzValue]="option"
+        [nzLabel]="option.name"
+    >
+        <div>{{ option.name }}</div>
+        <div class="recipe-summary ml-2">{{ $any(option) | recipeDataSummary }}</div>
     </nz-auto-option>
 </nz-autocomplete>

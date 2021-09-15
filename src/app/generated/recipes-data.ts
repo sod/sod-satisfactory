@@ -2,36 +2,17 @@
 
 export const recipesData = [
     {
-        "name": "Recipe_PortableMiner_C",
-        "inputs": [
-            {
-                "itemName": "Iron Plate",
-                "amount": 2
-            },
-            {
-                "itemName": "Iron Rod",
-                "amount": 4
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Portable Miner",
-                "amount": 1
-            }
-        ]
-    },
-    {
         "name": "Recipe_Cable_C",
         "inputs": [
             {
                 "itemName": "Wire",
-                "amount": 2
+                "amount": 60
             }
         ],
         "outputs": [
             {
                 "itemName": "Cable",
-                "amount": 1
+                "amount": 30
             }
         ]
     },
@@ -40,13 +21,13 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Copper Ingot",
-                "amount": 1
+                "amount": 15
             }
         ],
         "outputs": [
             {
                 "itemName": "Wire",
-                "amount": 2
+                "amount": 30
             }
         ]
     },
@@ -55,13 +36,13 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Copper Ore",
-                "amount": 1
+                "amount": 30
             }
         ],
         "outputs": [
             {
                 "itemName": "Copper Ingot",
-                "amount": 1
+                "amount": 30
             }
         ]
     },
@@ -70,17 +51,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Iron Plate",
-                "amount": 6
+                "amount": 30
             },
             {
                 "itemName": "Screw",
-                "amount": 12
+                "amount": 60
             }
         ],
         "outputs": [
             {
                 "itemName": "Reinforced Iron Plate",
-                "amount": 1
+                "amount": 5
             }
         ]
     },
@@ -89,13 +70,13 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Limestone",
-                "amount": 3
+                "amount": 45
             }
         ],
         "outputs": [
             {
                 "itemName": "Concrete",
-                "amount": 1
+                "amount": 15
             }
         ]
     },
@@ -104,13 +85,13 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Iron Rod",
-                "amount": 1
+                "amount": 10
             }
         ],
         "outputs": [
             {
                 "itemName": "Screw",
-                "amount": 4
+                "amount": 40
             }
         ]
     },
@@ -119,13 +100,13 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Leaves",
-                "amount": 10
+                "amount": 120
             }
         ],
         "outputs": [
             {
                 "itemName": "Biomass",
-                "amount": 5
+                "amount": 60
             }
         ]
     },
@@ -134,13 +115,13 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Wood",
-                "amount": 4
+                "amount": 60
             }
         ],
         "outputs": [
             {
                 "itemName": "Biomass",
-                "amount": 20
+                "amount": 300
             }
         ]
     },
@@ -149,13 +130,13 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Iron Ingot",
-                "amount": 3
+                "amount": 30
             }
         ],
         "outputs": [
             {
                 "itemName": "Iron Plate",
-                "amount": 2
+                "amount": 20
             }
         ]
     },
@@ -164,40 +145,13 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Iron Ingot",
-                "amount": 1
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Iron Rod",
-                "amount": 1
-            }
-        ]
-    },
-    {
-        "name": "Recipe_XenoZapper_C",
-        "inputs": [
-            {
-                "itemName": "Iron Rod",
-                "amount": 10
-            },
-            {
-                "itemName": "Reinforced Iron Plate",
-                "amount": 2
-            },
-            {
-                "itemName": "Cable",
                 "amount": 15
-            },
-            {
-                "itemName": "Wire",
-                "amount": 50
             }
         ],
         "outputs": [
             {
-                "itemName": "Xeno-Zapper",
-                "amount": 1
+                "itemName": "Iron Rod",
+                "amount": 15
             }
         ]
     },
@@ -206,13 +160,13 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Iron Ore",
-                "amount": 1
+                "amount": 30
             }
         ],
         "outputs": [
             {
                 "itemName": "Iron Ingot",
-                "amount": 1
+                "amount": 30
             }
         ]
     },
@@ -221,17 +175,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Iron Plate",
-                "amount": 3
+                "amount": 11.25
             },
             {
                 "itemName": "Rubber",
-                "amount": 1
+                "amount": 3.75
             }
         ],
         "outputs": [
             {
                 "itemName": "Reinforced Iron Plate",
-                "amount": 1
+                "amount": 3.75
             }
         ]
     },
@@ -240,17 +194,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Copper Sheet",
-                "amount": 2
+                "amount": 15
             },
             {
                 "itemName": "Plastic",
-                "amount": 4
+                "amount": 30
             }
         ],
         "outputs": [
             {
                 "itemName": "Circuit Board",
-                "amount": 1
+                "amount": 7.5
             }
         ]
     },
@@ -259,17 +213,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Crude Oil",
-                "amount": 6
+                "amount": 60
             }
         ],
         "outputs": [
             {
                 "itemName": "Fuel",
-                "amount": 4
+                "amount": 40
             },
             {
                 "itemName": "Polymer Resin",
-                "amount": 3
+                "amount": 30
             }
         ]
     },
@@ -278,13 +232,13 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Heavy Oil Residue",
-                "amount": 4
+                "amount": 40
             }
         ],
         "outputs": [
             {
                 "itemName": "Petroleum Coke",
-                "amount": 12
+                "amount": 120
             }
         ]
     },
@@ -293,17 +247,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Crude Oil",
-                "amount": 3
+                "amount": 30
             }
         ],
         "outputs": [
             {
                 "itemName": "Plastic",
-                "amount": 2
+                "amount": 20
             },
             {
                 "itemName": "Heavy Oil Residue",
-                "amount": 1
+                "amount": 10
             }
         ]
     },
@@ -312,17 +266,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Crude Oil",
-                "amount": 3
+                "amount": 30
             }
         ],
         "outputs": [
             {
                 "itemName": "Rubber",
-                "amount": 2
+                "amount": 20
             },
             {
                 "itemName": "Heavy Oil Residue",
-                "amount": 2
+                "amount": 20
             }
         ]
     },
@@ -331,13 +285,13 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Heavy Oil Residue",
-                "amount": 6
+                "amount": 60
             }
         ],
         "outputs": [
             {
                 "itemName": "Fuel",
-                "amount": 4
+                "amount": 40
             }
         ]
     },
@@ -346,17 +300,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Polymer Resin",
-                "amount": 6
+                "amount": 60
             },
             {
                 "itemName": "Water",
-                "amount": 2
+                "amount": 20
             }
         ],
         "outputs": [
             {
                 "itemName": "Plastic",
-                "amount": 2
+                "amount": 20
             }
         ]
     },
@@ -365,17 +319,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Polymer Resin",
-                "amount": 4
+                "amount": 40
             },
             {
                 "itemName": "Water",
-                "amount": 4
+                "amount": 40
             }
         ],
         "outputs": [
             {
                 "itemName": "Rubber",
-                "amount": 2
+                "amount": 20
             }
         ]
     },
@@ -384,17 +338,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Reinforced Iron Plate",
-                "amount": 3
+                "amount": 7.5
             },
             {
                 "itemName": "Screw",
-                "amount": 56
+                "amount": 140
             }
         ],
         "outputs": [
             {
                 "itemName": "Modular Frame",
-                "amount": 2
+                "amount": 5
             }
         ]
     },
@@ -422,17 +376,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Iron Rod",
-                "amount": 5
+                "amount": 20
             },
             {
                 "itemName": "Screw",
-                "amount": 25
+                "amount": 100
             }
         ],
         "outputs": [
             {
                 "itemName": "Rotor",
-                "amount": 1
+                "amount": 4
             }
         ]
     },
@@ -441,13 +395,13 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Copper Ingot",
-                "amount": 2
+                "amount": 20
             }
         ],
         "outputs": [
             {
                 "itemName": "Copper Sheet",
-                "amount": 1
+                "amount": 10
             }
         ]
     },
@@ -456,17 +410,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Reinforced Iron Plate",
-                "amount": 1
+                "amount": 2
             },
             {
                 "itemName": "Rotor",
-                "amount": 1
+                "amount": 2
             }
         ],
         "outputs": [
             {
                 "itemName": "Smart Plating",
-                "amount": 1
+                "amount": 2
             }
         ]
     },
@@ -475,17 +429,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Wire",
-                "amount": 5
+                "amount": 37.5
             },
             {
                 "itemName": "Heavy Oil Residue",
-                "amount": 2
+                "amount": 15
             }
         ],
         "outputs": [
             {
                 "itemName": "Cable",
-                "amount": 9
+                "amount": 67.5
             }
         ]
     },
@@ -494,17 +448,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Iron Plate",
-                "amount": 2
+                "amount": 30
             },
             {
                 "itemName": "Copper Sheet",
-                "amount": 1
+                "amount": 15
             }
         ],
         "outputs": [
             {
                 "itemName": "Empty Canister",
-                "amount": 4
+                "amount": 60
             }
         ]
     },
@@ -513,13 +467,13 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Plastic",
-                "amount": 2
+                "amount": 30
             }
         ],
         "outputs": [
             {
                 "itemName": "Empty Canister",
-                "amount": 4
+                "amount": 60
             }
         ]
     },
@@ -528,17 +482,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Fuel",
-                "amount": 2
+                "amount": 40
             },
             {
                 "itemName": "Empty Canister",
-                "amount": 2
+                "amount": 40
             }
         ],
         "outputs": [
             {
                 "itemName": "Packaged Fuel",
-                "amount": 2
+                "amount": 40
             }
         ]
     },
@@ -547,17 +501,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Solid Biofuel",
-                "amount": 6
+                "amount": 90
             },
             {
                 "itemName": "Water",
-                "amount": 3
+                "amount": 45
             }
         ],
         "outputs": [
             {
                 "itemName": "Liquid Biofuel",
-                "amount": 4
+                "amount": 60
             }
         ]
     },
@@ -566,17 +520,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Liquid Biofuel",
-                "amount": 2
+                "amount": 40
             },
             {
                 "itemName": "Empty Canister",
-                "amount": 2
+                "amount": 40
             }
         ],
         "outputs": [
             {
                 "itemName": "Packaged Liquid Biofuel",
-                "amount": 2
+                "amount": 40
             }
         ]
     },
@@ -585,17 +539,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Crude Oil",
-                "amount": 2
+                "amount": 30
             },
             {
                 "itemName": "Empty Canister",
-                "amount": 2
+                "amount": 30
             }
         ],
         "outputs": [
             {
                 "itemName": "Packaged Oil",
-                "amount": 2
+                "amount": 30
             }
         ]
     },
@@ -604,17 +558,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Heavy Oil Residue",
-                "amount": 2
+                "amount": 30
             },
             {
                 "itemName": "Empty Canister",
-                "amount": 2
+                "amount": 30
             }
         ],
         "outputs": [
             {
                 "itemName": "Packaged Heavy Oil Residue",
-                "amount": 2
+                "amount": 30
             }
         ]
     },
@@ -623,17 +577,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Water",
-                "amount": 2
+                "amount": 60
             },
             {
                 "itemName": "Empty Canister",
-                "amount": 2
+                "amount": 60
             }
         ],
         "outputs": [
             {
                 "itemName": "Packaged Water",
-                "amount": 2
+                "amount": 60
             }
         ]
     },
@@ -642,17 +596,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Packaged Liquid Biofuel",
-                "amount": 2
+                "amount": 60
             }
         ],
         "outputs": [
             {
                 "itemName": "Liquid Biofuel",
-                "amount": 2
+                "amount": 60
             },
             {
                 "itemName": "Empty Canister",
-                "amount": 2
+                "amount": 60
             }
         ]
     },
@@ -661,17 +615,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Packaged Fuel",
-                "amount": 2
+                "amount": 60
             }
         ],
         "outputs": [
             {
                 "itemName": "Fuel",
-                "amount": 2
+                "amount": 60
             },
             {
                 "itemName": "Empty Canister",
-                "amount": 2
+                "amount": 60
             }
         ]
     },
@@ -680,17 +634,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Packaged Oil",
-                "amount": 2
+                "amount": 60
             }
         ],
         "outputs": [
             {
                 "itemName": "Crude Oil",
-                "amount": 2
+                "amount": 60
             },
             {
                 "itemName": "Empty Canister",
-                "amount": 2
+                "amount": 60
             }
         ]
     },
@@ -699,17 +653,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Packaged Heavy Oil Residue",
-                "amount": 2
+                "amount": 20
             }
         ],
         "outputs": [
             {
                 "itemName": "Heavy Oil Residue",
-                "amount": 2
+                "amount": 20
             },
             {
                 "itemName": "Empty Canister",
-                "amount": 2
+                "amount": 20
             }
         ]
     },
@@ -718,17 +672,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Packaged Water",
-                "amount": 2
+                "amount": 120
             }
         ],
         "outputs": [
             {
                 "itemName": "Water",
-                "amount": 2
+                "amount": 120
             },
             {
                 "itemName": "Empty Canister",
-                "amount": 2
+                "amount": 120
             }
         ]
     },
@@ -737,17 +691,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Iron Ingot",
-                "amount": 10
+                "amount": 50
             },
             {
                 "itemName": "Plastic",
-                "amount": 2
+                "amount": 10
             }
         ],
         "outputs": [
             {
                 "itemName": "Iron Plate",
-                "amount": 15
+                "amount": 75
             }
         ]
     },
@@ -756,17 +710,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Iron Ore",
-                "amount": 15
+                "amount": 75
             },
             {
                 "itemName": "Petroleum Coke",
-                "amount": 15
+                "amount": 75
             }
         ],
         "outputs": [
             {
                 "itemName": "Steel Ingot",
-                "amount": 20
+                "amount": 100
             }
         ]
     },
@@ -775,17 +729,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Copper Ore",
-                "amount": 10
+                "amount": 50
             },
             {
                 "itemName": "Iron Ore",
-                "amount": 5
+                "amount": 25
             }
         ],
         "outputs": [
             {
                 "itemName": "Copper Ingot",
-                "amount": 20
+                "amount": 100
             }
         ]
     },
@@ -794,17 +748,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Copper Sheet",
-                "amount": 6
+                "amount": 22.5
             },
             {
                 "itemName": "Screw",
-                "amount": 52
+                "amount": 195
             }
         ],
         "outputs": [
             {
                 "itemName": "Rotor",
-                "amount": 3
+                "amount": 11.25
             }
         ]
     },
@@ -813,17 +767,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Heavy Oil Residue",
-                "amount": 1
+                "amount": 30
             },
             {
                 "itemName": "Packaged Water",
-                "amount": 2
+                "amount": 60
             }
         ],
         "outputs": [
             {
                 "itemName": "Packaged Fuel",
-                "amount": 2
+                "amount": 60
             }
         ]
     },
@@ -832,21 +786,21 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Alumina Solution",
-                "amount": 12
+                "amount": 180
             },
             {
                 "itemName": "Petroleum Coke",
-                "amount": 4
+                "amount": 60
             }
         ],
         "outputs": [
             {
                 "itemName": "Aluminum Scrap",
-                "amount": 20
+                "amount": 300
             },
             {
                 "itemName": "Water",
-                "amount": 7
+                "amount": 105
             }
         ]
     },
@@ -855,25 +809,25 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Uranium",
-                "amount": 10
+                "amount": 50
             },
             {
                 "itemName": "Concrete",
-                "amount": 3
+                "amount": 15
             },
             {
                 "itemName": "Sulfuric Acid",
-                "amount": 8
+                "amount": 40
             }
         ],
         "outputs": [
             {
                 "itemName": "Encased Uranium Cell",
-                "amount": 5
+                "amount": 25
             },
             {
                 "itemName": "Sulfuric Acid",
-                "amount": 2
+                "amount": 10
             }
         ]
     },
@@ -882,25 +836,25 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Heat Sink",
-                "amount": 2
+                "amount": 12
             },
             {
                 "itemName": "Rubber",
-                "amount": 2
+                "amount": 12
             },
             {
                 "itemName": "Water",
-                "amount": 5
+                "amount": 30
             },
             {
                 "itemName": "Nitrogen Gas",
-                "amount": 25
+                "amount": 150
             }
         ],
         "outputs": [
             {
                 "itemName": "Cooling System",
-                "amount": 1
+                "amount": 6
             }
         ]
     },
@@ -909,21 +863,21 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Nitrogen Gas",
-                "amount": 12
+                "amount": 120
             },
             {
                 "itemName": "Water",
-                "amount": 3
+                "amount": 30
             },
             {
                 "itemName": "Iron Plate",
-                "amount": 1
+                "amount": 10
             }
         ],
         "outputs": [
             {
                 "itemName": "Nitric Acid",
-                "amount": 3
+                "amount": 30
             }
         ]
     },
@@ -932,29 +886,29 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Uranium Waste",
-                "amount": 15
+                "amount": 37.5
             },
             {
                 "itemName": "Silica",
-                "amount": 10
+                "amount": 25
             },
             {
                 "itemName": "Nitric Acid",
-                "amount": 6
+                "amount": 15
             },
             {
                 "itemName": "Sulfuric Acid",
-                "amount": 6
+                "amount": 15
             }
         ],
         "outputs": [
             {
                 "itemName": "Non-fissile Uranium",
-                "amount": 20
+                "amount": 50
             },
             {
                 "itemName": "Water",
-                "amount": 6
+                "amount": 15
             }
         ]
     },
@@ -963,13 +917,13 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Aluminum Ingot",
-                "amount": 3
+                "amount": 90
             }
         ],
         "outputs": [
             {
                 "itemName": "Aluminum Casing",
-                "amount": 2
+                "amount": 60
             }
         ]
     },
@@ -978,17 +932,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Aluminum Ingot",
-                "amount": 3
+                "amount": 30
             },
             {
                 "itemName": "Copper Ingot",
-                "amount": 1
+                "amount": 10
             }
         ],
         "outputs": [
             {
                 "itemName": "Alclad Aluminum Sheet",
-                "amount": 3
+                "amount": 30
             }
         ]
     },
@@ -997,21 +951,21 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Aluminum Casing",
-                "amount": 32
+                "amount": 40
             },
             {
                 "itemName": "Crystal Oscillator",
-                "amount": 1
+                "amount": 1.25
             },
             {
                 "itemName": "Computer",
-                "amount": 1
+                "amount": 1.25
             }
         ],
         "outputs": [
             {
                 "itemName": "Radio Control Unit",
-                "amount": 2
+                "amount": 2.5
             }
         ]
     },
@@ -1020,21 +974,21 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Bauxite",
-                "amount": 12
+                "amount": 120
             },
             {
                 "itemName": "Water",
-                "amount": 18
+                "amount": 180
             }
         ],
         "outputs": [
             {
                 "itemName": "Alumina Solution",
-                "amount": 12
+                "amount": 120
             },
             {
                 "itemName": "Silica",
-                "amount": 5
+                "amount": 50
             }
         ]
     },
@@ -1043,21 +997,21 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Alumina Solution",
-                "amount": 4
+                "amount": 240
             },
             {
                 "itemName": "Coal",
-                "amount": 2
+                "amount": 120
             }
         ],
         "outputs": [
             {
                 "itemName": "Aluminum Scrap",
-                "amount": 6
+                "amount": 360
             },
             {
                 "itemName": "Water",
-                "amount": 2
+                "amount": 120
             }
         ]
     },
@@ -1066,17 +1020,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Alumina Solution",
-                "amount": 2
+                "amount": 120
             },
             {
                 "itemName": "Empty Canister",
-                "amount": 2
+                "amount": 120
             }
         ],
         "outputs": [
             {
                 "itemName": "Packaged Alumina Solution",
-                "amount": 2
+                "amount": 120
             }
         ]
     },
@@ -1085,17 +1039,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Aluminum Scrap",
-                "amount": 6
+                "amount": 90
             },
             {
                 "itemName": "Silica",
-                "amount": 5
+                "amount": 75
             }
         ],
         "outputs": [
             {
                 "itemName": "Aluminum Ingot",
-                "amount": 4
+                "amount": 60
             }
         ]
     },
@@ -1104,13 +1058,13 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Raw Quartz",
-                "amount": 5
+                "amount": 37.5
             }
         ],
         "outputs": [
             {
                 "itemName": "Quartz Crystal",
-                "amount": 3
+                "amount": 22.5
             }
         ]
     },
@@ -1119,21 +1073,21 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Quartz Crystal",
-                "amount": 36
+                "amount": 18
             },
             {
                 "itemName": "Cable",
-                "amount": 28
+                "amount": 14
             },
             {
                 "itemName": "Reinforced Iron Plate",
-                "amount": 5
+                "amount": 2.5
             }
         ],
         "outputs": [
             {
                 "itemName": "Crystal Oscillator",
-                "amount": 2
+                "amount": 1
             }
         ]
     },
@@ -1142,17 +1096,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Packaged Alumina Solution",
-                "amount": 2
+                "amount": 120
             }
         ],
         "outputs": [
             {
                 "itemName": "Alumina Solution",
-                "amount": 2
+                "amount": 120
             },
             {
                 "itemName": "Empty Canister",
-                "amount": 2
+                "amount": 120
             }
         ]
     },
@@ -1161,17 +1115,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Rubber",
-                "amount": 6
+                "amount": 30
             },
             {
                 "itemName": "Petroleum Coke",
-                "amount": 9
+                "amount": 45
             }
         ],
         "outputs": [
             {
                 "itemName": "Circuit Board",
-                "amount": 1
+                "amount": 5
             }
         ]
     },
@@ -1180,21 +1134,21 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Modular Frame",
-                "amount": 1
+                "amount": 3.75
             },
             {
                 "itemName": "Steel Beam",
-                "amount": 6
+                "amount": 22.5
             },
             {
                 "itemName": "Rubber",
-                "amount": 8
+                "amount": 30
             }
         ],
         "outputs": [
             {
                 "itemName": "Versatile Framework",
-                "amount": 2
+                "amount": 7.5
             }
         ]
     },
@@ -1203,17 +1157,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Copper Ingot",
-                "amount": 4
+                "amount": 12
             },
             {
                 "itemName": "Caterium Ingot",
-                "amount": 1
+                "amount": 3
             }
         ],
         "outputs": [
             {
                 "itemName": "Wire",
-                "amount": 30
+                "amount": 90
             }
         ]
     },
@@ -1222,25 +1176,25 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Modular Frame",
-                "amount": 5
+                "amount": 18.75
             },
             {
                 "itemName": "Encased Industrial Beam",
-                "amount": 3
+                "amount": 11.25
             },
             {
                 "itemName": "Rubber",
-                "amount": 20
+                "amount": 75
             },
             {
                 "itemName": "Screw",
-                "amount": 104
+                "amount": 390
             }
         ],
         "outputs": [
             {
                 "itemName": "Heavy Modular Frame",
-                "amount": 1
+                "amount": 3.75
             }
         ]
     },
@@ -1249,25 +1203,25 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Circuit Board",
-                "amount": 10
+                "amount": 25
             },
             {
                 "itemName": "Cable",
-                "amount": 9
+                "amount": 22.5
             },
             {
                 "itemName": "Plastic",
-                "amount": 18
+                "amount": 45
             },
             {
                 "itemName": "Screw",
-                "amount": 52
+                "amount": 130
             }
         ],
         "outputs": [
             {
                 "itemName": "Computer",
-                "amount": 1
+                "amount": 2.5
             }
         ]
     },
@@ -1299,25 +1253,25 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Automated Wiring",
-                "amount": 15
+                "amount": 7.5
             },
             {
                 "itemName": "Circuit Board",
-                "amount": 10
+                "amount": 5
             },
             {
                 "itemName": "Heavy Modular Frame",
-                "amount": 2
+                "amount": 1
             },
             {
                 "itemName": "Computer",
-                "amount": 2
+                "amount": 1
             }
         ],
         "outputs": [
             {
                 "itemName": "Adaptive Control Unit",
-                "amount": 2
+                "amount": 1
             }
         ]
     },
@@ -1326,17 +1280,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Crude Oil",
-                "amount": 3
+                "amount": 30
             }
         ],
         "outputs": [
             {
                 "itemName": "Heavy Oil Residue",
-                "amount": 4
+                "amount": 40
             },
             {
                 "itemName": "Polymer Resin",
-                "amount": 2
+                "amount": 20
             }
         ]
     },
@@ -1345,21 +1299,21 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Stator",
-                "amount": 2
+                "amount": 3.75
             },
             {
                 "itemName": "Wire",
-                "amount": 40
+                "amount": 75
             },
             {
                 "itemName": "High-Speed Connector",
-                "amount": 1
+                "amount": 1.88
             }
         ],
         "outputs": [
             {
                 "itemName": "Automated Wiring",
-                "amount": 4
+                "amount": 7.5
             }
         ]
     },
@@ -1368,17 +1322,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Steel Beam",
-                "amount": 4
+                "amount": 24
             },
             {
                 "itemName": "Concrete",
-                "amount": 5
+                "amount": 30
             }
         ],
         "outputs": [
             {
                 "itemName": "Encased Industrial Beam",
-                "amount": 1
+                "amount": 6
             }
         ]
     },
@@ -1387,17 +1341,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Rotor",
-                "amount": 2
+                "amount": 10
             },
             {
                 "itemName": "Stator",
-                "amount": 2
+                "amount": 10
             }
         ],
         "outputs": [
             {
                 "itemName": "Motor",
-                "amount": 1
+                "amount": 5
             }
         ]
     },
@@ -1406,17 +1360,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Steel Pipe",
-                "amount": 3
+                "amount": 15
             },
             {
                 "itemName": "Wire",
-                "amount": 8
+                "amount": 40
             }
         ],
         "outputs": [
             {
                 "itemName": "Stator",
-                "amount": 1
+                "amount": 5
             }
         ]
     },
@@ -1425,25 +1379,25 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Modular Frame",
-                "amount": 5
+                "amount": 10
             },
             {
                 "itemName": "Steel Pipe",
-                "amount": 15
+                "amount": 30
             },
             {
                 "itemName": "Encased Industrial Beam",
-                "amount": 5
+                "amount": 10
             },
             {
                 "itemName": "Screw",
-                "amount": 100
+                "amount": 200
             }
         ],
         "outputs": [
             {
                 "itemName": "Heavy Modular Frame",
-                "amount": 1
+                "amount": 2
             }
         ]
     },
@@ -1452,17 +1406,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Stator",
-                "amount": 1
+                "amount": 2.5
             },
             {
                 "itemName": "Cable",
-                "amount": 20
+                "amount": 50
             }
         ],
         "outputs": [
             {
                 "itemName": "Automated Wiring",
-                "amount": 1
+                "amount": 2.5
             }
         ]
     },
@@ -1471,17 +1425,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Copper Sheet",
-                "amount": 5
+                "amount": 25
             },
             {
                 "itemName": "Quickwire",
-                "amount": 20
+                "amount": 100
             }
         ],
         "outputs": [
             {
                 "itemName": "AI Limiter",
-                "amount": 1
+                "amount": 5
             }
         ]
     },
@@ -1490,21 +1444,21 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Reinforced Iron Plate",
-                "amount": 1
+                "amount": 2.5
             },
             {
                 "itemName": "Rotor",
-                "amount": 1
+                "amount": 2.5
             },
             {
                 "itemName": "Plastic",
-                "amount": 3
+                "amount": 7.5
             }
         ],
         "outputs": [
             {
                 "itemName": "Smart Plating",
-                "amount": 2
+                "amount": 5
             }
         ]
     },
@@ -1513,17 +1467,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Polymer Resin",
-                "amount": 16
+                "amount": 80
             },
             {
                 "itemName": "Water",
-                "amount": 10
+                "amount": 50
             }
         ],
         "outputs": [
             {
                 "itemName": "Fabric",
-                "amount": 1
+                "amount": 5
             }
         ]
     },
@@ -1532,17 +1486,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Mycelia",
-                "amount": 1
+                "amount": 15
             },
             {
                 "itemName": "Biomass",
-                "amount": 5
+                "amount": 75
             }
         ],
         "outputs": [
             {
                 "itemName": "Fabric",
-                "amount": 1
+                "amount": 15
             }
         ]
     },
@@ -1551,17 +1505,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Crude Oil",
-                "amount": 6
+                "amount": 60
             }
         ],
         "outputs": [
             {
                 "itemName": "Polymer Resin",
-                "amount": 13
+                "amount": 130
             },
             {
                 "itemName": "Heavy Oil Residue",
-                "amount": 2
+                "amount": 20
             }
         ]
     },
@@ -1570,13 +1524,13 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Aluminum Scrap",
-                "amount": 2
+                "amount": 60
             }
         ],
         "outputs": [
             {
                 "itemName": "Aluminum Ingot",
-                "amount": 1
+                "amount": 30
             }
         ]
     },
@@ -1585,17 +1539,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Caterium Ore",
-                "amount": 2
+                "amount": 24
             },
             {
                 "itemName": "Water",
-                "amount": 2
+                "amount": 24
             }
         ],
         "outputs": [
             {
                 "itemName": "Caterium Ingot",
-                "amount": 1
+                "amount": 12
             }
         ]
     },
@@ -1604,17 +1558,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Copper Ore",
-                "amount": 6
+                "amount": 15
             },
             {
                 "itemName": "Water",
-                "amount": 4
+                "amount": 10
             }
         ],
         "outputs": [
             {
                 "itemName": "Copper Ingot",
-                "amount": 15
+                "amount": 37.5
             }
         ]
     },
@@ -1623,17 +1577,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Iron Ore",
-                "amount": 7
+                "amount": 35
             },
             {
                 "itemName": "Water",
-                "amount": 4
+                "amount": 20
             }
         ],
         "outputs": [
             {
                 "itemName": "Iron Ingot",
-                "amount": 13
+                "amount": 65
             }
         ]
     },
@@ -1642,17 +1596,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Raw Quartz",
-                "amount": 9
+                "amount": 67.5
             },
             {
                 "itemName": "Water",
-                "amount": 5
+                "amount": 37.5
             }
         ],
         "outputs": [
             {
                 "itemName": "Quartz Crystal",
-                "amount": 7
+                "amount": 52.5
             }
         ]
     },
@@ -1661,17 +1615,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Plastic",
-                "amount": 6
+                "amount": 30
             },
             {
                 "itemName": "Fuel",
-                "amount": 6
+                "amount": 30
             }
         ],
         "outputs": [
             {
                 "itemName": "Rubber",
-                "amount": 12
+                "amount": 60
             }
         ]
     },
@@ -1680,17 +1634,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Limestone",
-                "amount": 10
+                "amount": 50
             },
             {
                 "itemName": "Rubber",
-                "amount": 2
+                "amount": 10
             }
         ],
         "outputs": [
             {
                 "itemName": "Concrete",
-                "amount": 9
+                "amount": 45
             }
         ]
     },
@@ -1699,17 +1653,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Copper Ingot",
-                "amount": 3
+                "amount": 22.5
             },
             {
                 "itemName": "Water",
-                "amount": 3
+                "amount": 22.5
             }
         ],
         "outputs": [
             {
                 "itemName": "Copper Sheet",
-                "amount": 3
+                "amount": 22.5
             }
         ]
     },
@@ -1718,13 +1672,13 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Steel Ingot",
-                "amount": 3
+                "amount": 60
             }
         ],
         "outputs": [
             {
                 "itemName": "Empty Canister",
-                "amount": 2
+                "amount": 40
             }
         ]
     },
@@ -1733,17 +1687,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Steel Ingot",
-                "amount": 3
+                "amount": 7.5
             },
             {
                 "itemName": "Plastic",
-                "amount": 2
+                "amount": 5
             }
         ],
         "outputs": [
             {
                 "itemName": "Iron Plate",
-                "amount": 18
+                "amount": 45
             }
         ]
     },
@@ -1752,13 +1706,13 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Steel Ingot",
-                "amount": 1
+                "amount": 12
             }
         ],
         "outputs": [
             {
                 "itemName": "Iron Rod",
-                "amount": 4
+                "amount": 48
             }
         ]
     },
@@ -1767,13 +1721,13 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Steel Ingot",
-                "amount": 4
+                "amount": 60
             }
         ],
         "outputs": [
             {
                 "itemName": "Steel Beam",
-                "amount": 1
+                "amount": 15
             }
         ]
     },
@@ -1782,13 +1736,13 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Steel Ingot",
-                "amount": 3
+                "amount": 30
             }
         ],
         "outputs": [
             {
                 "itemName": "Steel Pipe",
-                "amount": 2
+                "amount": 20
             }
         ]
     },
@@ -1797,17 +1751,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Iron Ore",
-                "amount": 3
+                "amount": 45
             },
             {
                 "itemName": "Coal",
-                "amount": 3
+                "amount": 45
             }
         ],
         "outputs": [
             {
                 "itemName": "Steel Ingot",
-                "amount": 3
+                "amount": 45
             }
         ]
     },
@@ -1816,17 +1770,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Modular Frame",
-                "amount": 1
+                "amount": 2.5
             },
             {
                 "itemName": "Steel Beam",
-                "amount": 12
+                "amount": 30
             }
         ],
         "outputs": [
             {
                 "itemName": "Versatile Framework",
-                "amount": 2
+                "amount": 5
             }
         ]
     },
@@ -1835,17 +1789,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Heavy Oil Residue",
-                "amount": 5
+                "amount": 37.5
             },
             {
                 "itemName": "Compacted Coal",
-                "amount": 4
+                "amount": 30
             }
         ],
         "outputs": [
             {
                 "itemName": "Turbofuel",
-                "amount": 4
+                "amount": 30
             }
         ]
     },
@@ -1854,17 +1808,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Turbofuel",
-                "amount": 2
+                "amount": 20
             },
             {
                 "itemName": "Empty Canister",
-                "amount": 2
+                "amount": 20
             }
         ],
         "outputs": [
             {
                 "itemName": "Packaged Turbofuel",
-                "amount": 2
+                "amount": 20
             }
         ]
     },
@@ -1873,17 +1827,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Packaged Turbofuel",
-                "amount": 2
+                "amount": 20
             }
         ],
         "outputs": [
             {
                 "itemName": "Turbofuel",
-                "amount": 2
+                "amount": 20
             },
             {
                 "itemName": "Empty Canister",
-                "amount": 2
+                "amount": 20
             }
         ]
     },
@@ -1892,13 +1846,13 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Wood",
-                "amount": 1
+                "amount": 15
             }
         ],
         "outputs": [
             {
                 "itemName": "Coal",
-                "amount": 10
+                "amount": 150
             }
         ]
     },
@@ -1907,13 +1861,13 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Biomass",
-                "amount": 5
+                "amount": 37.5
             }
         ],
         "outputs": [
             {
                 "itemName": "Coal",
-                "amount": 6
+                "amount": 45
             }
         ]
     },
@@ -1922,17 +1876,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Coal",
-                "amount": 5
+                "amount": 25
             },
             {
                 "itemName": "Sulfur",
-                "amount": 5
+                "amount": 25
             }
         ],
         "outputs": [
             {
                 "itemName": "Compacted Coal",
-                "amount": 5
+                "amount": 25
             }
         ]
     },
@@ -1941,17 +1895,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Limestone",
-                "amount": 6
+                "amount": 120
             },
             {
                 "itemName": "Water",
-                "amount": 5
+                "amount": 100
             }
         ],
         "outputs": [
             {
                 "itemName": "Concrete",
-                "amount": 4
+                "amount": 80
             }
         ]
     },
@@ -1960,17 +1914,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Aluminum Ingot",
-                "amount": 20
+                "amount": 150
             },
             {
                 "itemName": "Copper Ingot",
-                "amount": 10
+                "amount": 75
             }
         ],
         "outputs": [
             {
                 "itemName": "Aluminum Casing",
-                "amount": 15
+                "amount": 112.5
             }
         ]
     },
@@ -2006,25 +1960,25 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Sulfur",
-                "amount": 6
+                "amount": 45
             },
             {
                 "itemName": "Alclad Aluminum Sheet",
-                "amount": 7
+                "amount": 52.5
             },
             {
                 "itemName": "Plastic",
-                "amount": 8
+                "amount": 60
             },
             {
                 "itemName": "Wire",
-                "amount": 12
+                "amount": 90
             }
         ],
         "outputs": [
             {
                 "itemName": "Battery",
-                "amount": 4
+                "amount": 30
             }
         ]
     },
@@ -2033,25 +1987,25 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Sulfuric Acid",
-                "amount": 2.5
+                "amount": 50
             },
             {
                 "itemName": "Alumina Solution",
-                "amount": 2
+                "amount": 40
             },
             {
                 "itemName": "Aluminum Casing",
-                "amount": 1
+                "amount": 20
             }
         ],
         "outputs": [
             {
                 "itemName": "Battery",
-                "amount": 1
+                "amount": 20
             },
             {
                 "itemName": "Water",
-                "amount": 1.5
+                "amount": 30
             }
         ]
     },
@@ -2060,25 +2014,25 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Computer",
-                "amount": 2
+                "amount": 3.75
             },
             {
                 "itemName": "AI Limiter",
-                "amount": 2
+                "amount": 3.75
             },
             {
                 "itemName": "High-Speed Connector",
-                "amount": 3
+                "amount": 5.63
             },
             {
                 "itemName": "Plastic",
-                "amount": 28
+                "amount": 52.5
             }
         ],
         "outputs": [
             {
                 "itemName": "Supercomputer",
-                "amount": 1
+                "amount": 1.88
             }
         ]
     },
@@ -2087,17 +2041,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Sulfur",
-                "amount": 5
+                "amount": 50
             },
             {
                 "itemName": "Water",
-                "amount": 5
+                "amount": 50
             }
         ],
         "outputs": [
             {
                 "itemName": "Sulfuric Acid",
-                "amount": 5
+                "amount": 50
             }
         ]
     },
@@ -2106,17 +2060,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Sulfuric Acid",
-                "amount": 2
+                "amount": 40
             },
             {
                 "itemName": "Empty Canister",
-                "amount": 2
+                "amount": 40
             }
         ],
         "outputs": [
             {
                 "itemName": "Packaged Sulfuric Acid",
-                "amount": 2
+                "amount": 40
             }
         ]
     },
@@ -2125,17 +2079,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Adaptive Control Unit",
-                "amount": 2
+                "amount": 1.5
             },
             {
                 "itemName": "Supercomputer",
-                "amount": 1
+                "amount": 0.75
             }
         ],
         "outputs": [
             {
                 "itemName": "Assembly Director System",
-                "amount": 1
+                "amount": 0.75
             }
         ]
     },
@@ -2144,21 +2098,21 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Quickwire",
-                "amount": 56
+                "amount": 210
             },
             {
                 "itemName": "Cable",
-                "amount": 10
+                "amount": 37.5
             },
             {
                 "itemName": "Circuit Board",
-                "amount": 1
+                "amount": 3.75
             }
         ],
         "outputs": [
             {
                 "itemName": "High-Speed Connector",
-                "amount": 1
+                "amount": 3.75
             }
         ]
     },
@@ -2167,17 +2121,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Packaged Sulfuric Acid",
-                "amount": 1
+                "amount": 60
             }
         ],
         "outputs": [
             {
                 "itemName": "Sulfuric Acid",
-                "amount": 1
+                "amount": 60
             },
             {
                 "itemName": "Empty Canister",
-                "amount": 1
+                "amount": 60
             }
         ]
     },
@@ -2186,21 +2140,21 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Heat Sink",
-                "amount": 5
+                "amount": 9.38
             },
             {
                 "itemName": "Motor",
-                "amount": 1
+                "amount": 1.88
             },
             {
                 "itemName": "Nitrogen Gas",
-                "amount": 24
+                "amount": 45
             }
         ],
         "outputs": [
             {
                 "itemName": "Cooling System",
-                "amount": 2
+                "amount": 3.75
             }
         ]
     },
@@ -2209,17 +2163,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Alclad Aluminum Sheet",
-                "amount": 5
+                "amount": 37.5
             },
             {
                 "itemName": "Copper Sheet",
-                "amount": 3
+                "amount": 22.5
             }
         ],
         "outputs": [
             {
                 "itemName": "Heat Sink",
-                "amount": 1
+                "amount": 7.5
             }
         ]
     },
@@ -2228,21 +2182,21 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Heavy Modular Frame",
-                "amount": 1
+                "amount": 1.5
             },
             {
                 "itemName": "Aluminum Casing",
-                "amount": 50
+                "amount": 75
             },
             {
                 "itemName": "Nitrogen Gas",
-                "amount": 25
+                "amount": 37.5
             }
         ],
         "outputs": [
             {
                 "itemName": "Fused Modular Frame",
-                "amount": 1
+                "amount": 1.5
             }
         ]
     },
@@ -2251,13 +2205,13 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Aluminum Ingot",
-                "amount": 1
+                "amount": 60
             }
         ],
         "outputs": [
             {
                 "itemName": "Empty Fluid Tank",
-                "amount": 1
+                "amount": 60
             }
         ]
     },
@@ -2266,17 +2220,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Nitrogen Gas",
-                "amount": 4
+                "amount": 240
             },
             {
                 "itemName": "Empty Fluid Tank",
-                "amount": 1
+                "amount": 60
             }
         ],
         "outputs": [
             {
                 "itemName": "Packaged Nitrogen Gas",
-                "amount": 1
+                "amount": 60
             }
         ]
     },
@@ -2285,17 +2239,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Packaged Nitrogen Gas",
-                "amount": 1
+                "amount": 60
             }
         ],
         "outputs": [
             {
                 "itemName": "Nitrogen Gas",
-                "amount": 4
+                "amount": 240
             },
             {
                 "itemName": "Empty Fluid Tank",
-                "amount": 1
+                "amount": 60
             }
         ]
     },
@@ -2304,17 +2258,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Heavy Oil Residue",
-                "amount": 5
+                "amount": 50
             },
             {
                 "itemName": "Water",
-                "amount": 10
+                "amount": 100
             }
         ],
         "outputs": [
             {
                 "itemName": "Fuel",
-                "amount": 10
+                "amount": 100
             }
         ]
     },
@@ -2323,17 +2277,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Electromagnetic Control Rod",
-                "amount": 1
+                "amount": 3.75
             },
             {
                 "itemName": "Rotor",
-                "amount": 2
+                "amount": 7.5
             }
         ],
         "outputs": [
             {
                 "itemName": "Motor",
-                "amount": 2
+                "amount": 7.5
             }
         ]
     },
@@ -2342,29 +2296,29 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Uranium",
-                "amount": 5
+                "amount": 25
             },
             {
                 "itemName": "Uranium Waste",
-                "amount": 5
+                "amount": 25
             },
             {
                 "itemName": "Nitric Acid",
-                "amount": 3
+                "amount": 15
             },
             {
                 "itemName": "Sulfuric Acid",
-                "amount": 5
+                "amount": 25
             }
         ],
         "outputs": [
             {
                 "itemName": "Non-fissile Uranium",
-                "amount": 20
+                "amount": 100
             },
             {
                 "itemName": "Water",
-                "amount": 8
+                "amount": 40
             }
         ]
     },
@@ -2373,17 +2327,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Plutonium Pellet",
-                "amount": 2
+                "amount": 10
             },
             {
                 "itemName": "Concrete",
-                "amount": 4
+                "amount": 20
             }
         ],
         "outputs": [
             {
                 "itemName": "Encased Plutonium Cell",
-                "amount": 1
+                "amount": 5
             }
         ]
     },
@@ -2411,13 +2365,13 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Copper Ingot",
-                "amount": 30
+                "amount": 300
             }
         ],
         "outputs": [
             {
                 "itemName": "Copper Powder",
-                "amount": 5
+                "amount": 50
             }
         ]
     },
@@ -2445,25 +2399,25 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Encased Plutonium Cell",
-                "amount": 30
+                "amount": 7.5
             },
             {
                 "itemName": "Steel Beam",
-                "amount": 18
+                "amount": 4.5
             },
             {
                 "itemName": "Electromagnetic Control Rod",
-                "amount": 6
+                "amount": 1.5
             },
             {
                 "itemName": "Heat Sink",
-                "amount": 10
+                "amount": 2.5
             }
         ],
         "outputs": [
             {
                 "itemName": "Plutonium Fuel Rod",
-                "amount": 1
+                "amount": 0.25
             }
         ]
     },
@@ -2472,17 +2426,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Nitric Acid",
-                "amount": 1
+                "amount": 30
             },
             {
                 "itemName": "Empty Fluid Tank",
-                "amount": 1
+                "amount": 30
             }
         ],
         "outputs": [
             {
                 "itemName": "Packaged Nitric Acid",
-                "amount": 1
+                "amount": 30
             }
         ]
     },
@@ -2491,17 +2445,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Copper Powder",
-                "amount": 200
+                "amount": 100
             },
             {
                 "itemName": "Pressure Conversion Cube",
-                "amount": 1
+                "amount": 0.5
             }
         ],
         "outputs": [
             {
                 "itemName": "Nuclear Pasta",
-                "amount": 1
+                "amount": 0.5
             }
         ]
     },
@@ -2510,17 +2464,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Packaged Nitric Acid",
-                "amount": 1
+                "amount": 20
             }
         ],
         "outputs": [
             {
                 "itemName": "Nitric Acid",
-                "amount": 1
+                "amount": 20
             },
             {
                 "itemName": "Empty Fluid Tank",
-                "amount": 1
+                "amount": 20
             }
         ]
     },
@@ -2529,25 +2483,25 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Heavy Modular Frame",
-                "amount": 1
+                "amount": 3
             },
             {
                 "itemName": "Aluminum Ingot",
-                "amount": 50
+                "amount": 150
             },
             {
                 "itemName": "Nitric Acid",
-                "amount": 8
+                "amount": 24
             },
             {
                 "itemName": "Fuel",
-                "amount": 10
+                "amount": 30
             }
         ],
         "outputs": [
             {
                 "itemName": "Fused Modular Frame",
-                "amount": 1
+                "amount": 3
             }
         ]
     },
@@ -2556,17 +2510,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Non-fissile Uranium",
-                "amount": 150
+                "amount": 75
             },
             {
                 "itemName": "Aluminum Casing",
-                "amount": 20
+                "amount": 10
             }
         ],
         "outputs": [
             {
                 "itemName": "Encased Plutonium Cell",
-                "amount": 20
+                "amount": 10
             }
         ]
     },
@@ -2575,29 +2529,29 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Bauxite",
-                "amount": 15
+                "amount": 150
             },
             {
                 "itemName": "Coal",
-                "amount": 10
+                "amount": 100
             },
             {
                 "itemName": "Sulfuric Acid",
-                "amount": 5
+                "amount": 50
             },
             {
                 "itemName": "Water",
-                "amount": 6
+                "amount": 60
             }
         ],
         "outputs": [
             {
                 "itemName": "Aluminum Scrap",
-                "amount": 30
+                "amount": 300
             },
             {
                 "itemName": "Water",
-                "amount": 5
+                "amount": 50
             }
         ]
     },
@@ -2606,17 +2560,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Radio Control Unit",
-                "amount": 3
+                "amount": 9
             },
             {
                 "itemName": "Cooling System",
-                "amount": 3
+                "amount": 9
             }
         ],
         "outputs": [
             {
                 "itemName": "Supercomputer",
-                "amount": 1
+                "amount": 3
             }
         ]
     },
@@ -2625,17 +2579,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Encased Plutonium Cell",
-                "amount": 20
+                "amount": 10
             },
             {
                 "itemName": "Pressure Conversion Cube",
-                "amount": 1
+                "amount": 0.5
             }
         ],
         "outputs": [
             {
                 "itemName": "Plutonium Fuel Rod",
-                "amount": 1
+                "amount": 0.5
             }
         ]
     },
@@ -2644,25 +2598,25 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Crystal Oscillator",
-                "amount": 1
+                "amount": 1.5
             },
             {
                 "itemName": "Circuit Board",
-                "amount": 10
+                "amount": 15
             },
             {
                 "itemName": "Aluminum Casing",
-                "amount": 60
+                "amount": 90
             },
             {
                 "itemName": "Rubber",
-                "amount": 30
+                "amount": 45
             }
         ],
         "outputs": [
             {
                 "itemName": "Radio Control Unit",
-                "amount": 3
+                "amount": 4.5
             }
         ]
     },
@@ -2671,17 +2625,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Bauxite",
-                "amount": 10
+                "amount": 200
             },
             {
                 "itemName": "Water",
-                "amount": 10
+                "amount": 200
             }
         ],
         "outputs": [
             {
                 "itemName": "Alumina Solution",
-                "amount": 12
+                "amount": 240
             }
         ]
     },
@@ -2690,25 +2644,25 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Computer",
-                "amount": 3
+                "amount": 3.6
             },
             {
                 "itemName": "Electromagnetic Control Rod",
-                "amount": 2
+                "amount": 2.4
             },
             {
                 "itemName": "Battery",
-                "amount": 20
+                "amount": 24
             },
             {
                 "itemName": "Wire",
-                "amount": 45
+                "amount": 54
             }
         ],
         "outputs": [
             {
                 "itemName": "Supercomputer",
-                "amount": 2
+                "amount": 2.4
             }
         ]
     },
@@ -2717,17 +2671,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Stator",
-                "amount": 3
+                "amount": 6
             },
             {
                 "itemName": "AI Limiter",
-                "amount": 2
+                "amount": 4
             }
         ],
         "outputs": [
             {
                 "itemName": "Electromagnetic Control Rod",
-                "amount": 2
+                "amount": 4
             }
         ]
     },
@@ -2736,21 +2690,21 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Encased Uranium Cell",
-                "amount": 50
+                "amount": 20
             },
             {
                 "itemName": "Encased Industrial Beam",
-                "amount": 3
+                "amount": 1.2
             },
             {
                 "itemName": "Electromagnetic Control Rod",
-                "amount": 5
+                "amount": 2
             }
         ],
         "outputs": [
             {
                 "itemName": "Uranium Fuel Rod",
-                "amount": 1
+                "amount": 0.4
             }
         ]
     },
@@ -2759,21 +2713,21 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Versatile Framework",
-                "amount": 5
+                "amount": 2.5
             },
             {
                 "itemName": "Electromagnetic Control Rod",
-                "amount": 2
+                "amount": 1
             },
             {
                 "itemName": "Battery",
-                "amount": 10
+                "amount": 5
             }
         ],
         "outputs": [
             {
                 "itemName": "Magnetic Field Generator",
-                "amount": 2
+                "amount": 1
             }
         ]
     },
@@ -2782,25 +2736,25 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Fuel",
-                "amount": 2
+                "amount": 15
             },
             {
                 "itemName": "Heavy Oil Residue",
-                "amount": 4
+                "amount": 30
             },
             {
                 "itemName": "Sulfur",
-                "amount": 3
+                "amount": 22.5
             },
             {
                 "itemName": "Petroleum Coke",
-                "amount": 3
+                "amount": 22.5
             }
         ],
         "outputs": [
             {
                 "itemName": "Turbofuel",
-                "amount": 6
+                "amount": 45
             }
         ]
     },
@@ -2809,25 +2763,25 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Motor",
-                "amount": 4
+                "amount": 7.5
             },
             {
                 "itemName": "Pressure Conversion Cube",
-                "amount": 1
+                "amount": 1.88
             },
             {
                 "itemName": "Packaged Nitrogen Gas",
-                "amount": 24
+                "amount": 45
             },
             {
                 "itemName": "Stator",
-                "amount": 8
+                "amount": 15
             }
         ],
         "outputs": [
             {
                 "itemName": "Turbo Motor",
-                "amount": 2
+                "amount": 3.75
             }
         ]
     },
@@ -2836,21 +2790,21 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Steel Beam",
-                "amount": 4
+                "amount": 2
             },
             {
                 "itemName": "Steel Pipe",
-                "amount": 16
+                "amount": 8
             },
             {
                 "itemName": "Crystal Oscillator",
-                "amount": 1
+                "amount": 0.5
             }
         ],
         "outputs": [
             {
                 "itemName": "Beacon",
-                "amount": 20
+                "amount": 10
             }
         ]
     },
@@ -2859,17 +2813,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Wire",
-                "amount": 9
+                "amount": 45
             },
             {
                 "itemName": "Rubber",
-                "amount": 6
+                "amount": 30
             }
         ],
         "outputs": [
             {
                 "itemName": "Cable",
-                "amount": 20
+                "amount": 100
             }
         ]
     },
@@ -2878,17 +2832,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Quickwire",
-                "amount": 3
+                "amount": 7.5
             },
             {
                 "itemName": "Rubber",
-                "amount": 2
+                "amount": 5
             }
         ],
         "outputs": [
             {
                 "itemName": "Cable",
-                "amount": 11
+                "amount": 27.5
             }
         ]
     },
@@ -2897,13 +2851,13 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Caterium Ore",
-                "amount": 3
+                "amount": 45
             }
         ],
         "outputs": [
             {
                 "itemName": "Caterium Ingot",
-                "amount": 1
+                "amount": 15
             }
         ]
     },
@@ -2912,17 +2866,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Copper Sheet",
-                "amount": 11
+                "amount": 27.5
             },
             {
                 "itemName": "Silica",
-                "amount": 11
+                "amount": 27.5
             }
         ],
         "outputs": [
             {
                 "itemName": "Circuit Board",
-                "amount": 5
+                "amount": 12.5
             }
         ]
     },
@@ -2931,17 +2885,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Plastic",
-                "amount": 10
+                "amount": 12.5
             },
             {
                 "itemName": "Quickwire",
-                "amount": 30
+                "amount": 37.5
             }
         ],
         "outputs": [
             {
                 "itemName": "Circuit Board",
-                "amount": 7
+                "amount": 8.75
             }
         ]
     },
@@ -2950,21 +2904,21 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Circuit Board",
-                "amount": 7
+                "amount": 26.25
             },
             {
                 "itemName": "Quickwire",
-                "amount": 28
+                "amount": 105
             },
             {
                 "itemName": "Rubber",
-                "amount": 12
+                "amount": 45
             }
         ],
         "outputs": [
             {
                 "itemName": "Computer",
-                "amount": 1
+                "amount": 3.75
             }
         ]
     },
@@ -2973,17 +2927,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Circuit Board",
-                "amount": 8
+                "amount": 7.5
             },
             {
                 "itemName": "Crystal Oscillator",
-                "amount": 3
+                "amount": 2.81
             }
         ],
         "outputs": [
             {
                 "itemName": "Computer",
-                "amount": 3
+                "amount": 2.81
             }
         ]
     },
@@ -2992,17 +2946,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Silica",
-                "amount": 3
+                "amount": 7.5
             },
             {
                 "itemName": "Limestone",
-                "amount": 12
+                "amount": 30
             }
         ],
         "outputs": [
             {
                 "itemName": "Concrete",
-                "amount": 10
+                "amount": 25
             }
         ]
     },
@@ -3011,21 +2965,21 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Quartz Crystal",
-                "amount": 10
+                "amount": 18.75
             },
             {
                 "itemName": "Rubber",
-                "amount": 7
+                "amount": 13.13
             },
             {
                 "itemName": "AI Limiter",
-                "amount": 1
+                "amount": 1.88
             }
         ],
         "outputs": [
             {
                 "itemName": "Crystal Oscillator",
-                "amount": 1
+                "amount": 1.88
             }
         ]
     },
@@ -3034,17 +2988,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Stator",
-                "amount": 2
+                "amount": 8
             },
             {
                 "itemName": "High-Speed Connector",
-                "amount": 1
+                "amount": 4
             }
         ],
         "outputs": [
             {
                 "itemName": "Electromagnetic Control Rod",
-                "amount": 2
+                "amount": 8
             }
         ]
     },
@@ -3053,17 +3007,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Sulfur",
-                "amount": 2
+                "amount": 7.5
             },
             {
                 "itemName": "Compacted Coal",
-                "amount": 1
+                "amount": 3.75
             }
         ],
         "outputs": [
             {
                 "itemName": "Black Powder",
-                "amount": 4
+                "amount": 15
             }
         ]
     },
@@ -3072,17 +3026,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Aluminum Casing",
-                "amount": 3
+                "amount": 30
             },
             {
                 "itemName": "Rubber",
-                "amount": 3
+                "amount": 30
             }
         ],
         "outputs": [
             {
                 "itemName": "Heat Sink",
-                "amount": 1
+                "amount": 10
             }
         ]
     },
@@ -3091,25 +3045,25 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Modular Frame",
-                "amount": 8
+                "amount": 7.5
             },
             {
                 "itemName": "Encased Industrial Beam",
-                "amount": 10
+                "amount": 9.38
             },
             {
                 "itemName": "Steel Pipe",
-                "amount": 36
+                "amount": 33.75
             },
             {
                 "itemName": "Concrete",
-                "amount": 22
+                "amount": 20.63
             }
         ],
         "outputs": [
             {
                 "itemName": "Heavy Modular Frame",
-                "amount": 3
+                "amount": 2.81
             }
         ]
     },
@@ -3118,21 +3072,21 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Quickwire",
-                "amount": 60
+                "amount": 90
             },
             {
                 "itemName": "Silica",
-                "amount": 25
+                "amount": 37.5
             },
             {
                 "itemName": "Circuit Board",
-                "amount": 2
+                "amount": 3
             }
         ],
         "outputs": [
             {
                 "itemName": "High-Speed Connector",
-                "amount": 2
+                "amount": 3
             }
         ]
     },
@@ -3141,17 +3095,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Iron Ore",
-                "amount": 2
+                "amount": 20
             },
             {
                 "itemName": "Copper Ore",
-                "amount": 2
+                "amount": 20
             }
         ],
         "outputs": [
             {
                 "itemName": "Iron Ingot",
-                "amount": 5
+                "amount": 50
             }
         ]
     },
@@ -3160,17 +3114,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Iron Ingot",
-                "amount": 2
+                "amount": 40
             },
             {
                 "itemName": "Coal",
-                "amount": 2
+                "amount": 40
             }
         ],
         "outputs": [
             {
                 "itemName": "Steel Ingot",
-                "amount": 3
+                "amount": 60
             }
         ]
     },
@@ -3179,17 +3133,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Iron Ore",
-                "amount": 6
+                "amount": 22.5
             },
             {
                 "itemName": "Compacted Coal",
-                "amount": 3
+                "amount": 11.25
             }
         ],
         "outputs": [
             {
                 "itemName": "Steel Ingot",
-                "amount": 10
+                "amount": 37.5
             }
         ]
     },
@@ -3217,21 +3171,21 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Rotor",
-                "amount": 3
+                "amount": 3.75
             },
             {
                 "itemName": "Stator",
-                "amount": 3
+                "amount": 3.75
             },
             {
                 "itemName": "Crystal Oscillator",
-                "amount": 1
+                "amount": 1.25
             }
         ],
         "outputs": [
             {
                 "itemName": "Motor",
-                "amount": 6
+                "amount": 7.5
             }
         ]
     },
@@ -3240,21 +3194,21 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Black Powder",
-                "amount": 8
+                "amount": 12
             },
             {
                 "itemName": "Steel Pipe",
-                "amount": 8
+                "amount": 12
             },
             {
                 "itemName": "Crystal Oscillator",
-                "amount": 1
+                "amount": 1.5
             }
         ],
         "outputs": [
             {
                 "itemName": "Nobelisk",
-                "amount": 4
+                "amount": 6
             }
         ]
     },
@@ -3263,17 +3217,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Black Powder",
-                "amount": 5
+                "amount": 15
             },
             {
                 "itemName": "Steel Pipe",
-                "amount": 10
+                "amount": 30
             }
         ],
         "outputs": [
             {
                 "itemName": "Nobelisk",
-                "amount": 1
+                "amount": 3
             }
         ]
     },
@@ -3282,25 +3236,25 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Encased Uranium Cell",
-                "amount": 100
+                "amount": 20
             },
             {
                 "itemName": "Electromagnetic Control Rod",
-                "amount": 10
+                "amount": 2
             },
             {
                 "itemName": "Crystal Oscillator",
-                "amount": 3
+                "amount": 0.6
             },
             {
                 "itemName": "Beacon",
-                "amount": 6
+                "amount": 1.2
             }
         ],
         "outputs": [
             {
                 "itemName": "Uranium Fuel Rod",
-                "amount": 3
+                "amount": 0.6
             }
         ]
     },
@@ -3309,17 +3263,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Rubber",
-                "amount": 6
+                "amount": 30
             },
             {
                 "itemName": "Fuel",
-                "amount": 6
+                "amount": 30
             }
         ],
         "outputs": [
             {
                 "itemName": "Plastic",
-                "amount": 12
+                "amount": 60
             }
         ]
     },
@@ -3328,17 +3282,17 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Caterium Ingot",
-                "amount": 1
+                "amount": 7.5
             },
             {
                 "itemName": "Copper Ingot",
-                "amount": 5
+                "amount": 37.5
             }
         ],
         "outputs": [
             {
                 "itemName": "Quickwire",
-                "amount": 12
+                "amount": 90
             }
         ]
     },
@@ -3347,21 +3301,21 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Heat Sink",
-                "amount": 4
+                "amount": 15
             },
             {
                 "itemName": "High-Speed Connector",
-                "amount": 2
+                "amount": 7.5
             },
             {
                 "itemName": "Quartz Crystal",
-                "amount": 12
+                "amount": 45
             }
         ],
         "outputs": [
             {
                 "itemName": "Radio Control Unit",
-                "amount": 1
+                "amount": 3.75
             }
         ]
     },
@@ -3370,961 +3324,7 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Iron Plate",
-                "amount": 18
-            },
-            {
-                "itemName": "Screw",
-                "amount": 50
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Reinforced Iron Plate",
-                "amount": 3
-            }
-        ]
-    },
-    {
-        "name": "Recipe_Alternate_ReinforcedIronPlate_2_C",
-        "inputs": [
-            {
-                "itemName": "Iron Plate",
-                "amount": 10
-            },
-            {
-                "itemName": "Wire",
-                "amount": 20
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Reinforced Iron Plate",
-                "amount": 3
-            }
-        ]
-    },
-    {
-        "name": "Recipe_Alternate_EncasedIndustrialBeam_C",
-        "inputs": [
-            {
-                "itemName": "Steel Pipe",
-                "amount": 7
-            },
-            {
-                "itemName": "Concrete",
-                "amount": 5
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Encased Industrial Beam",
-                "amount": 1
-            }
-        ]
-    },
-    {
-        "name": "Recipe_Alternate_Rotor_C",
-        "inputs": [
-            {
-                "itemName": "Steel Pipe",
-                "amount": 2
-            },
-            {
-                "itemName": "Wire",
-                "amount": 6
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Rotor",
-                "amount": 1
-            }
-        ]
-    },
-    {
-        "name": "Recipe_Alternate_Screw_C",
-        "inputs": [
-            {
-                "itemName": "Iron Ingot",
-                "amount": 5
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Screw",
-                "amount": 20
-            }
-        ]
-    },
-    {
-        "name": "Recipe_Alternate_Screw_2_C",
-        "inputs": [
-            {
-                "itemName": "Steel Beam",
-                "amount": 1
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Screw",
-                "amount": 52
-            }
-        ]
-    },
-    {
-        "name": "Recipe_Alternate_Silica_C",
-        "inputs": [
-            {
-                "itemName": "Raw Quartz",
-                "amount": 3
-            },
-            {
-                "itemName": "Limestone",
-                "amount": 5
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Silica",
-                "amount": 7
-            }
-        ]
-    },
-    {
-        "name": "Recipe_Silica_C",
-        "inputs": [
-            {
-                "itemName": "Raw Quartz",
-                "amount": 3
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Silica",
-                "amount": 5
-            }
-        ]
-    },
-    {
-        "name": "Recipe_Alternate_Stator_C",
-        "inputs": [
-            {
-                "itemName": "Steel Pipe",
-                "amount": 4
-            },
-            {
-                "itemName": "Quickwire",
-                "amount": 15
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Stator",
-                "amount": 2
-            }
-        ]
-    },
-    {
-        "name": "Recipe_Alternate_Turbofuel_C",
-        "inputs": [
-            {
-                "itemName": "Fuel",
-                "amount": 6
-            },
-            {
-                "itemName": "Compacted Coal",
-                "amount": 4
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Turbofuel",
-                "amount": 5
-            }
-        ]
-    },
-    {
-        "name": "Recipe_Alternate_TurboMotor_1_C",
-        "inputs": [
-            {
-                "itemName": "Motor",
-                "amount": 7
-            },
-            {
-                "itemName": "Radio Control Unit",
-                "amount": 9
-            },
-            {
-                "itemName": "Electromagnetic Control Rod",
-                "amount": 5
-            },
-            {
-                "itemName": "Rotor",
-                "amount": 7
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Turbo Motor",
-                "amount": 3
-            }
-        ]
-    },
-    {
-        "name": "Recipe_MotorTurbo_C",
-        "inputs": [
-            {
-                "itemName": "Cooling System",
-                "amount": 4
-            },
-            {
-                "itemName": "Radio Control Unit",
-                "amount": 2
-            },
-            {
-                "itemName": "Motor",
-                "amount": 4
-            },
-            {
-                "itemName": "Rubber",
-                "amount": 24
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Turbo Motor",
-                "amount": 1
-            }
-        ]
-    },
-    {
-        "name": "Recipe_SpaceElevatorPart_8_C",
-        "inputs": [
-            {
-                "itemName": "Modular Engine",
-                "amount": 5
-            },
-            {
-                "itemName": "Turbo Motor",
-                "amount": 2
-            },
-            {
-                "itemName": "Cooling System",
-                "amount": 6
-            },
-            {
-                "itemName": "Fused Modular Frame",
-                "amount": 2
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Thermal Propulsion Rocket",
-                "amount": 2
-            }
-        ]
-    },
-    {
-        "name": "Recipe_Alternate_UraniumCell_1_C",
-        "inputs": [
-            {
-                "itemName": "Uranium",
-                "amount": 5
-            },
-            {
-                "itemName": "Silica",
-                "amount": 3
-            },
-            {
-                "itemName": "Sulfur",
-                "amount": 5
-            },
-            {
-                "itemName": "Quickwire",
-                "amount": 15
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Encased Uranium Cell",
-                "amount": 4
-            }
-        ]
-    },
-    {
-        "name": "Recipe_Alternate_Wire_1_C",
-        "inputs": [
-            {
-                "itemName": "Iron Ingot",
-                "amount": 5
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Wire",
-                "amount": 9
-            }
-        ]
-    },
-    {
-        "name": "Recipe_Alternate_Wire_2_C",
-        "inputs": [
-            {
-                "itemName": "Caterium Ingot",
-                "amount": 1
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Wire",
-                "amount": 8
-            }
-        ]
-    },
-    {
-        "name": "Recipe_Beacon_C",
-        "inputs": [
-            {
-                "itemName": "Iron Plate",
-                "amount": 3
-            },
-            {
-                "itemName": "Iron Rod",
-                "amount": 1
-            },
-            {
-                "itemName": "Wire",
-                "amount": 15
-            },
-            {
-                "itemName": "Cable",
-                "amount": 2
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Beacon",
-                "amount": 1
-            }
-        ]
-    },
-    {
-        "name": "Recipe_ObjectScanner_C",
-        "inputs": [
-            {
-                "itemName": "Reinforced Iron Plate",
-                "amount": 4
-            },
-            {
-                "itemName": "Beacon",
-                "amount": 3
-            },
-            {
-                "itemName": "Screw",
-                "amount": 50
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Object Scanner",
-                "amount": 1
-            }
-        ]
-    },
-    {
-        "name": "Recipe_Biofuel_C",
-        "inputs": [
-            {
-                "itemName": "Biomass",
-                "amount": 8
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Solid Biofuel",
-                "amount": 4
-            }
-        ]
-    },
-    {
-        "name": "Recipe_Chainsaw_C",
-        "inputs": [
-            {
-                "itemName": "Reinforced Iron Plate",
-                "amount": 5
-            },
-            {
-                "itemName": "Iron Rod",
-                "amount": 25
-            },
-            {
-                "itemName": "Screw",
-                "amount": 160
-            },
-            {
-                "itemName": "Cable",
-                "amount": 15
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Chainsaw",
-                "amount": 1
-            }
-        ]
-    },
-    {
-        "name": "Recipe_XenoBasher_C",
-        "inputs": [
-            {
-                "itemName": "Modular Frame",
-                "amount": 5
-            },
-            {
-                "itemName": "Xeno-Zapper",
-                "amount": 2
-            },
-            {
-                "itemName": "Cable",
-                "amount": 25
-            },
-            {
-                "itemName": "Wire",
-                "amount": 500
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Xeno-Basher",
-                "amount": 1
-            }
-        ]
-    },
-    {
-        "name": "Recipe_JetPack_C",
-        "inputs": [
-            {
-                "itemName": "Plastic",
-                "amount": 50
-            },
-            {
-                "itemName": "Rubber",
-                "amount": 50
-            },
-            {
-                "itemName": "Circuit Board",
-                "amount": 15
-            },
-            {
-                "itemName": "Motor",
-                "amount": 5
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Jetpack",
-                "amount": 1
-            }
-        ]
-    },
-    {
-        "name": "Recipe_FilterGasMask_C",
-        "inputs": [
-            {
-                "itemName": "Coal",
-                "amount": 5
-            },
-            {
-                "itemName": "Rubber",
-                "amount": 2
-            },
-            {
-                "itemName": "Fabric",
-                "amount": 2
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Gas Filter",
-                "amount": 1
-            }
-        ]
-    },
-    {
-        "name": "Recipe_Gasmask_C",
-        "inputs": [
-            {
-                "itemName": "Rubber",
-                "amount": 100
-            },
-            {
-                "itemName": "Plastic",
-                "amount": 100
-            },
-            {
-                "itemName": "Fabric",
-                "amount": 100
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Gas Mask",
-                "amount": 1
-            }
-        ]
-    },
-    {
-        "name": "Recipe_FilterHazmat_C",
-        "inputs": [
-            {
-                "itemName": "Gas Filter",
-                "amount": 1
-            },
-            {
-                "itemName": "Quickwire",
-                "amount": 8
-            },
-            {
-                "itemName": "Aluminum Casing",
-                "amount": 1
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Iodine Infused Filter",
-                "amount": 1
-            }
-        ]
-    },
-    {
-        "name": "Recipe_HazmatSuit_C",
-        "inputs": [
-            {
-                "itemName": "Rubber",
-                "amount": 50
-            },
-            {
-                "itemName": "Plastic",
-                "amount": 50
-            },
-            {
-                "itemName": "Alclad Aluminum Sheet",
-                "amount": 50
-            },
-            {
-                "itemName": "Fabric",
-                "amount": 50
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Hazmat Suit",
-                "amount": 1
-            }
-        ]
-    },
-    {
-        "name": "Recipe_Hoverpack_C",
-        "inputs": [
-            {
-                "itemName": "Motor",
-                "amount": 8
-            },
-            {
-                "itemName": "Heavy Modular Frame",
-                "amount": 4
-            },
-            {
-                "itemName": "Computer",
-                "amount": 8
-            },
-            {
-                "itemName": "Alclad Aluminum Sheet",
-                "amount": 40
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Hover Pack",
-                "amount": 1
-            }
-        ]
-    },
-    {
-        "name": "Recipe_Biomass_AlienCarapace_C",
-        "inputs": [
-            {
-                "itemName": "Alien Carapace",
-                "amount": 1
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Biomass",
-                "amount": 100
-            }
-        ]
-    },
-    {
-        "name": "Recipe_RebarGun_C",
-        "inputs": [
-            {
-                "itemName": "Reinforced Iron Plate",
-                "amount": 6
-            },
-            {
-                "itemName": "Iron Rod",
-                "amount": 16
-            },
-            {
-                "itemName": "Screw",
-                "amount": 100
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Rebar Gun",
-                "amount": 1
-            }
-        ]
-    },
-    {
-        "name": "Recipe_SpikedRebar_C",
-        "inputs": [
-            {
-                "itemName": "Iron Rod",
-                "amount": 1
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Spiked Rebar",
-                "amount": 1
-            }
-        ]
-    },
-    {
-        "name": "Recipe_Biomass_AlienOrgans_C",
-        "inputs": [
-            {
-                "itemName": "Alien Organs",
-                "amount": 1
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Biomass",
-                "amount": 200
-            }
-        ]
-    },
-    {
-        "name": "Recipe_MedicinalInhalerAlienOrgans_C",
-        "inputs": [
-            {
-                "itemName": "Alien Organs",
-                "amount": 3
-            },
-            {
-                "itemName": "Mycelia",
-                "amount": 5
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Medicinal Inhaler",
-                "amount": 1
-            }
-        ]
-    },
-    {
-        "name": "Recipe_Quickwire_C",
-        "inputs": [
-            {
-                "itemName": "Caterium Ingot",
-                "amount": 1
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Quickwire",
-                "amount": 5
-            }
-        ]
-    },
-    {
-        "name": "Recipe_ZipLine_C",
-        "inputs": [
-            {
-                "itemName": "Xeno-Zapper",
-                "amount": 1
-            },
-            {
-                "itemName": "Quickwire",
-                "amount": 30
-            },
-            {
-                "itemName": "Iron Rod",
-                "amount": 3
-            },
-            {
-                "itemName": "Cable",
-                "amount": 10
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Zipline",
-                "amount": 1
-            }
-        ]
-    },
-    {
-        "name": "Recipe_BladeRunners_C",
-        "inputs": [
-            {
-                "itemName": "Quickwire",
-                "amount": 50
-            },
-            {
-                "itemName": "Modular Frame",
-                "amount": 3
-            },
-            {
-                "itemName": "Rotor",
-                "amount": 3
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Blade Runners",
-                "amount": 1
-            }
-        ]
-    },
-    {
-        "name": "Recipe_ColorGun_C",
-        "inputs": [
-            {
-                "itemName": "Iron Plate",
-                "amount": 5
-            },
-            {
-                "itemName": "Screw",
-                "amount": 80
-            },
-            {
-                "itemName": "Wire",
-                "amount": 40
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Color Gun",
-                "amount": 1
-            }
-        ]
-    },
-    {
-        "name": "Recipe_ColorCartridge_C",
-        "inputs": [
-            {
-                "itemName": "Flower Petals",
-                "amount": 5
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Color Cartridge",
-                "amount": 10
-            }
-        ]
-    },
-    {
-        "name": "Recipe_Biomass_Mycelia_C",
-        "inputs": [
-            {
-                "itemName": "Mycelia",
-                "amount": 10
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Biomass",
-                "amount": 10
-            }
-        ]
-    },
-    {
-        "name": "Recipe_Parachute_C",
-        "inputs": [
-            {
-                "itemName": "Fabric",
-                "amount": 10
-            },
-            {
-                "itemName": "Cable",
-                "amount": 5
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Parachute",
-                "amount": 5
-            }
-        ]
-    },
-    {
-        "name": "Recipe_MedicinalInhaler_C",
-        "inputs": [
-            {
-                "itemName": "Bacon Agaric",
-                "amount": 1
-            },
-            {
-                "itemName": "Paleberry",
-                "amount": 2
-            },
-            {
-                "itemName": "Beryl Nut",
-                "amount": 3
-            },
-            {
-                "itemName": "Mycelia",
-                "amount": 5
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Medicinal Inhaler",
-                "amount": 1
-            }
-        ]
-    },
-    {
-        "name": "Recipe_NutritionalInhaler_C",
-        "inputs": [
-            {
-                "itemName": "Bacon Agaric",
-                "amount": 1
-            },
-            {
-                "itemName": "Paleberry",
-                "amount": 3
-            },
-            {
-                "itemName": "Beryl Nut",
-                "amount": 7
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Medicinal Inhaler",
-                "amount": 1
-            }
-        ]
-    },
-    {
-        "name": "Recipe_PowerCrystalShard_1_C",
-        "inputs": [
-            {
-                "itemName": "Green Power Slug",
-                "amount": 1
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Power Shard",
-                "amount": 1
-            }
-        ]
-    },
-    {
-        "name": "Recipe_PowerCrystalShard_2_C",
-        "inputs": [
-            {
-                "itemName": "Yellow Power Slug",
-                "amount": 1
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Power Shard",
-                "amount": 2
-            }
-        ]
-    },
-    {
-        "name": "Recipe_PowerCrystalShard_3_C",
-        "inputs": [
-            {
-                "itemName": "Purple Power Slug",
-                "amount": 1
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Power Shard",
-                "amount": 5
-            }
-        ]
-    },
-    {
-        "name": "Recipe_Gunpowder_C",
-        "inputs": [
-            {
-                "itemName": "Coal",
-                "amount": 1
-            },
-            {
-                "itemName": "Sulfur",
-                "amount": 2
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Black Powder",
-                "amount": 1
-            }
-        ]
-    },
-    {
-        "name": "Recipe_NobeliskDetonator_C",
-        "inputs": [
-            {
-                "itemName": "Object Scanner",
-                "amount": 5
-            },
-            {
-                "itemName": "Encased Industrial Beam",
-                "amount": 5
-            },
-            {
-                "itemName": "Cable",
-                "amount": 50
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Nobelisk Detonator",
-                "amount": 1
-            }
-        ]
-    },
-    {
-        "name": "Recipe_SpaceRifleMk1_C",
-        "inputs": [
-            {
-                "itemName": "Steel Pipe",
-                "amount": 25
-            },
-            {
-                "itemName": "Heavy Modular Frame",
-                "amount": 3
-            },
-            {
-                "itemName": "Circuit Board",
-                "amount": 20
+                "amount": 90
             },
             {
                 "itemName": "Screw",
@@ -4333,8 +3333,547 @@ export const recipesData = [
         ],
         "outputs": [
             {
-                "itemName": "Rifle",
+                "itemName": "Reinforced Iron Plate",
+                "amount": 15
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Alternate_ReinforcedIronPlate_2_C",
+        "inputs": [
+            {
+                "itemName": "Iron Plate",
+                "amount": 18.75
+            },
+            {
+                "itemName": "Wire",
+                "amount": 37.5
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Reinforced Iron Plate",
+                "amount": 5.63
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Alternate_EncasedIndustrialBeam_C",
+        "inputs": [
+            {
+                "itemName": "Steel Pipe",
+                "amount": 28
+            },
+            {
+                "itemName": "Concrete",
+                "amount": 20
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Encased Industrial Beam",
+                "amount": 4
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Alternate_Rotor_C",
+        "inputs": [
+            {
+                "itemName": "Steel Pipe",
+                "amount": 10
+            },
+            {
+                "itemName": "Wire",
+                "amount": 30
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Rotor",
+                "amount": 5
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Alternate_Screw_C",
+        "inputs": [
+            {
+                "itemName": "Iron Ingot",
+                "amount": 12.5
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Screw",
+                "amount": 50
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Alternate_Screw_2_C",
+        "inputs": [
+            {
+                "itemName": "Steel Beam",
+                "amount": 5
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Screw",
+                "amount": 260
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Alternate_Silica_C",
+        "inputs": [
+            {
+                "itemName": "Raw Quartz",
+                "amount": 11.25
+            },
+            {
+                "itemName": "Limestone",
+                "amount": 18.75
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Silica",
+                "amount": 26.25
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Silica_C",
+        "inputs": [
+            {
+                "itemName": "Raw Quartz",
+                "amount": 22.5
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Silica",
+                "amount": 37.5
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Alternate_Stator_C",
+        "inputs": [
+            {
+                "itemName": "Steel Pipe",
+                "amount": 16
+            },
+            {
+                "itemName": "Quickwire",
+                "amount": 60
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Stator",
+                "amount": 8
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Alternate_Turbofuel_C",
+        "inputs": [
+            {
+                "itemName": "Fuel",
+                "amount": 22.5
+            },
+            {
+                "itemName": "Compacted Coal",
+                "amount": 15
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Turbofuel",
+                "amount": 18.75
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Alternate_TurboMotor_1_C",
+        "inputs": [
+            {
+                "itemName": "Motor",
+                "amount": 6.56
+            },
+            {
+                "itemName": "Radio Control Unit",
+                "amount": 8.44
+            },
+            {
+                "itemName": "Electromagnetic Control Rod",
+                "amount": 4.69
+            },
+            {
+                "itemName": "Rotor",
+                "amount": 6.56
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Turbo Motor",
+                "amount": 2.81
+            }
+        ]
+    },
+    {
+        "name": "Recipe_MotorTurbo_C",
+        "inputs": [
+            {
+                "itemName": "Cooling System",
+                "amount": 7.5
+            },
+            {
+                "itemName": "Radio Control Unit",
+                "amount": 3.75
+            },
+            {
+                "itemName": "Motor",
+                "amount": 7.5
+            },
+            {
+                "itemName": "Rubber",
+                "amount": 45
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Turbo Motor",
+                "amount": 1.88
+            }
+        ]
+    },
+    {
+        "name": "Recipe_SpaceElevatorPart_8_C",
+        "inputs": [
+            {
+                "itemName": "Modular Engine",
+                "amount": 2.5
+            },
+            {
+                "itemName": "Turbo Motor",
                 "amount": 1
+            },
+            {
+                "itemName": "Cooling System",
+                "amount": 3
+            },
+            {
+                "itemName": "Fused Modular Frame",
+                "amount": 1
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Thermal Propulsion Rocket",
+                "amount": 1
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Alternate_UraniumCell_1_C",
+        "inputs": [
+            {
+                "itemName": "Uranium",
+                "amount": 25
+            },
+            {
+                "itemName": "Silica",
+                "amount": 15
+            },
+            {
+                "itemName": "Sulfur",
+                "amount": 25
+            },
+            {
+                "itemName": "Quickwire",
+                "amount": 75
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Encased Uranium Cell",
+                "amount": 20
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Alternate_Wire_1_C",
+        "inputs": [
+            {
+                "itemName": "Iron Ingot",
+                "amount": 12.5
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Wire",
+                "amount": 22.5
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Alternate_Wire_2_C",
+        "inputs": [
+            {
+                "itemName": "Caterium Ingot",
+                "amount": 15
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Wire",
+                "amount": 120
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Beacon_C",
+        "inputs": [
+            {
+                "itemName": "Iron Plate",
+                "amount": 22.5
+            },
+            {
+                "itemName": "Iron Rod",
+                "amount": 7.5
+            },
+            {
+                "itemName": "Wire",
+                "amount": 112.5
+            },
+            {
+                "itemName": "Cable",
+                "amount": 15
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Beacon",
+                "amount": 7.5
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Biofuel_C",
+        "inputs": [
+            {
+                "itemName": "Biomass",
+                "amount": 120
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Solid Biofuel",
+                "amount": 60
+            }
+        ]
+    },
+    {
+        "name": "Recipe_FilterGasMask_C",
+        "inputs": [
+            {
+                "itemName": "Coal",
+                "amount": 37.5
+            },
+            {
+                "itemName": "Rubber",
+                "amount": 15
+            },
+            {
+                "itemName": "Fabric",
+                "amount": 15
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Gas Filter",
+                "amount": 7.5
+            }
+        ]
+    },
+    {
+        "name": "Recipe_FilterHazmat_C",
+        "inputs": [
+            {
+                "itemName": "Gas Filter",
+                "amount": 3.75
+            },
+            {
+                "itemName": "Quickwire",
+                "amount": 30
+            },
+            {
+                "itemName": "Aluminum Casing",
+                "amount": 3.75
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Iodine Infused Filter",
+                "amount": 3.75
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Biomass_AlienCarapace_C",
+        "inputs": [
+            {
+                "itemName": "Alien Carapace",
+                "amount": 15
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Biomass",
+                "amount": 1500
+            }
+        ]
+    },
+    {
+        "name": "Recipe_SpikedRebar_C",
+        "inputs": [
+            {
+                "itemName": "Iron Rod",
+                "amount": 15
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Spiked Rebar",
+                "amount": 15
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Biomass_AlienOrgans_C",
+        "inputs": [
+            {
+                "itemName": "Alien Organs",
+                "amount": 7.5
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Biomass",
+                "amount": 1500
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Quickwire_C",
+        "inputs": [
+            {
+                "itemName": "Caterium Ingot",
+                "amount": 12
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Quickwire",
+                "amount": 60
+            }
+        ]
+    },
+    {
+        "name": "Recipe_ColorCartridge_C",
+        "inputs": [
+            {
+                "itemName": "Flower Petals",
+                "amount": 37.5
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Color Cartridge",
+                "amount": 75
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Biomass_Mycelia_C",
+        "inputs": [
+            {
+                "itemName": "Mycelia",
+                "amount": 150
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Biomass",
+                "amount": 150
+            }
+        ]
+    },
+    {
+        "name": "Recipe_PowerCrystalShard_1_C",
+        "inputs": [
+            {
+                "itemName": "Green Power Slug",
+                "amount": 7.5
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Power Shard",
+                "amount": 7.5
+            }
+        ]
+    },
+    {
+        "name": "Recipe_PowerCrystalShard_2_C",
+        "inputs": [
+            {
+                "itemName": "Yellow Power Slug",
+                "amount": 5
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Power Shard",
+                "amount": 10
+            }
+        ]
+    },
+    {
+        "name": "Recipe_PowerCrystalShard_3_C",
+        "inputs": [
+            {
+                "itemName": "Purple Power Slug",
+                "amount": 2.5
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Power Shard",
+                "amount": 12.5
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Gunpowder_C",
+        "inputs": [
+            {
+                "itemName": "Coal",
+                "amount": 7.5
+            },
+            {
+                "itemName": "Sulfur",
+                "amount": 15
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Black Powder",
+                "amount": 7.5
             }
         ]
     },
@@ -4343,48 +3882,25 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Beacon",
-                "amount": 1
+                "amount": 3
             },
             {
                 "itemName": "Steel Pipe",
-                "amount": 10
+                "amount": 30
             },
             {
                 "itemName": "Black Powder",
-                "amount": 10
+                "amount": 30
             },
             {
                 "itemName": "Rubber",
-                "amount": 10
+                "amount": 30
             }
         ],
         "outputs": [
             {
                 "itemName": "Rifle Cartridge",
-                "amount": 5
-            }
-        ]
-    },
-    {
-        "name": "Recipe_FactoryCart_C",
-        "inputs": [
-            {
-                "itemName": "Reinforced Iron Plate",
-                "amount": 4
-            },
-            {
-                "itemName": "Iron Rod",
-                "amount": 4
-            },
-            {
-                "itemName": "Rotor",
-                "amount": 2
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Factory Cart™",
-                "amount": 1
+                "amount": 15
             }
         ]
     }

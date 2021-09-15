@@ -12,15 +12,21 @@ function getItemNameMap(docs: ReturnType<typeof parseDocs>): Map<string, string>
     return new Map(rawItems.map(([itemId, item]) => [itemId, item.name]));
 }
 
+function getAmount(item: {quantity: number}, recipe: {craftTime: number}): number {
+    return +((item.quantity * 60) / recipe.craftTime).toFixed(2);
+}
+
 function getRecipes(docs: ReturnType<typeof parseDocs>) {
     const itemNameMap = getItemNameMap(rawData);
     const getItemName = (itemClass: string): string => itemNameMap.get(itemClass) ?? itemClass;
     const rawRecipes: [string: 'RecipeId', ItemRecipeInfo: ItemRecipeInfo][] = Object.entries(docs.itemRecipes) as any;
-    const recipes = rawRecipes.map(([name, recipe]) => ({
-        name,
-        inputs: recipe.ingredients.map((input) => ({itemName: getItemName(input.itemClass), amount: input.quantity})),
-        outputs: recipe.products.map((input) => ({itemName: getItemName(input.itemClass), amount: input.quantity})),
-    }));
+    const recipes = rawRecipes
+        .filter(([_, recipe]) => recipe.machineCraftable)
+        .map(([name, recipe]) => ({
+            name,
+            inputs: recipe.ingredients.map((input) => ({itemName: getItemName(input.itemClass), amount: getAmount(input, recipe)})),
+            outputs: recipe.products.map((input) => ({itemName: getItemName(input.itemClass), amount: getAmount(input, recipe)})),
+        }));
 
     return recipes;
 }

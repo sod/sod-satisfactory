@@ -26,6 +26,7 @@ import * as fromPlanner from './store/planner/planner.reducer';
 import { SatisfactoryItemImageComponent } from './component/satisfactory-item-image/satisfactory-item-image.component';
 import { SatisfactoryItemComponent } from './component/satisfactory-item/satisfactory-item.component';
 import { SatisfactoryItemsComponent } from './component/satisfactory-items/satisfactory-items.component';
+import { RecipeDataSummaryPipe } from './pipe/recipe-data-summary.pipe';
 
 @NgModule({
     declarations: [
@@ -47,6 +48,7 @@ import { SatisfactoryItemsComponent } from './component/satisfactory-items/satis
         SatisfactoryItemImageComponent,
         SatisfactoryItemComponent,
         SatisfactoryItemsComponent,
+        RecipeDataSummaryPipe,
     ],
     imports: [
         CommonModule,
@@ -77,6 +79,7 @@ import { SatisfactoryItemsComponent } from './component/satisfactory-items/satis
         SatisfactoryItemImageComponent,
         SatisfactoryItemComponent,
         SatisfactoryItemsComponent,
+        RecipeDataSummaryPipe,
     ],
 })
 export class SharedModule {}

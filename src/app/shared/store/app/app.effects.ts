@@ -13,6 +13,7 @@ import {
     clearProduction,
     editProductionClicked,
     plannerStoreRestored,
+    recipeSelected,
     removeItemPackage,
     removeProductionClicked,
     updateItemPackage,
@@ -35,6 +36,7 @@ export class AppEffects {
                     editProductionClicked,
                     removeProductionClicked,
                     addProductionWithOutputNameClicked,
+                    recipeSelected,
                 ),
                 switchMapTo(this.store.pipe(take(1))),
                 tap((store: GlobalState) => {

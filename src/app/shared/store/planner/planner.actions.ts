@@ -6,6 +6,7 @@ import {
     ItemParentRelationForRecipe,
 } from 'src/app/shared/entities/item-parent-relations';
 import {ProductionDto} from 'src/app/shared/entities/production-dto';
+import {RecipeDataDto} from 'src/app/shared/entities/recipe-data-item-dto';
 import {RecipeTarget} from 'src/app/shared/entities/recipe-dto';
 import {PlannerState} from './planner.reducer';
 
@@ -29,6 +30,10 @@ export const addItemPackage = createAction(
 export const updateItemPackage = createAction(
     '[Planner] Update Item Package',
     props<{relation: ItemParentRelationForItemPackage; itemPackage: Partial<ItemPackageDto>}>(),
+);
+export const recipeSelected = createAction(
+    '[Planner] Recipe Selected',
+    props<{relation: ItemParentRelationForProduction; recipe: RecipeDataDto}>(),
 );
 export const removeItemPackage = createAction('[Planner] Remove Item Package', props<{relation: ItemParentRelationForItemPackage}>());
 

@@ -72,6 +72,14 @@ export const reducer = createReducer(
         })),
     })),
 
+    on(PlannerActions.recipeSelected, (state, action) => ({
+        ...state,
+        productions: Production.update(state.productions, action.relation, (production) => ({
+            ...production,
+            recipe: Recipe.fromRecipeDataDto(action.recipe),
+        })),
+    })),
+
     on(PlannerActions.removeItemPackage, (state, action) => ({
         ...state,
         productions: Recipe.update(state.productions, action.relation, (recipe) => ({

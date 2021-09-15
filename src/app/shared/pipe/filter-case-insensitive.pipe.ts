@@ -4,9 +4,19 @@ import {Pipe, PipeTransform} from '@angular/core';
     name: 'filterCaseInsensitive',
 })
 export class FilterCaseInsensitivePipe implements PipeTransform {
-    transform(haystack: string[], needle?: unknown): string[] {
-        return needle && typeof needle === 'string'
-            ? haystack.filter((option) => option.toLowerCase().indexOf(needle.toLowerCase()) !== -1)
-            : haystack;
+    transform<T>(haystack: T[], needle: unknown, toString: (value: T) => string = (value) => String(value)): T[] {
+        const limit = 30;
+        const needles = needle && typeof needle === 'string' ? needle.toLowerCase().trim().split(/ +/) : undefined;
+
+        if (!needles) {
+            return haystack.slice(0, limit);
+        }
+
+        return haystack
+            .filter((option) => {
+                const hay = toString(option).toLowerCase();
+                return needles.every((needle) => hay.indexOf(needle) !== -1);
+            })
+            .slice(0, limit);
     }
 }
