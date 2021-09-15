@@ -3,6 +3,7 @@ import {NgModule} from '@angular/core';
 import {IconDefinition} from '@ant-design/icons-angular';
 import {
     ArrowRightOutline,
+    BuildOutline,
     CheckCircleOutline,
     CloseCircleOutline,
     DeleteOutline,
@@ -37,6 +38,7 @@ export const ngZorroIcons: IconDefinition[] = [
     CheckCircleOutline,
     CloseCircleOutline,
     ArrowRightOutline,
+    BuildOutline,
 ];
 
 @NgModule({

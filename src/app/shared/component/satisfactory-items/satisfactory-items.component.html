@@ -1,7 +1,7 @@
 <div class="row mx-n1" [class.justify-content-end]="align === 'right'">
     <div class="col-6 px-1 d-flex" *ngFor="let itemPackage of values; trackBy: trackByService.index">
-        <div class="border rounded shadow-sm d-flex p-2 bg-white">
-            <app-satisfactory-item [itemPackage]="itemPackage"></app-satisfactory-item>
+        <div class="border rounded shadow-sm d-flex p-2 bg-white w-100">
+            <app-satisfactory-item class="d-block w-100" [itemPackage]="itemPackage"></app-satisfactory-item>
         </div>
     </div>
 </div>
