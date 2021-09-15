@@ -7,12 +7,26 @@
         [nzExtra]="extraTemplate"
     >
         <div *ngIf="production.recipe.inputs.length">
+            <div>
+                <app-satisfactory-item-image
+                    [itemPackage]="value"
+                    *ngFor="let value of production.recipe.inputs"
+                ></app-satisfactory-item-image>
+            </div>
+
             Inputs:
             <ul>
                 <li *ngFor="let value of production.recipe.inputs">{{ value | amountWithModifiers }}x {{ value.itemName }}</li>
             </ul>
         </div>
         <div *ngIf="production.recipe.outputs.length">
+            <div class="float-right">
+                <app-satisfactory-item-image
+                    [itemPackage]="value"
+                    *ngFor="let value of production.recipe.outputs"
+                ></app-satisfactory-item-image>
+            </div>
+
             Outputs:
             <ul>
                 <li *ngFor="let value of production.recipe.outputs">{{ value | amountWithModifiers }}x {{ value.itemName }}</li>

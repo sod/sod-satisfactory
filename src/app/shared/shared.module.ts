@@ -6,22 +6,24 @@ import {StoreModule} from '@ngrx/store';
 import {ActionAddProductionComponent} from 'src/app/shared/component/action-add-production/action-add-production.component';
 import {ActionClearProductionComponent} from 'src/app/shared/component/action-clear-production/action-clear-production.component';
 import {AmountWithModifiersPipe} from 'src/app/shared/pipe/amount-with-modifiers.pipe';
+import {SatisfactoriyItemImagePipe} from 'src/app/shared/pipe/satisfactoriy-item-image.pipe';
 import {SharedNgZorroModule} from '../shared-ng-zorro/shared-ng-zorro.module';
 import {ItemPackageComponent} from './component/item-package/item-package.component';
 import {ItemComponent} from './component/item/item.component';
 import {ProductionInputOrOutputComponent} from './component/production-input-or-output/production-input-or-output.component';
+import {ProductionInputTodoComponent} from './component/production-input-todo/production-input-todo.component';
 import {ProductionOverviewComponent} from './component/production-overview/production-overview.component';
 import {ProductionComponent} from './component/production/production.component';
 import {RecipeComponent} from './component/recipe/recipe.component';
 import {FilterCaseInsensitivePipe} from './pipe/filter-case-insensitive.pipe';
 import {PlusOneUndefinedPipe} from './pipe/plus-one-undefined.pipe';
+import {ProductionTitlePipe} from './pipe/production-title.pipe';
+import {ResolveProductionPipe} from './pipe/resolve-production.pipe';
 import {AppEffects} from './store/app/app.effects';
 import * as fromApp from './store/app/app.reducer';
 import {PlannerEffects} from './store/planner/planner.effects';
 import * as fromPlanner from './store/planner/planner.reducer';
-import { ProductionTitlePipe } from './pipe/production-title.pipe';
-import { ProductionInputTodoComponent } from './component/production-input-todo/production-input-todo.component';
-import { ResolveProductionPipe } from './pipe/resolve-production.pipe';
+import { SatisfactoryItemImageComponent } from './component/satisfactory-item-image/satisfactory-item-image.component';
 
 @NgModule({
     declarations: [
@@ -39,6 +41,8 @@ import { ResolveProductionPipe } from './pipe/resolve-production.pipe';
         ProductionTitlePipe,
         ProductionInputTodoComponent,
         ResolveProductionPipe,
+        SatisfactoriyItemImagePipe,
+        SatisfactoryItemImageComponent,
     ],
     imports: [
         CommonModule,
@@ -65,6 +69,8 @@ import { ResolveProductionPipe } from './pipe/resolve-production.pipe';
         ProductionTitlePipe,
         ProductionInputTodoComponent,
         ResolveProductionPipe,
+        SatisfactoriyItemImagePipe,
+        SatisfactoryItemImageComponent,
     ],
 })
 export class SharedModule {}
