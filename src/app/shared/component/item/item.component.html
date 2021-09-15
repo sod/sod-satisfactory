@@ -1,13 +1,13 @@
 <input
     [placeholder]="'Add more ' + target"
     nz-input
-    [ngModel]="itemPackage?.itemName ?? null"
+    [ngModel]="itemPackage?.itemName ?? ''"
     (ngModelChange)="itemSelected($event, itemPackage)"
     (blur)="itemPackage?.itemName === '' && remove(itemPackage!)"
     [nzAutocomplete]="auto"
 />
 
-<nz-autocomplete #auto [nzWidth]="400">
+<nz-autocomplete #auto [nzWidth]="400" [nzBackfill]="false">
     <nz-auto-option
         *ngFor="let option of items | filterCaseInsensitive: itemPackage?.itemName; trackBy: trackByService.index"
         [nzValue]="option"

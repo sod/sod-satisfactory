@@ -1,6 +1,6 @@
 <div
     *ngIf="{edit: edit$ | async} as state"
-    class="bg-light rounded border pb-2 px-2"
+    class="bg-light rounded border px-2"
     [class.shadow]="state.edit && production.index === state.edit.index"
 >
     <nz-page-header class="p-0" *ngIf="{title: production | productionTitle} as header">
@@ -21,7 +21,7 @@
     <div class="text-center text-muted" *ngIf="!production.recipe.inputs.length && !production.recipe.outputs.length">
         Not inputs and outputs yet.
     </div>
-    <div class="row position-relative">
+    <div class="row position-relative align-items-center">
         <div class="text-center arrow-center" *ngIf="production.recipe.inputs.length && production.recipe.outputs.length">
             <i nz-icon nzType="arrow-right" nzTheme="outline"></i>
         </div>

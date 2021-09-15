@@ -1,11 +1,11 @@
 <div class="shadow">
-    <ng-container *ngIf="production.recipe.outputs.length">
+    <ng-container *ngIf="production.recipe.outputs.length || production.recipe.inputs.length">
         <app-production-input-or-output [production]="production" [target]="'inputs'"></app-production-input-or-output>
     </ng-container>
 
     <app-production-input-or-output [production]="production" [target]="'outputs'"></app-production-input-or-output>
 
-    <ng-container *ngIf="production.recipe.outputs.length">
+    <ng-container *ngIf="production.recipe.outputs.length || production.recipe.inputs.length">
         <nz-card nzTitle="Modifier" nzSize="small" nzBorderless>
             <nz-input-group nzCompact [nzAddOnAfter]="'Machines'" class="mb-2">
                 <nz-input-number
