@@ -2,6 +2,8 @@
 
 <div class="row my-3" *ngIf="productions$ | async as productions">
     <div class="col-6">
+        <app-production-input-todo [productions]="productions"></app-production-input-todo>
+
         <ng-container *ngFor="let production of productions; trackBy: trackByService.index; let index = index">
             <app-production-overview [production]="production"></app-production-overview>
         </ng-container>
@@ -12,7 +14,6 @@
     </div>
 
     <div class="col-6">
-        <app-production-input-todo [productions]="productions"></app-production-input-todo>
         <app-production [production]="production" *ngIf="edit$ | async as production"></app-production>
     </div>
 </div>
