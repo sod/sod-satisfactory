@@ -11,5 +11,5 @@ rm -rf docs
 yarn run build --baseHref="/sod-satisfactory/"
 cp -R dist/sod-satisfactory docs
 git add docs
-git commit -m "new release"
+git commit -m "deploy current source to github pages"
 git push
