@@ -9,15 +9,15 @@
         </thead>
         <tbody>
             <tr *ngFor="let data of fixedTable.data; trackBy: trackByService.index">
-                <td [class.complete]="data.amount <= 0" [class.missing]="data.amount > 0">
-                    <i nz-icon [nzType]="data.amount > 0 ? 'close-circle' : 'check-circle'" nzTheme="outline"></i>
+                <td [class.complete]="!data.isMissing()" [class.text-danger]="data.isMissing()">
+                    <i nz-icon [nzType]="data.isMissing() ? 'close-circle' : 'check-circle'" nzTheme="outline"></i>
                     {{ data.amount.toFixed(1) }}
                 </td>
-                <td [class.complete]="data.amount <= 0">{{ data.itemName }}</td>
+                <td [class.complete]="!data.isMissing()">{{ data.itemName }}</td>
                 <td>
                     <ng-container [ngSwitch]="data.outputProductionIndex">
                         <ng-container *ngSwitchCase="undefined">
-                            <button nz-button nzType="link" (click)="addProduction(data.itemName, data.amount)" *ngIf="data.amount > 0">
+                            <button nz-button nzType="link" (click)="addProduction(data.itemName, data.amount)" *ngIf="data.isMissing()">
                                 <i nz-icon nzType="plus" nzTheme="outline"></i>
                                 Add
                             </button>

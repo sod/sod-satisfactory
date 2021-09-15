@@ -26,7 +26,11 @@
             <i nz-icon nzType="arrow-right" nzTheme="outline"></i>
         </div>
         <div class="col-6">
-            <app-satisfactory-items [values]="production.recipe.inputs" align="left"></app-satisfactory-items>
+            <app-satisfactory-items
+                [values]="production.recipe.inputs"
+                [productionInputs]="productionInputs"
+                align="left"
+            ></app-satisfactory-items>
         </div>
         <div class="col-6">
             <app-satisfactory-items [values]="production.recipe.outputs" align="right"></app-satisfactory-items>

@@ -1,6 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {Store} from '@ngrx/store';
 import {Production} from 'src/app/shared/entities/production';
+import {ProductionInputs} from 'src/app/shared/pipe/resolve-production.pipe';
 import {GlobalState} from 'src/app/shared/store/global-state';
 import {editProductionClicked} from 'src/app/shared/store/planner/planner.actions';
 import {selectPlannerEdit} from 'src/app/shared/store/planner/planner.selectors';
@@ -12,6 +13,7 @@ import {selectPlannerEdit} from 'src/app/shared/store/planner/planner.selectors'
 })
 export class ProductionOverviewComponent {
     @Input() production!: Production;
+    @Input() productionInputs!: ProductionInputs;
     public edit$ = this.store.select(selectPlannerEdit);
 
     constructor(private store: Store<GlobalState>) {}

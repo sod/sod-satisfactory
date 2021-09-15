@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {ItemPackage} from 'src/app/shared/entities/item-package';
+import {ProductionInputs} from 'src/app/shared/pipe/resolve-production.pipe';
 
 @Component({
     selector: 'app-satisfactory-item',
@@ -8,4 +9,5 @@ import {ItemPackage} from 'src/app/shared/entities/item-package';
 })
 export class SatisfactoryItemComponent {
     @Input() itemPackage!: ItemPackage;
+    @Input() productionInputs?: ProductionInputs;
 }

@@ -19,6 +19,7 @@ import {NzInputModule} from 'ng-zorro-antd/input';
 import {NzInputNumberModule} from 'ng-zorro-antd/input-number';
 import {NzPageHeaderModule} from 'ng-zorro-antd/page-header';
 import {NzTableModule} from 'ng-zorro-antd/table';
+import {NzToolTipModule} from 'ng-zorro-antd/tooltip';
 
 const modules = [
     NzButtonModule,
@@ -30,6 +31,7 @@ const modules = [
     NzDividerModule,
     NzAutocompleteModule,
     NzTableModule,
+    NzToolTipModule,
 ];
 export const ngZorroIcons: IconDefinition[] = [
     PlusOutline,

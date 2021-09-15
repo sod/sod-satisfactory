@@ -1,18 +1,17 @@
 <h1 class="my-3">Satisfactory Production Planner</h1>
 
-<div class="row my-3" *ngIf="productions$ | async as productions">
-    <div class="col-6">
-        <ng-container *ngIf="productions | resolveProduction as productionInputs">
-            <ng-container *ngIf="productionInputs.length">
-                <h5 class="my-3">Inputs</h5>
-                <app-production-input-todo [productionInputs]="productionInputs"></app-production-input-todo>
-            </ng-container>
-        </ng-container>
+<div class="text-muted">All input & output values are normalized to "N units/m³ per 60 seconds"</div>
 
+<div class="row my-3" *ngIf="productions$ | async as productions">
+    <div class="col-6" *ngIf="productions | resolveProduction as productionInputs">
         <ng-container *ngIf="productions.length">
             <h5 class="my-3">Belts and Machines</h5>
             <ng-container *ngFor="let production of productions; trackBy: trackByService.index; let index = index">
-                <app-production-overview [production]="production" class="mb-3 d-block"></app-production-overview>
+                <app-production-overview
+                    [production]="production"
+                    [productionInputs]="productionInputs"
+                    class="mb-3 d-block"
+                ></app-production-overview>
             </ng-container>
 
             <nz-divider></nz-divider>
@@ -23,6 +22,6 @@
     </div>
 
     <div class="col-6">
-        <app-production [production]="production" *ngIf="edit$ | async as production"></app-production>
+        <app-production class="sticky-top" style="top: 1rem" [production]="production" *ngIf="edit$ | async as production"></app-production>
     </div>
 </div>
