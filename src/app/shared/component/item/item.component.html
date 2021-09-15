@@ -1,5 +1,5 @@
 <input
-    placeholder="Item"
+    [placeholder]="'Add more ' + target"
     nz-input
     [ngModel]="itemPackage?.itemName ?? null"
     (ngModelChange)="itemPackage ? updateItemName($event, itemPackage) : addItemName($event)"
