@@ -10,6 +10,7 @@ export class Production {
     readonly clockSpeed1: number = this.dto.clockSpeed1 ?? 100;
     readonly clockSpeed2: number = this.dto.clockSpeed2 ?? 100;
     readonly machines: number = this.dto.machines ?? 1;
+    readonly built: boolean = this.dto.built ?? false;
 
     constructor(private dto: ProductionDto, public readonly index: number) {}
 

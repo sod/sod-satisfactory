@@ -5,9 +5,11 @@ import {
     ArrowRightOutline,
     BuildOutline,
     CheckCircleOutline,
+    ClockCircleOutline,
     CloseCircleOutline,
     DeleteOutline,
     EditOutline,
+    MinusSquareOutline,
     PlusOutline,
 } from '@ant-design/icons-angular/icons';
 import {NzAutocompleteModule} from 'ng-zorro-antd/auto-complete';
@@ -41,6 +43,8 @@ export const ngZorroIcons: IconDefinition[] = [
     CloseCircleOutline,
     ArrowRightOutline,
     BuildOutline,
+    MinusSquareOutline,
+    ClockCircleOutline,
 ];
 
 @NgModule({

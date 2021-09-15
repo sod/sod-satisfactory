@@ -80,6 +80,14 @@ export const reducer = createReducer(
         })),
     })),
 
+    on(PlannerActions.productionBuiltClicked, (state, action) => ({
+        ...state,
+        productions: Production.update(state.productions, action.relation, (production) => ({
+            ...production,
+            built: !production.built,
+        })),
+    })),
+
     on(PlannerActions.removeItemPackage, (state, action) => ({
         ...state,
         productions: Recipe.update(state.productions, action.relation, (recipe) => ({

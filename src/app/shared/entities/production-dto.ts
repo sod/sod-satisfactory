@@ -5,4 +5,5 @@ export interface ProductionDto {
     clockSpeed1?: number;
     clockSpeed2?: number;
     machines?: number;
+    built?: boolean;
 }

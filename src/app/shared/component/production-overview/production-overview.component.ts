@@ -3,7 +3,7 @@ import {Store} from '@ngrx/store';
 import {Production} from 'src/app/shared/entities/production';
 import {ProductionInputs} from 'src/app/shared/pipe/resolve-production.pipe';
 import {GlobalState} from 'src/app/shared/store/global-state';
-import {editProductionClicked} from 'src/app/shared/store/planner/planner.actions';
+import {editProductionClicked, productionBuiltClicked} from 'src/app/shared/store/planner/planner.actions';
 import {selectPlannerEdit} from 'src/app/shared/store/planner/planner.selectors';
 
 @Component({
@@ -20,5 +20,9 @@ export class ProductionOverviewComponent {
 
     edit(index: number): void {
         this.store.dispatch(editProductionClicked({index}));
+    }
+
+    built(production: Production): void {
+        this.store.dispatch(productionBuiltClicked({relation: production.unwrap()}));
     }
 }

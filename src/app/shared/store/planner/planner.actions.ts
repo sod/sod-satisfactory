@@ -41,5 +41,9 @@ export const updateProductionClicked = createAction(
     '[Planner] Update Production',
     props<{relation: ItemParentRelationForProduction; production: Partial<ProductionDto>}>(),
 );
+export const productionBuiltClicked = createAction(
+    '[Planner] Production Built Clicked',
+    props<{relation: ItemParentRelationForProduction}>(),
+);
 
 export const editProductionClicked = createAction('[Planner] Edit Production Clicked', props<{index: number}>());

@@ -1,6 +1,7 @@
 <div
     *ngIf="{edit: edit$ | async} as state"
     class="bg-light rounded border px-2"
+    [class.built]="production.built"
     [class.border-primary]="state.edit && production.index === state.edit.index"
     [class.shadow-sm]="state.edit && production.index === state.edit.index"
 >
@@ -8,6 +9,10 @@
         <nz-page-header-title>{{ header.title.title }}</nz-page-header-title>
         <nz-page-header-subtitle>{{ header.title.subtitle }}</nz-page-header-subtitle>
         <nz-page-header-extra>
+            <button nz-button nzType="link" (click)="built(production)">
+                <i nz-icon [nzType]="production.built ? 'check' : 'clock-circle'" nzTheme="outline"></i>
+                Built
+            </button>
             <button
                 nz-button
                 [nzType]="state.edit && production.index === state.edit.index ? 'primary' : 'link'"
