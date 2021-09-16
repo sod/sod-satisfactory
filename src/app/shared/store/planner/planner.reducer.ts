@@ -88,6 +88,14 @@ export const reducer = createReducer(
         })),
     })),
 
+    on(PlannerActions.productionUpNextClicked, (state, action) => ({
+        ...state,
+        edit: undefined, // reset edit on upNext action to reduce visual noise when reordering the list
+        productions: state.productions.includes(action.relation.production)
+            ? [action.relation.production, ...without(state.productions, action.relation.production)]
+            : state.productions,
+    })),
+
     on(PlannerActions.removeItemPackage, (state, action) => ({
         ...state,
         productions: Recipe.update(state.productions, action.relation, (recipe) => ({

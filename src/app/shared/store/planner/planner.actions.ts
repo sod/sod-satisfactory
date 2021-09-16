@@ -45,5 +45,9 @@ export const productionBuiltClicked = createAction(
     '[Planner] Production Built Clicked',
     props<{relation: ItemParentRelationForProduction}>(),
 );
+export const productionUpNextClicked = createAction(
+    '[Planner] Production Up Next Clicked',
+    props<{relation: ItemParentRelationForProduction}>(),
+);
 
 export const editProductionClicked = createAction('[Planner] Edit Production Clicked', props<{index: number}>());
