@@ -18,16 +18,16 @@ export class Production {
         return {production: this.dto};
     }
 
+    getModifier(): number {
+        const modifier1 = (this.clockSpeed1 ?? 100) / 100;
+        const modifier2 = (this.clockSpeed2 ?? 100) / 100;
+        const modifier3 = this.machines ?? 1;
+
+        return modifier1 * modifier2 * modifier3;
+    }
+
     multiply(amount?: number): number | undefined {
-        if (typeof amount === 'number') {
-            const modifier1 = (this.clockSpeed1 ?? 100) / 100;
-            const modifier2 = (this.clockSpeed2 ?? 100) / 100;
-            const modifier3 = this.machines ?? 1;
-
-            return amount * modifier1 * modifier2 * modifier3;
-        }
-
-        return undefined;
+        return typeof amount === 'number' ? amount * this.getModifier() : undefined;
     }
 
     static update(

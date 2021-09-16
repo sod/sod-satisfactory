@@ -1,11 +1,16 @@
-<input
-    [placeholder]="'Add more ' + target"
-    nz-input
-    [ngModel]="itemPackage?.itemName ?? ''"
-    (ngModelChange)="itemSelected($event, itemPackage)"
-    (blur)="itemPackage?.itemName === '' && remove(itemPackage!)"
-    [nzAutocomplete]="auto"
-/>
+<nz-input-group [nzPrefix]="searchIcon">
+    <input
+        nz-input
+        type="search"
+        [placeholder]="labels[target]"
+        [ngModel]="itemPackage?.itemName ?? ''"
+        (ngModelChange)="itemSelected($event, itemPackage)"
+        (blur)="itemPackage?.itemName === '' && remove(itemPackage!)"
+        [nzAutocomplete]="auto"
+    />
+</nz-input-group>
+
+<ng-template #searchIcon><i nz-icon class="text-muted" nzType="search" nzTheme="outline"></i></ng-template>
 
 <nz-autocomplete #auto [nzWidth]="400" [nzBackfill]="false">
     <nz-auto-option

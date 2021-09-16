@@ -11,6 +11,7 @@ import {
     EditOutline,
     MinusSquareOutline,
     PlusOutline,
+    SearchOutline,
 } from '@ant-design/icons-angular/icons';
 import {NzAutocompleteModule} from 'ng-zorro-antd/auto-complete';
 import {NzButtonModule} from 'ng-zorro-antd/button';
@@ -45,6 +46,7 @@ export const ngZorroIcons: IconDefinition[] = [
     BuildOutline,
     MinusSquareOutline,
     ClockCircleOutline,
+    SearchOutline,
 ];
 
 @NgModule({

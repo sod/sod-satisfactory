@@ -5,7 +5,7 @@
     [class.border-primary]="state.edit && production.index === state.edit.index"
     [class.shadow-sm]="state.edit && production.index === state.edit.index"
 >
-    <nz-page-header class="p-0" *ngIf="{title: production | productionTitle} as header">
+    <nz-page-header class="px-0 py-1" *ngIf="{title: production | productionTitle} as header">
         <nz-page-header-title>{{ header.title.title }}</nz-page-header-title>
         <nz-page-header-subtitle>{{ header.title.subtitle }}</nz-page-header-subtitle>
         <nz-page-header-extra>
@@ -24,7 +24,7 @@
         </nz-page-header-extra>
     </nz-page-header>
 
-    <div class="text-center text-muted" *ngIf="!production.recipe.inputs.length && !production.recipe.outputs.length">
+    <div class="text-center text-muted mb-3" *ngIf="!production.recipe.inputs.length && !production.recipe.outputs.length">
         Not inputs and outputs yet.
     </div>
     <div class="row position-relative align-items-center">

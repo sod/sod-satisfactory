@@ -19,6 +19,7 @@ export class ItemComponent {
     @Input() target!: RecipeTarget;
     @Input() itemPackage?: ItemPackage;
     items: typeof itemNames = itemNames;
+    labels: Record<RecipeTarget, string> = {inputs: 'Input', outputs: 'Output or recipe'};
     recipesData: typeof recipesData = recipesData;
 
     constructor(public store: Store, public trackByService: TrackByService) {}

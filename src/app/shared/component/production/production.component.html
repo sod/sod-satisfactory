@@ -1,11 +1,15 @@
-<div class="shadow">
-    <ng-container *ngIf="production.recipe.outputs.length || production.recipe.inputs.length">
+<div class="shadow" *ngIf="production.recipe.outputs.length || production.recipe.inputs.length ? 'active' : 'new' as current">
+    <div [style.opacity]="current === 'active' ? 1 : 0.5">
         <app-production-input-or-output [production]="production" [target]="'inputs'"></app-production-input-or-output>
-    </ng-container>
+    </div>
 
-    <app-production-input-or-output [production]="production" [target]="'outputs'"></app-production-input-or-output>
+    <app-production-input-or-output
+        [production]="production"
+        [target]="'outputs'"
+        [autofocus]="current === 'new'"
+    ></app-production-input-or-output>
 
-    <ng-container *ngIf="production.recipe.outputs.length || production.recipe.inputs.length">
+    <ng-container *ngIf="current === 'active'">
         <nz-card nzTitle="Modifier" nzSize="small" nzBorderless>
             <nz-input-group nzCompact [nzAddOnAfter]="'Machines'" class="mb-2">
                 <nz-input-number
@@ -37,11 +41,9 @@
                 ></nz-input-number>
             </nz-input-group>
         </nz-card>
-
-        <nz-divider></nz-divider>
     </ng-container>
 
-    <div class="pb-2 mx-2 text-right">
+    <div style="padding: 0 12px 12px" class="text-right mt-3">
         <button nz-button [nzType]="'default'" nzDanger (click)="removeProduction(production)">
             <i nz-icon nzType="delete" nzTheme="outline"></i>
             Remove

@@ -1,11 +1,21 @@
-<nz-input-group nzCompact>
-    <app-item [itemPackage]="itemPackage" [recipe]="recipe" [target]="target"></app-item>
-    <nz-input-number
-        [ngModel]="itemPackage?.amount ?? null"
-        [nzDisabled]="!itemPackage"
-        [nzMin]="1"
-        [nzStep]="1"
-        (ngModelChange)="itemPackage && updateItemPackageAmount($event, itemPackage)"
-    ></nz-input-number>
-    <input nz-input disabled [ngModel]="itemPackage | amountWithModifiers" style="width: 70px" />
-</nz-input-group>
+<div class="row mx-n1">
+    <app-item class="px-1 col" [itemPackage]="itemPackage" [recipe]="recipe" [target]="target"></app-item>
+    <div class="px-1 col-5 col-lg-4" *ngIf="itemPackage">
+        <nz-input-group [nzSuffix]="amountSuffix">
+            <input
+                nz-input
+                type="number"
+                class="number-input"
+                [placeholder]="'Amount'"
+                [ngModel]="itemPackage?.amount ?? null"
+                (ngModelChange)="itemPackage && +$event > 0 && updateItemPackageAmount(+$event, itemPackage)"
+            />
+        </nz-input-group>
+    </div>
+</div>
+
+<ng-template #amountSuffix>
+    <ng-container *ngIf="(itemPackage?.parent?.parent?.getModifier() ?? 1) !== 1">
+        <span class="text-muted">= {{ itemPackage | amountWithModifiers }}</span>
+    </ng-container>
+</ng-template>
