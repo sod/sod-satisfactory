@@ -30,6 +30,10 @@ export class Production {
         return typeof amount === 'number' ? amount * this.getModifier() : undefined;
     }
 
+    hasRecipes(): boolean {
+        return this.recipe.inputs.length + this.recipe.outputs.length > 0;
+    }
+
     static update(
         productions: ProductionDto[],
         unwrapped: ItemParentRelationForProduction,
