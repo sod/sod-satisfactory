@@ -12,7 +12,7 @@
 
 <ng-template #searchIcon><i nz-icon class="text-muted" nzType="search" nzTheme="outline"></i></ng-template>
 
-<nz-autocomplete #auto [nzWidth]="400" [nzBackfill]="false">
+<nz-autocomplete #auto [nzWidth]="450" [nzBackfill]="false">
     <nz-auto-option
         *ngFor="let option of items | filterCaseInsensitive: itemPackage?.itemName; trackBy: trackByService.index"
         [nzValue]="option"
