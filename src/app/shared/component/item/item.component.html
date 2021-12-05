@@ -29,6 +29,9 @@
         [nzLabel]="option.name"
     >
         <div>{{ option.name }}</div>
-        <div class="recipe-summary ml-2">{{ $any(option) | recipeDataSummary }}</div>
+        <div class="row mt-2">
+            <app-package-images class="col px-2" [items]="option.inputs"></app-package-images>
+            <app-package-images class="col px-2 justify-content-end d-flex" [items]="option.outputs"></app-package-images>
+        </div>
     </nz-auto-option>
 </nz-autocomplete>

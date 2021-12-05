@@ -7,7 +7,7 @@ import {ItemPackage} from 'src/app/shared/entities/item-package';
     name: 'satisfactoriyItemImage',
 })
 export class SatisfactoriyItemImagePipe implements PipeTransform {
-    transform(value: ItemPackage): string | undefined {
+    transform(value: Pick<ItemPackage, 'itemName'>): string | undefined {
         const source = itemImage.get(value.itemName);
 
         if (!source) {

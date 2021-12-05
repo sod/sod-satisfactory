@@ -27,6 +27,7 @@ import { SatisfactoryItemImageComponent } from './component/satisfactory-item-im
 import { SatisfactoryItemComponent } from './component/satisfactory-item/satisfactory-item.component';
 import { SatisfactoryItemsComponent } from './component/satisfactory-items/satisfactory-items.component';
 import { RecipeDataSummaryPipe } from './pipe/recipe-data-summary.pipe';
+import { PackageImagesComponent } from './component/package-images/package-images.component';
 
 @NgModule({
     declarations: [
@@ -49,6 +50,7 @@ import { RecipeDataSummaryPipe } from './pipe/recipe-data-summary.pipe';
         SatisfactoryItemComponent,
         SatisfactoryItemsComponent,
         RecipeDataSummaryPipe,
+        PackageImagesComponent,
     ],
     imports: [
         CommonModule,
@@ -80,6 +82,7 @@ import { RecipeDataSummaryPipe } from './pipe/recipe-data-summary.pipe';
         SatisfactoryItemComponent,
         SatisfactoryItemsComponent,
         RecipeDataSummaryPipe,
+        PackageImagesComponent,
     ],
 })
 export class SharedModule {}

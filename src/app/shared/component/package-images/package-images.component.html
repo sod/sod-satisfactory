@@ -1,0 +1,12 @@
+<ng-container *ngFor="let itemPackage of items">
+    <span
+        class="d-inline-block text-center mx-2"
+        nz-tooltip
+        [nzTooltipTitle]="itemPackage.itemName"
+        *ngIf="itemPackage | satisfactoriyItemImage as source"
+    >
+        <img class="img-fluid image" [src]="source" />
+        <br />
+        <span class="badge badge-pill badge-dark">{{ itemPackage.amount }}</span>
+    </span>
+</ng-container>
