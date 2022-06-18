@@ -532,22 +532,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ant-design/icons-angular@npm:^12.0.3":
-  version: 12.0.3
-  resolution: "@ant-design/icons-angular@npm:12.0.3"
-  dependencies:
-    "@ant-design/colors": ^5.0.0
-    tslib: ^2.0.0
-  peerDependencies:
-    "@angular/common": ^12.0.3
-    "@angular/core": ^12.0.3
-    "@angular/platform-browser": ^12.0.3
-    rxjs: ^6.4.0
-  checksum: c36ea8ade0405c3c6f9634580838b938e146f9da7d283c0147b2c66575cb9c290c65a52116462dd8a1345e672133e3d0617e347292f8fc3712f89ad91e3eb436
-  languageName: node
-  linkType: hard
-
-"@ant-design/icons-angular@npm:^13.0.1":
+"@ant-design/icons-angular@npm:^13, @ant-design/icons-angular@npm:^13.0.1":
   version: 13.1.0
   resolution: "@ant-design/icons-angular@npm:13.1.0"
   dependencies:
@@ -12512,7 +12497,7 @@ resolve@1.22.0:
     "@angular/platform-browser": ~13.3.11
     "@angular/platform-browser-dynamic": ~13.3.11
     "@angular/router": ~13.3.11
-    "@ant-design/icons-angular": ^12.0.3
+    "@ant-design/icons-angular": ^13
     "@ngrx/effects": ^13.2.0
     "@ngrx/entity": ^13.2.0
     "@ngrx/schematics": ^13.2.0
