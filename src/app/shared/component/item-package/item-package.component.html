@@ -7,7 +7,7 @@
                 type="number"
                 class="number-input"
                 [placeholder]="'Amount'"
-                [ngModel]="itemPackage?.amount ?? null"
+                [ngModel]="itemPackage.amount"
                 (ngModelChange)="itemPackage && +$event > 0 && updateItemPackageAmount(+$event, itemPackage)"
             />
         </nz-input-group>
