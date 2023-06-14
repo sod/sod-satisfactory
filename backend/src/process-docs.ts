@@ -1,9 +1,8 @@
 import * as fs from 'fs';
 import parseDocs from 'satisfactory-docs-parser';
 import {ItemInfo} from 'satisfactory-docs-parser/dist/parsers/parseItems';
-import {ItemRecipeInfo} from 'satisfactory-docs-parser/dist/parsers/parseRecipes';
 
-const file = fs.readFileSync('resources/update4/CommunityResources/Docs/docs.json');
+const file = fs.readFileSync('resources/update8/Docs.json');
 const rawData = parseDocs(file);
 
 function getItemNameMap(docs: ReturnType<typeof parseDocs>): Map<string, string> {
@@ -19,18 +18,19 @@ function getAmount(item: {quantity: number}, recipe: {craftTime: number}): numbe
 function getRecipes(docs: ReturnType<typeof parseDocs>) {
     const itemNameMap = getItemNameMap(rawData);
     const getItemName = (itemClass: string): string => itemNameMap.get(itemClass) ?? itemClass;
-    const rawRecipes: [string: 'RecipeId', ItemRecipeInfo: ItemRecipeInfo][] = Object.entries(docs.itemRecipes) as any;
-    const recipes = rawRecipes
-        .filter(([_, recipe]) => recipe.machineCraftable)
-        .map(([name, recipe]) => ({
-            name,
-            inputs: recipe.ingredients.map((input) => ({itemName: getItemName(input.itemClass), amount: getAmount(input, recipe)})),
-            outputs: recipe.products.map((input) => ({itemName: getItemName(input.itemClass), amount: getAmount(input, recipe)})),
-        }));
+    // const rawRecipes: [string: 'RecipeId', ItemRecipeInfo: ItemRecipeInfo][] = Object.entries(docs.buildableRecipes) as any;
+    // const recipes = docs.buildableRecipes
+    //     .filter((recipe) => recipe.machineCraftable)
+    //     .map(([name, recipe]) => ({
+    //         name,
+    //         inputs: recipe.ingredients.map((input) => ({itemName: getItemName(input.itemClass), amount: getAmount(input, recipe)})),
+    //         outputs: recipe.products.map((input) => ({itemName: getItemName(input.itemClass), amount: getAmount(input, recipe)})),
+    //     }));
 
-    return recipes;
+    // return recipes;
 }
 
+process.exit();
 const recipesData = getRecipes(rawData);
 
 // fs.writeFileSync('parsed-docs-dump.json', JSON.stringify(data));
