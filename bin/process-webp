@@ -1,0 +1,44 @@
+#!/bin/bash
+
+EXECUTABLE_WEBP_CHECK=$(brew ls --versions webp)
+
+if [[ "" == "${EXECUTABLE_WEBP_CHECK}" ]]; then
+    echo "Error: 'cwebp' missing. Please install via 'brew install webp'"
+    exit 1
+fi
+
+processFile() {
+    SOURCE="$1"
+    FILENAME=$(basename -- "${SOURCE}")
+
+    DIR=$(dirname -- "${SOURCE}")
+    FILE="${FILENAME%.*}"
+
+    (
+        set -x
+        # We use quality 30. It's indistinguishable from the original for @2x images! Tested on text, image and text+image samples
+        # A 2x image quality 30 is very close to a quality 80 1x variant in filesize, rendering the 1x variant obsolete
+        cwebp "${SOURCE}" -q 30 -o "${DIR}/${FILE}.webp"
+    )
+}
+
+if [ -p /dev/stdin ]; then
+    while IFS= read line; do
+        processFile "${line}"
+    done
+else
+    if [ -f "$1" ]; then
+        processFile "${1}"
+    else
+        echo "This script creates webp from the source files"
+        echo
+        echo "Usage:"
+        echo
+        echo "Pipe:"
+        echo "  find web/images/foo -type f | ../bin/image-generate-webp"
+        echo "  fd '.jpe?g$' | ../bin/image-generate-webp"
+        echo
+        echo "Argument:"
+        echo "  ../bin/image-generate-webp web/images/foo/bar.jpg"
+    fi
+fi
