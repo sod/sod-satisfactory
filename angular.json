@@ -46,11 +46,8 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-builders/custom-webpack:browser",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "customWebpackConfig": {
-              "path": "webpack.config.js"
-            },
             "outputPath": "dist/sod-satisfactory",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -62,7 +59,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/bootstrap.scss",
+              "src/ant-design.scss"
             ],
             "scripts": []
           },
