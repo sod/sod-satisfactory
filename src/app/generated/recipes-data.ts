@@ -126,6 +126,78 @@ export const recipesData = [
         ]
     },
     {
+        "name": "Recipe_Fireworks_01_C",
+        "inputs": [
+            {
+                "itemName": "FICSMAS Tree Branch",
+                "amount": 15
+            },
+            {
+                "itemName": "Candy Cane",
+                "amount": 7.5
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Sweet Fireworks",
+                "amount": 2.5
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Fireworks_02_C",
+        "inputs": [
+            {
+                "itemName": "FICSMAS Tree Branch",
+                "amount": 10
+            },
+            {
+                "itemName": "FICSMAS Bow",
+                "amount": 7.5
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Fancy Fireworks",
+                "amount": 2.5
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Fireworks_03_C",
+        "inputs": [
+            {
+                "itemName": "FICSMAS Tree Branch",
+                "amount": 7.5
+            },
+            {
+                "itemName": "Actual Snow",
+                "amount": 5
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Sparkly Fireworks",
+                "amount": 2.5
+            }
+        ]
+    },
+    {
+        "name": "Recipe_XmasBranch_C",
+        "inputs": [
+            {
+                "itemName": "FICSMAS Gift",
+                "amount": 10
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "FICSMAS Tree Branch",
+                "amount": 10
+            }
+        ]
+    },
+    {
         "name": "Recipe_IronPlate_C",
         "inputs": [
             {
@@ -459,6 +531,21 @@ export const recipesData = [
             {
                 "itemName": "Empty Canister",
                 "amount": 60
+            }
+        ]
+    },
+    {
+        "name": "Recipe_ColorCartridge_C",
+        "inputs": [
+            {
+                "itemName": "Flower Petals",
+                "amount": 50
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Color Cartridge",
+                "amount": 100
             }
         ]
     },
@@ -1069,6 +1156,21 @@ export const recipesData = [
         ]
     },
     {
+        "name": "Recipe_Silica_C",
+        "inputs": [
+            {
+                "itemName": "Raw Quartz",
+                "amount": 22.5
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Silica",
+                "amount": 37.5
+            }
+        ]
+    },
+    {
         "name": "Recipe_CrystalOscillator_C",
         "inputs": [
             {
@@ -1459,44 +1561,6 @@ export const recipesData = [
             {
                 "itemName": "Smart Plating",
                 "amount": 5
-            }
-        ]
-    },
-    {
-        "name": "Recipe_Alternate_PolyesterFabric_C",
-        "inputs": [
-            {
-                "itemName": "Polymer Resin",
-                "amount": 80
-            },
-            {
-                "itemName": "Water",
-                "amount": 50
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Fabric",
-                "amount": 5
-            }
-        ]
-    },
-    {
-        "name": "Recipe_Fabric_C",
-        "inputs": [
-            {
-                "itemName": "Mycelia",
-                "amount": 15
-            },
-            {
-                "itemName": "Biomass",
-                "amount": 75
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Fabric",
-                "amount": 15
             }
         ]
     },
@@ -3190,48 +3254,6 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_Nobelisk_1_C",
-        "inputs": [
-            {
-                "itemName": "Black Powder",
-                "amount": 12
-            },
-            {
-                "itemName": "Steel Pipe",
-                "amount": 12
-            },
-            {
-                "itemName": "Crystal Oscillator",
-                "amount": 1.5
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Nobelisk",
-                "amount": 6
-            }
-        ]
-    },
-    {
-        "name": "Recipe_Nobelisk_C",
-        "inputs": [
-            {
-                "itemName": "Black Powder",
-                "amount": 15
-            },
-            {
-                "itemName": "Steel Pipe",
-                "amount": 30
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Nobelisk",
-                "amount": 3
-            }
-        ]
-    },
-    {
         "name": "Recipe_Alternate_NuclearFuelRod_1_C",
         "inputs": [
             {
@@ -3441,21 +3463,6 @@ export const recipesData = [
             {
                 "itemName": "Silica",
                 "amount": 26.25
-            }
-        ]
-    },
-    {
-        "name": "Recipe_Silica_C",
-        "inputs": [
-            {
-                "itemName": "Raw Quartz",
-                "amount": 22.5
-            }
-        ],
-        "outputs": [
-            {
-                "itemName": "Silica",
-                "amount": 37.5
             }
         ]
     },
@@ -3724,17 +3731,17 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Biomass_AlienCarapace_C",
+        "name": "Recipe_Protein_Hog_C",
         "inputs": [
             {
-                "itemName": "Alien Carapace",
-                "amount": 15
+                "itemName": "Hog Remains",
+                "amount": 20
             }
         ],
         "outputs": [
             {
-                "itemName": "Biomass",
-                "amount": 1500
+                "itemName": "Alien Protein",
+                "amount": 20
             }
         ]
     },
@@ -3748,23 +3755,83 @@ export const recipesData = [
         ],
         "outputs": [
             {
-                "itemName": "Spiked Rebar",
+                "itemName": "Iron Rebar",
                 "amount": 15
             }
         ]
     },
     {
-        "name": "Recipe_Biomass_AlienOrgans_C",
+        "name": "Recipe_Protein_Spitter_C",
         "inputs": [
             {
-                "itemName": "Alien Organs",
-                "amount": 7.5
+                "itemName": "Plasma Spitter Remains",
+                "amount": 20
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Alien Protein",
+                "amount": 20
+            }
+        ]
+    },
+    {
+        "name": "Recipe_AlienDNACapsule_C",
+        "inputs": [
+            {
+                "itemName": "Alien Protein",
+                "amount": 10
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Alien DNA Capsule",
+                "amount": 10
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Biomass_AlienProtein_C",
+        "inputs": [
+            {
+                "itemName": "Alien Protein",
+                "amount": 15
             }
         ],
         "outputs": [
             {
                 "itemName": "Biomass",
                 "amount": 1500
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Protein_Crab_C",
+        "inputs": [
+            {
+                "itemName": "Hatcher Remains",
+                "amount": 20
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Alien Protein",
+                "amount": 20
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Protein_Stinger_C",
+        "inputs": [
+            {
+                "itemName": "Stinger Remains",
+                "amount": 20
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Alien Protein",
+                "amount": 20
             }
         ]
     },
@@ -3784,17 +3851,40 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_ColorCartridge_C",
+        "name": "Recipe_Rebar_Stunshot_C",
         "inputs": [
             {
-                "itemName": "Flower Petals",
-                "amount": 37.5
+                "itemName": "Iron Rebar",
+                "amount": 10
+            },
+            {
+                "itemName": "Quickwire",
+                "amount": 50
             }
         ],
         "outputs": [
             {
-                "itemName": "Color Cartridge",
-                "amount": 75
+                "itemName": "Stun Rebar",
+                "amount": 10
+            }
+        ]
+    },
+    {
+        "name": "Recipe_CartridgeSmart_C",
+        "inputs": [
+            {
+                "itemName": "Rifle Ammo",
+                "amount": 50
+            },
+            {
+                "itemName": "High-Speed Connector",
+                "amount": 2.5
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Homing Rifle Ammo",
+                "amount": 25
             }
         ]
     },
@@ -3803,7 +3893,7 @@ export const recipesData = [
         "inputs": [
             {
                 "itemName": "Mycelia",
-                "amount": 150
+                "amount": 15
             }
         ],
         "outputs": [
@@ -3814,10 +3904,67 @@ export const recipesData = [
         ]
     },
     {
+        "name": "Recipe_Fabric_C",
+        "inputs": [
+            {
+                "itemName": "Mycelia",
+                "amount": 15
+            },
+            {
+                "itemName": "Biomass",
+                "amount": 75
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Fabric",
+                "amount": 15
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Alternate_PolyesterFabric_C",
+        "inputs": [
+            {
+                "itemName": "Polymer Resin",
+                "amount": 30
+            },
+            {
+                "itemName": "Water",
+                "amount": 30
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Fabric",
+                "amount": 30
+            }
+        ]
+    },
+    {
+        "name": "Recipe_NobeliskGas_C",
+        "inputs": [
+            {
+                "itemName": "Nobelisk",
+                "amount": 5
+            },
+            {
+                "itemName": "Biomass",
+                "amount": 50
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Gas Nobelisk",
+                "amount": 5
+            }
+        ]
+    },
+    {
         "name": "Recipe_PowerCrystalShard_1_C",
         "inputs": [
             {
-                "itemName": "Green Power Slug",
+                "itemName": "Blue Power Slug",
                 "amount": 7.5
             }
         ],
@@ -3859,11 +4006,49 @@ export const recipesData = [
         ]
     },
     {
+        "name": "Recipe_Rebar_Spreadshot_C",
+        "inputs": [
+            {
+                "itemName": "Iron Rebar",
+                "amount": 10
+            },
+            {
+                "itemName": "Quartz Crystal",
+                "amount": 15
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Shatter Rebar",
+                "amount": 5
+            }
+        ]
+    },
+    {
+        "name": "Recipe_NobeliskShockwave_C",
+        "inputs": [
+            {
+                "itemName": "Nobelisk",
+                "amount": 5
+            },
+            {
+                "itemName": "Crystal Oscillator",
+                "amount": 1
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Pulse Nobelisk",
+                "amount": 5
+            }
+        ]
+    },
+    {
         "name": "Recipe_Gunpowder_C",
         "inputs": [
             {
                 "itemName": "Coal",
-                "amount": 7.5
+                "amount": 15
             },
             {
                 "itemName": "Sulfur",
@@ -3873,7 +4058,64 @@ export const recipesData = [
         "outputs": [
             {
                 "itemName": "Black Powder",
+                "amount": 30
+            }
+        ]
+    },
+    {
+        "name": "Recipe_GunpowderMK2_C",
+        "inputs": [
+            {
+                "itemName": "Black Powder",
+                "amount": 20
+            },
+            {
+                "itemName": "Heavy Oil Residue",
+                "amount": 10
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Smokeless Powder",
+                "amount": 20
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Nobelisk_C",
+        "inputs": [
+            {
+                "itemName": "Black Powder",
+                "amount": 20
+            },
+            {
+                "itemName": "Steel Pipe",
+                "amount": 20
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Nobelisk",
+                "amount": 10
+            }
+        ]
+    },
+    {
+        "name": "Recipe_NobeliskCluster_C",
+        "inputs": [
+            {
+                "itemName": "Nobelisk",
                 "amount": 7.5
+            },
+            {
+                "itemName": "Smokeless Powder",
+                "amount": 10
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Cluster Nobelisk",
+                "amount": 2.5
             }
         ]
     },
@@ -3881,26 +4123,299 @@ export const recipesData = [
         "name": "Recipe_Cartridge_C",
         "inputs": [
             {
-                "itemName": "Beacon",
-                "amount": 3
+                "itemName": "Copper Sheet",
+                "amount": 15
             },
             {
-                "itemName": "Steel Pipe",
-                "amount": 30
-            },
-            {
-                "itemName": "Black Powder",
-                "amount": 30
-            },
-            {
-                "itemName": "Rubber",
-                "amount": 30
+                "itemName": "Smokeless Powder",
+                "amount": 10
             }
         ],
         "outputs": [
             {
-                "itemName": "Rifle Cartridge",
+                "itemName": "Rifle Ammo",
+                "amount": 75
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Rebar_Explosive_C",
+        "inputs": [
+            {
+                "itemName": "Iron Rebar",
+                "amount": 10
+            },
+            {
+                "itemName": "Smokeless Powder",
+                "amount": 10
+            },
+            {
+                "itemName": "Steel Pipe",
+                "amount": 10
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Explosive Rebar",
+                "amount": 5
+            }
+        ]
+    },
+    {
+        "name": "Recipe_NobeliskNuke_C",
+        "inputs": [
+            {
+                "itemName": "Nobelisk",
+                "amount": 2.5
+            },
+            {
+                "itemName": "Encased Uranium Cell",
+                "amount": 10
+            },
+            {
+                "itemName": "Smokeless Powder",
+                "amount": 5
+            },
+            {
+                "itemName": "AI Limiter",
+                "amount": 3
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Nuke Nobelisk",
+                "amount": 0.5
+            }
+        ]
+    },
+    {
+        "name": "Recipe_CartridgeChaos_C",
+        "inputs": [
+            {
+                "itemName": "Rifle Ammo",
+                "amount": 125
+            },
+            {
+                "itemName": "Aluminum Casing",
                 "amount": 15
+            },
+            {
+                "itemName": "Turbofuel",
+                "amount": 15
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Turbo Rifle Ammo",
+                "amount": 250
+            }
+        ]
+    },
+    {
+        "name": "Recipe_CartridgeChaos_Packaged_C",
+        "inputs": [
+            {
+                "itemName": "Rifle Ammo",
+                "amount": 125
+            },
+            {
+                "itemName": "Aluminum Casing",
+                "amount": 15
+            },
+            {
+                "itemName": "Packaged Turbofuel",
+                "amount": 15
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Turbo Rifle Ammo",
+                "amount": 250
+            }
+        ]
+    },
+    {
+        "name": "Recipe_CandyCane_C",
+        "inputs": [
+            {
+                "itemName": "FICSMAS Gift",
+                "amount": 15
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Candy Cane",
+                "amount": 5
+            }
+        ]
+    },
+    {
+        "name": "Recipe_XmasBow_C",
+        "inputs": [
+            {
+                "itemName": "FICSMAS Gift",
+                "amount": 10
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "FICSMAS Bow",
+                "amount": 5
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Snow_C",
+        "inputs": [
+            {
+                "itemName": "FICSMAS Gift",
+                "amount": 25
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Actual Snow",
+                "amount": 10
+            }
+        ]
+    },
+    {
+        "name": "Recipe_XmasBall3_C",
+        "inputs": [
+            {
+                "itemName": "Red FICSMAS Ornament",
+                "amount": 10
+            },
+            {
+                "itemName": "Copper Ingot",
+                "amount": 10
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Copper FICSMAS Ornament",
+                "amount": 5
+            }
+        ]
+    },
+    {
+        "name": "Recipe_XmasBall4_C",
+        "inputs": [
+            {
+                "itemName": "Blue FICSMAS Ornament",
+                "amount": 15
+            },
+            {
+                "itemName": "Iron Ingot",
+                "amount": 15
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Iron FICSMAS Ornament",
+                "amount": 5
+            }
+        ]
+    },
+    {
+        "name": "Recipe_XmasBall1_C",
+        "inputs": [
+            {
+                "itemName": "FICSMAS Gift",
+                "amount": 5
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Red FICSMAS Ornament",
+                "amount": 5
+            }
+        ]
+    },
+    {
+        "name": "Recipe_XmasBall2_C",
+        "inputs": [
+            {
+                "itemName": "FICSMAS Gift",
+                "amount": 5
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Blue FICSMAS Ornament",
+                "amount": 10
+            }
+        ]
+    },
+    {
+        "name": "Recipe_XmasBallCluster_C",
+        "inputs": [
+            {
+                "itemName": "Copper FICSMAS Ornament",
+                "amount": 5
+            },
+            {
+                "itemName": "Iron FICSMAS Ornament",
+                "amount": 5
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "FICSMAS Ornament Bundle",
+                "amount": 5
+            }
+        ]
+    },
+    {
+        "name": "Recipe_XmasWreath_C",
+        "inputs": [
+            {
+                "itemName": "FICSMAS Tree Branch",
+                "amount": 15
+            },
+            {
+                "itemName": "FICSMAS Ornament Bundle",
+                "amount": 6
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "FICSMAS Decoration",
+                "amount": 2
+            }
+        ]
+    },
+    {
+        "name": "Recipe_XmasStar_C",
+        "inputs": [
+            {
+                "itemName": "FICSMAS Decoration",
+                "amount": 5
+            },
+            {
+                "itemName": "Candy Cane",
+                "amount": 20
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "FICSMAS Wonder Star",
+                "amount": 1
+            }
+        ]
+    },
+    {
+        "name": "Recipe_Snowball_C",
+        "inputs": [
+            {
+                "itemName": "Actual Snow",
+                "amount": 15
+            }
+        ],
+        "outputs": [
+            {
+                "itemName": "Snowball",
+                "amount": 5
             }
         ]
     }
