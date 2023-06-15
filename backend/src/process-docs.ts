@@ -25,7 +25,7 @@ function getRecipes(docs: ReturnType<typeof parseDocs>) {
     const recipes = rawRecipes
         .filter(([_, recipe]) => recipe.machineCraftable)
         .map(([name, recipe]) => ({
-            name,
+            name: recipe.name,
             inputs: recipe.ingredients.map((input) => ({itemName: getItemName(input.itemClass), amount: getAmount(input, recipe)})),
             outputs: recipe.products.map((input) => ({itemName: getItemName(input.itemClass), amount: getAmount(input, recipe)})),
         }));
@@ -34,7 +34,7 @@ function getRecipes(docs: ReturnType<typeof parseDocs>) {
 }
 
 const recipesData = getRecipes(rawData);
-// debugger;
+debugger;
 // process.exit();
 
 // fs.writeFileSync('parsed-docs-dump.json', JSON.stringify(data));

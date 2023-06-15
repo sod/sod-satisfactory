@@ -2,7 +2,7 @@
 
 export const recipesData = [
     {
-        "name": "Recipe_Cable_C",
+        "name": "Cable",
         "inputs": [
             {
                 "itemName": "Wire",
@@ -17,7 +17,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Wire_C",
+        "name": "Wire",
         "inputs": [
             {
                 "itemName": "Copper Ingot",
@@ -32,7 +32,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_IngotCopper_C",
+        "name": "Copper Ingot",
         "inputs": [
             {
                 "itemName": "Copper Ore",
@@ -47,7 +47,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_IronPlateReinforced_C",
+        "name": "Reinforced Iron Plate",
         "inputs": [
             {
                 "itemName": "Iron Plate",
@@ -66,7 +66,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Concrete_C",
+        "name": "Concrete",
         "inputs": [
             {
                 "itemName": "Limestone",
@@ -81,7 +81,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Screw_C",
+        "name": "Screw",
         "inputs": [
             {
                 "itemName": "Iron Rod",
@@ -96,7 +96,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Biomass_Leaves_C",
+        "name": "Biomass (Leaves)",
         "inputs": [
             {
                 "itemName": "Leaves",
@@ -111,7 +111,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Biomass_Wood_C",
+        "name": "Biomass (Wood)",
         "inputs": [
             {
                 "itemName": "Wood",
@@ -126,7 +126,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Fireworks_01_C",
+        "name": "Sweet Fireworks",
         "inputs": [
             {
                 "itemName": "FICSMAS Tree Branch",
@@ -145,7 +145,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Fireworks_02_C",
+        "name": "Fancy Fireworks",
         "inputs": [
             {
                 "itemName": "FICSMAS Tree Branch",
@@ -164,7 +164,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Fireworks_03_C",
+        "name": "Sparkly Fireworks",
         "inputs": [
             {
                 "itemName": "FICSMAS Tree Branch",
@@ -183,7 +183,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_XmasBranch_C",
+        "name": "FICSMAS Tree Branch",
         "inputs": [
             {
                 "itemName": "FICSMAS Gift",
@@ -198,7 +198,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_IronPlate_C",
+        "name": "Iron Plate",
         "inputs": [
             {
                 "itemName": "Iron Ingot",
@@ -213,7 +213,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_IronRod_C",
+        "name": "Iron Rod",
         "inputs": [
             {
                 "itemName": "Iron Ingot",
@@ -228,7 +228,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_IngotIron_C",
+        "name": "Iron Ingot",
         "inputs": [
             {
                 "itemName": "Iron Ore",
@@ -243,7 +243,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_AdheredIronPlate_C",
+        "name": "Alternate: Adhered Iron Plate",
         "inputs": [
             {
                 "itemName": "Iron Plate",
@@ -262,7 +262,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_CircuitBoard_C",
+        "name": "Circuit Board",
         "inputs": [
             {
                 "itemName": "Copper Sheet",
@@ -281,7 +281,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_LiquidFuel_C",
+        "name": "Fuel",
         "inputs": [
             {
                 "itemName": "Crude Oil",
@@ -300,7 +300,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_PetroleumCoke_C",
+        "name": "Petroleum Coke",
         "inputs": [
             {
                 "itemName": "Heavy Oil Residue",
@@ -315,7 +315,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Plastic_C",
+        "name": "Plastic",
         "inputs": [
             {
                 "itemName": "Crude Oil",
@@ -334,7 +334,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Rubber_C",
+        "name": "Rubber",
         "inputs": [
             {
                 "itemName": "Crude Oil",
@@ -353,7 +353,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_ResidualFuel_C",
+        "name": "Residual Fuel",
         "inputs": [
             {
                 "itemName": "Heavy Oil Residue",
@@ -368,7 +368,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_ResidualPlastic_C",
+        "name": "Residual Plastic",
         "inputs": [
             {
                 "itemName": "Polymer Resin",
@@ -387,7 +387,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_ResidualRubber_C",
+        "name": "Residual Rubber",
         "inputs": [
             {
                 "itemName": "Polymer Resin",
@@ -406,7 +406,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_BoltedFrame_C",
+        "name": "Alternate: Bolted Frame",
         "inputs": [
             {
                 "itemName": "Reinforced Iron Plate",
@@ -425,7 +425,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_ModularFrame_C",
+        "name": "Modular Frame",
         "inputs": [
             {
                 "itemName": "Reinforced Iron Plate",
@@ -444,7 +444,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Rotor_C",
+        "name": "Rotor",
         "inputs": [
             {
                 "itemName": "Iron Rod",
@@ -463,7 +463,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_CopperSheet_C",
+        "name": "Copper Sheet",
         "inputs": [
             {
                 "itemName": "Copper Ingot",
@@ -478,7 +478,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_SpaceElevatorPart_1_C",
+        "name": "Smart Plating",
         "inputs": [
             {
                 "itemName": "Reinforced Iron Plate",
@@ -497,7 +497,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_CoatedCable_C",
+        "name": "Alternate: Coated Cable",
         "inputs": [
             {
                 "itemName": "Wire",
@@ -516,7 +516,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_CoatedIronCanister_C",
+        "name": "Alternate: Coated Iron Canister",
         "inputs": [
             {
                 "itemName": "Iron Plate",
@@ -535,7 +535,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_ColorCartridge_C",
+        "name": "Color Cartridge",
         "inputs": [
             {
                 "itemName": "Flower Petals",
@@ -550,7 +550,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_FluidCanister_C",
+        "name": "Empty Canister",
         "inputs": [
             {
                 "itemName": "Plastic",
@@ -565,7 +565,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Fuel_C",
+        "name": "Packaged Fuel",
         "inputs": [
             {
                 "itemName": "Fuel",
@@ -584,7 +584,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_LiquidBiofuel_C",
+        "name": "Liquid Biofuel",
         "inputs": [
             {
                 "itemName": "Solid Biofuel",
@@ -603,7 +603,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_PackagedBiofuel_C",
+        "name": "Packaged Liquid Biofuel",
         "inputs": [
             {
                 "itemName": "Liquid Biofuel",
@@ -622,7 +622,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_PackagedCrudeOil_C",
+        "name": "Packaged Oil",
         "inputs": [
             {
                 "itemName": "Crude Oil",
@@ -641,7 +641,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_PackagedOilResidue_C",
+        "name": "Packaged Heavy Oil Residue",
         "inputs": [
             {
                 "itemName": "Heavy Oil Residue",
@@ -660,7 +660,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_PackagedWater_C",
+        "name": "Packaged Water",
         "inputs": [
             {
                 "itemName": "Water",
@@ -679,7 +679,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_UnpackageBioFuel_C",
+        "name": "Unpackage Liquid Biofuel",
         "inputs": [
             {
                 "itemName": "Packaged Liquid Biofuel",
@@ -698,7 +698,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_UnpackageFuel_C",
+        "name": "Unpackage Fuel",
         "inputs": [
             {
                 "itemName": "Packaged Fuel",
@@ -717,7 +717,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_UnpackageOil_C",
+        "name": "Unpackage Oil",
         "inputs": [
             {
                 "itemName": "Packaged Oil",
@@ -736,7 +736,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_UnpackageOilResidue_C",
+        "name": "Unpackage Heavy Oil Residue",
         "inputs": [
             {
                 "itemName": "Packaged Heavy Oil Residue",
@@ -755,7 +755,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_UnpackageWater_C",
+        "name": "Unpackage Water",
         "inputs": [
             {
                 "itemName": "Packaged Water",
@@ -774,7 +774,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_CoatedIronPlate_C",
+        "name": "Alternate: Coated Iron Plate",
         "inputs": [
             {
                 "itemName": "Iron Ingot",
@@ -793,7 +793,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_CokeSteelIngot_C",
+        "name": "Alternate: Coke Steel Ingot",
         "inputs": [
             {
                 "itemName": "Iron Ore",
@@ -812,7 +812,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_CopperAlloyIngot_C",
+        "name": "Alternate: Copper Alloy Ingot",
         "inputs": [
             {
                 "itemName": "Copper Ore",
@@ -831,7 +831,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_CopperRotor_C",
+        "name": "Alternate: Copper Rotor",
         "inputs": [
             {
                 "itemName": "Copper Sheet",
@@ -850,7 +850,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_DilutedPackagedFuel_C",
+        "name": "Alternate: Diluted Packaged Fuel",
         "inputs": [
             {
                 "itemName": "Heavy Oil Residue",
@@ -869,7 +869,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_ElectroAluminumScrap_C",
+        "name": "Alternate: Electrode - Aluminum Scrap",
         "inputs": [
             {
                 "itemName": "Alumina Solution",
@@ -892,7 +892,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_UraniumCell_C",
+        "name": "Encased Uranium Cell",
         "inputs": [
             {
                 "itemName": "Uranium",
@@ -919,7 +919,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_CoolingSystem_C",
+        "name": "Cooling System",
         "inputs": [
             {
                 "itemName": "Heat Sink",
@@ -946,7 +946,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_NitricAcid_C",
+        "name": "Nitric Acid",
         "inputs": [
             {
                 "itemName": "Nitrogen Gas",
@@ -969,7 +969,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_NonFissileUranium_C",
+        "name": "Non-fissile Uranium",
         "inputs": [
             {
                 "itemName": "Uranium Waste",
@@ -1000,7 +1000,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_AluminumCasing_C",
+        "name": "Aluminum Casing",
         "inputs": [
             {
                 "itemName": "Aluminum Ingot",
@@ -1015,7 +1015,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_AluminumSheet_C",
+        "name": "Alclad Aluminum Sheet",
         "inputs": [
             {
                 "itemName": "Aluminum Ingot",
@@ -1034,7 +1034,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_RadioControlUnit_C",
+        "name": "Radio Control Unit",
         "inputs": [
             {
                 "itemName": "Aluminum Casing",
@@ -1057,7 +1057,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_AluminaSolution_C",
+        "name": "Alumina Solution",
         "inputs": [
             {
                 "itemName": "Bauxite",
@@ -1080,7 +1080,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_AluminumScrap_C",
+        "name": "Aluminum Scrap",
         "inputs": [
             {
                 "itemName": "Alumina Solution",
@@ -1103,7 +1103,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_PackagedAlumina_C",
+        "name": "Packaged Alumina Solution",
         "inputs": [
             {
                 "itemName": "Alumina Solution",
@@ -1122,7 +1122,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_IngotAluminum_C",
+        "name": "Aluminum Ingot",
         "inputs": [
             {
                 "itemName": "Aluminum Scrap",
@@ -1141,7 +1141,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_QuartzCrystal_C",
+        "name": "Quartz Crystal",
         "inputs": [
             {
                 "itemName": "Raw Quartz",
@@ -1156,7 +1156,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Silica_C",
+        "name": "Silica",
         "inputs": [
             {
                 "itemName": "Raw Quartz",
@@ -1171,7 +1171,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_CrystalOscillator_C",
+        "name": "Crystal Oscillator",
         "inputs": [
             {
                 "itemName": "Quartz Crystal",
@@ -1194,7 +1194,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_UnpackageAlumina_C",
+        "name": "Unpackage Alumina Solution",
         "inputs": [
             {
                 "itemName": "Packaged Alumina Solution",
@@ -1213,7 +1213,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_ElectrodeCircuitBoard_C",
+        "name": "Alternate: Electrode Circuit Board",
         "inputs": [
             {
                 "itemName": "Rubber",
@@ -1232,7 +1232,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_FlexibleFramework_C",
+        "name": "Alternate: Flexible Framework",
         "inputs": [
             {
                 "itemName": "Modular Frame",
@@ -1255,7 +1255,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_FusedWire_C",
+        "name": "Alternate: Fused Wire",
         "inputs": [
             {
                 "itemName": "Copper Ingot",
@@ -1274,7 +1274,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_HeavyFlexibleFrame_C",
+        "name": "Alternate: Heavy Flexible Frame",
         "inputs": [
             {
                 "itemName": "Modular Frame",
@@ -1301,7 +1301,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Computer_C",
+        "name": "Computer",
         "inputs": [
             {
                 "itemName": "Circuit Board",
@@ -1328,7 +1328,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_SpaceElevatorPart_4_C",
+        "name": "Modular Engine",
         "inputs": [
             {
                 "itemName": "Motor",
@@ -1351,7 +1351,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_SpaceElevatorPart_5_C",
+        "name": "Adaptive Control Unit",
         "inputs": [
             {
                 "itemName": "Automated Wiring",
@@ -1378,7 +1378,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_HeavyOilResidue_C",
+        "name": "Alternate: Heavy Oil Residue",
         "inputs": [
             {
                 "itemName": "Crude Oil",
@@ -1397,7 +1397,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_HighSpeedWiring_C",
+        "name": "Alternate: Automated Speed Wiring",
         "inputs": [
             {
                 "itemName": "Stator",
@@ -1420,7 +1420,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_EncasedIndustrialBeam_C",
+        "name": "Encased Industrial Beam",
         "inputs": [
             {
                 "itemName": "Steel Beam",
@@ -1439,7 +1439,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Motor_C",
+        "name": "Motor",
         "inputs": [
             {
                 "itemName": "Rotor",
@@ -1458,7 +1458,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Stator_C",
+        "name": "Stator",
         "inputs": [
             {
                 "itemName": "Steel Pipe",
@@ -1477,7 +1477,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_ModularFrameHeavy_C",
+        "name": "Heavy Modular Frame",
         "inputs": [
             {
                 "itemName": "Modular Frame",
@@ -1504,7 +1504,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_SpaceElevatorPart_3_C",
+        "name": "Automated Wiring",
         "inputs": [
             {
                 "itemName": "Stator",
@@ -1523,7 +1523,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_AILimiter_C",
+        "name": "AI Limiter",
         "inputs": [
             {
                 "itemName": "Copper Sheet",
@@ -1542,7 +1542,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_PlasticSmartPlating_C",
+        "name": "Alternate: Plastic Smart Plating",
         "inputs": [
             {
                 "itemName": "Reinforced Iron Plate",
@@ -1565,7 +1565,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_PolymerResin_C",
+        "name": "Alternate: Polymer Resin",
         "inputs": [
             {
                 "itemName": "Crude Oil",
@@ -1584,7 +1584,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_PureAluminumIngot_C",
+        "name": "Alternate: Pure Aluminum Ingot",
         "inputs": [
             {
                 "itemName": "Aluminum Scrap",
@@ -1599,7 +1599,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_PureCateriumIngot_C",
+        "name": "Alternate: Pure Caterium Ingot",
         "inputs": [
             {
                 "itemName": "Caterium Ore",
@@ -1618,7 +1618,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_PureCopperIngot_C",
+        "name": "Alternate: Pure Copper Ingot",
         "inputs": [
             {
                 "itemName": "Copper Ore",
@@ -1637,7 +1637,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_PureIronIngot_C",
+        "name": "Alternate: Pure Iron Ingot",
         "inputs": [
             {
                 "itemName": "Iron Ore",
@@ -1656,7 +1656,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_PureQuartzCrystal_C",
+        "name": "Alternate: Pure Quartz Crystal",
         "inputs": [
             {
                 "itemName": "Raw Quartz",
@@ -1675,7 +1675,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_RecycledRubber_C",
+        "name": "Alternate: Recycled Rubber",
         "inputs": [
             {
                 "itemName": "Plastic",
@@ -1694,7 +1694,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_RubberConcrete_C",
+        "name": "Alternate: Rubber Concrete",
         "inputs": [
             {
                 "itemName": "Limestone",
@@ -1713,7 +1713,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_SteamedCopperSheet_C",
+        "name": "Alternate: Steamed Copper Sheet",
         "inputs": [
             {
                 "itemName": "Copper Ingot",
@@ -1732,7 +1732,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_SteelCanister_C",
+        "name": "Alternate: Steel Canister",
         "inputs": [
             {
                 "itemName": "Steel Ingot",
@@ -1747,7 +1747,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_SteelCoatedPlate_C",
+        "name": "Alternate: Steel Coated Plate",
         "inputs": [
             {
                 "itemName": "Steel Ingot",
@@ -1766,7 +1766,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_SteelRod_C",
+        "name": "Alternate: Steel Rod",
         "inputs": [
             {
                 "itemName": "Steel Ingot",
@@ -1781,7 +1781,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_SteelBeam_C",
+        "name": "Steel Beam",
         "inputs": [
             {
                 "itemName": "Steel Ingot",
@@ -1796,7 +1796,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_SteelPipe_C",
+        "name": "Steel Pipe",
         "inputs": [
             {
                 "itemName": "Steel Ingot",
@@ -1811,7 +1811,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_IngotSteel_C",
+        "name": "Steel Ingot",
         "inputs": [
             {
                 "itemName": "Iron Ore",
@@ -1830,7 +1830,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_SpaceElevatorPart_2_C",
+        "name": "Versatile Framework",
         "inputs": [
             {
                 "itemName": "Modular Frame",
@@ -1849,7 +1849,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_TurboHeavyFuel_C",
+        "name": "Alternate: Turbo Heavy Fuel",
         "inputs": [
             {
                 "itemName": "Heavy Oil Residue",
@@ -1868,7 +1868,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_PackagedTurboFuel_C",
+        "name": "Packaged Turbofuel",
         "inputs": [
             {
                 "itemName": "Turbofuel",
@@ -1887,7 +1887,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_UnpackageTurboFuel_C",
+        "name": "Unpackage Turbofuel",
         "inputs": [
             {
                 "itemName": "Packaged Turbofuel",
@@ -1906,7 +1906,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_Coal_1_C",
+        "name": "Alternate: Charcoal",
         "inputs": [
             {
                 "itemName": "Wood",
@@ -1921,7 +1921,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_Coal_2_C",
+        "name": "Alternate: Biocoal",
         "inputs": [
             {
                 "itemName": "Biomass",
@@ -1936,7 +1936,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_EnrichedCoal_C",
+        "name": "Alternate: Compacted Coal",
         "inputs": [
             {
                 "itemName": "Coal",
@@ -1955,7 +1955,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_WetConcrete_C",
+        "name": "Alternate: Wet Concrete",
         "inputs": [
             {
                 "itemName": "Limestone",
@@ -1974,7 +1974,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_AlcladCasing_C",
+        "name": "Alternate: Alclad Casing",
         "inputs": [
             {
                 "itemName": "Aluminum Ingot",
@@ -1993,7 +1993,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_AutomatedMiner_C",
+        "name": "Alternate: Automated Miner",
         "inputs": [
             {
                 "itemName": "Motor",
@@ -2020,7 +2020,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_ClassicBattery_C",
+        "name": "Alternate: Classic Battery",
         "inputs": [
             {
                 "itemName": "Sulfur",
@@ -2047,7 +2047,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Battery_C",
+        "name": "Battery",
         "inputs": [
             {
                 "itemName": "Sulfuric Acid",
@@ -2074,7 +2074,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_ComputerSuper_C",
+        "name": "Supercomputer",
         "inputs": [
             {
                 "itemName": "Computer",
@@ -2101,7 +2101,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_SulfuricAcid_C",
+        "name": "Sulfuric Acid",
         "inputs": [
             {
                 "itemName": "Sulfur",
@@ -2120,7 +2120,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_PackagedSulfuricAcid_C",
+        "name": "Packaged Sulfuric Acid",
         "inputs": [
             {
                 "itemName": "Sulfuric Acid",
@@ -2139,7 +2139,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_SpaceElevatorPart_7_C",
+        "name": "Assembly Director System",
         "inputs": [
             {
                 "itemName": "Adaptive Control Unit",
@@ -2158,7 +2158,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_HighSpeedConnector_C",
+        "name": "High-Speed Connector",
         "inputs": [
             {
                 "itemName": "Quickwire",
@@ -2181,7 +2181,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_UnpackageSulfuricAcid_C",
+        "name": "Unpackage Sulfuric Acid",
         "inputs": [
             {
                 "itemName": "Packaged Sulfuric Acid",
@@ -2200,7 +2200,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_CoolingDevice_C",
+        "name": "Alternate: Cooling Device",
         "inputs": [
             {
                 "itemName": "Heat Sink",
@@ -2223,7 +2223,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_HeatSink_C",
+        "name": "Heat Sink",
         "inputs": [
             {
                 "itemName": "Alclad Aluminum Sheet",
@@ -2242,7 +2242,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_FusedModularFrame_C",
+        "name": "Fused Modular Frame",
         "inputs": [
             {
                 "itemName": "Heavy Modular Frame",
@@ -2265,7 +2265,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_GasTank_C",
+        "name": "Empty Fluid Tank",
         "inputs": [
             {
                 "itemName": "Aluminum Ingot",
@@ -2280,7 +2280,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_PackagedNitrogen_C",
+        "name": "Packaged Nitrogen Gas",
         "inputs": [
             {
                 "itemName": "Nitrogen Gas",
@@ -2299,7 +2299,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_UnpackageNitrogen_C",
+        "name": "Unpackage Nitrogen Gas",
         "inputs": [
             {
                 "itemName": "Packaged Nitrogen Gas",
@@ -2318,7 +2318,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_DilutedFuel_C",
+        "name": "Alternate: Diluted Fuel",
         "inputs": [
             {
                 "itemName": "Heavy Oil Residue",
@@ -2337,7 +2337,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_ElectricMotor_C",
+        "name": "Alternate: Electric Motor",
         "inputs": [
             {
                 "itemName": "Electromagnetic Control Rod",
@@ -2356,7 +2356,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_FertileUranium_C",
+        "name": "Alternate: Fertile Uranium",
         "inputs": [
             {
                 "itemName": "Uranium",
@@ -2387,7 +2387,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_PlutoniumCell_C",
+        "name": "Encased Plutonium Cell",
         "inputs": [
             {
                 "itemName": "Plutonium Pellet",
@@ -2406,7 +2406,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_PressureConversionCube_C",
+        "name": "Pressure Conversion Cube",
         "inputs": [
             {
                 "itemName": "Fused Modular Frame",
@@ -2425,7 +2425,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_CopperDust_C",
+        "name": "Copper Powder",
         "inputs": [
             {
                 "itemName": "Copper Ingot",
@@ -2440,7 +2440,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Plutonium_C",
+        "name": "Plutonium Pellet",
         "inputs": [
             {
                 "itemName": "Non-fissile Uranium",
@@ -2459,7 +2459,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_PlutoniumFuelRod_C",
+        "name": "Plutonium Fuel Rod",
         "inputs": [
             {
                 "itemName": "Encased Plutonium Cell",
@@ -2486,7 +2486,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_PackagedNitricAcid_C",
+        "name": "Packaged Nitric Acid",
         "inputs": [
             {
                 "itemName": "Nitric Acid",
@@ -2505,7 +2505,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_SpaceElevatorPart_9_C",
+        "name": "Nuclear Pasta",
         "inputs": [
             {
                 "itemName": "Copper Powder",
@@ -2524,7 +2524,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_UnpackageNitricAcid_C",
+        "name": "Unpackage Nitric Acid",
         "inputs": [
             {
                 "itemName": "Packaged Nitric Acid",
@@ -2543,7 +2543,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_HeatFusedFrame_C",
+        "name": "Alternate: Heat-Fused Frame",
         "inputs": [
             {
                 "itemName": "Heavy Modular Frame",
@@ -2570,7 +2570,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_InstantPlutoniumCell_C",
+        "name": "Alternate: Instant Plutonium Cell",
         "inputs": [
             {
                 "itemName": "Non-fissile Uranium",
@@ -2589,7 +2589,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_InstantScrap_C",
+        "name": "Alternate: Instant Scrap",
         "inputs": [
             {
                 "itemName": "Bauxite",
@@ -2620,7 +2620,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_OCSupercomputer_C",
+        "name": "Alternate: OC Supercomputer",
         "inputs": [
             {
                 "itemName": "Radio Control Unit",
@@ -2639,7 +2639,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_PlutoniumFuelUnit_C",
+        "name": "Alternate: Plutonium Fuel Unit",
         "inputs": [
             {
                 "itemName": "Encased Plutonium Cell",
@@ -2658,7 +2658,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_RadioControlSystem_C",
+        "name": "Alternate: Radio Control System",
         "inputs": [
             {
                 "itemName": "Crystal Oscillator",
@@ -2685,7 +2685,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_SloppyAlumina_C",
+        "name": "Alternate: Sloppy Alumina",
         "inputs": [
             {
                 "itemName": "Bauxite",
@@ -2704,7 +2704,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_SuperStateComputer_C",
+        "name": "Alternate: Super-State Computer",
         "inputs": [
             {
                 "itemName": "Computer",
@@ -2731,7 +2731,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_ElectromagneticControlRod_C",
+        "name": "Electromagnetic Control Rod",
         "inputs": [
             {
                 "itemName": "Stator",
@@ -2750,7 +2750,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_NuclearFuelRod_C",
+        "name": "Uranium Fuel Rod",
         "inputs": [
             {
                 "itemName": "Encased Uranium Cell",
@@ -2773,7 +2773,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_SpaceElevatorPart_6_C",
+        "name": "Magnetic Field Generator",
         "inputs": [
             {
                 "itemName": "Versatile Framework",
@@ -2796,7 +2796,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_TurboBlendFuel_C",
+        "name": "Alternate: Turbo Blend Fuel",
         "inputs": [
             {
                 "itemName": "Fuel",
@@ -2823,7 +2823,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_TurboPressureMotor_C",
+        "name": "Alternate: Turbo Pressure Motor",
         "inputs": [
             {
                 "itemName": "Motor",
@@ -2850,7 +2850,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_Beacon_1_C",
+        "name": "Alternate: Crystal Beacon",
         "inputs": [
             {
                 "itemName": "Steel Beam",
@@ -2873,7 +2873,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_Cable_1_C",
+        "name": "Alternate: Insulated Cable",
         "inputs": [
             {
                 "itemName": "Wire",
@@ -2892,7 +2892,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_Cable_2_C",
+        "name": "Alternate: Quickwire Cable",
         "inputs": [
             {
                 "itemName": "Quickwire",
@@ -2911,7 +2911,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_IngotCaterium_C",
+        "name": "Caterium Ingot",
         "inputs": [
             {
                 "itemName": "Caterium Ore",
@@ -2926,7 +2926,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_CircuitBoard_1_C",
+        "name": "Alternate: Silicon Circuit Board",
         "inputs": [
             {
                 "itemName": "Copper Sheet",
@@ -2945,7 +2945,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_CircuitBoard_2_C",
+        "name": "Alternate: Caterium Circuit Board",
         "inputs": [
             {
                 "itemName": "Plastic",
@@ -2964,7 +2964,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_Computer_1_C",
+        "name": "Alternate: Caterium Computer",
         "inputs": [
             {
                 "itemName": "Circuit Board",
@@ -2987,7 +2987,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_Computer_2_C",
+        "name": "Alternate: Crystal Computer",
         "inputs": [
             {
                 "itemName": "Circuit Board",
@@ -3006,7 +3006,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_Concrete_C",
+        "name": "Alternate: Fine Concrete",
         "inputs": [
             {
                 "itemName": "Silica",
@@ -3025,7 +3025,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_CrystalOscillator_C",
+        "name": "Alternate: Insulated Crystal Oscillator",
         "inputs": [
             {
                 "itemName": "Quartz Crystal",
@@ -3048,7 +3048,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_ElectromagneticControlRod_1_C",
+        "name": "Alternate: Electromagnetic Connection Rod",
         "inputs": [
             {
                 "itemName": "Stator",
@@ -3067,7 +3067,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_Gunpowder_1_C",
+        "name": "Alternate: Fine Black Powder",
         "inputs": [
             {
                 "itemName": "Sulfur",
@@ -3086,7 +3086,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_HeatSink_1_C",
+        "name": "Alternate: Heat Exchanger",
         "inputs": [
             {
                 "itemName": "Aluminum Casing",
@@ -3105,7 +3105,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_ModularFrameHeavy_C",
+        "name": "Alternate: Heavy Encased Frame",
         "inputs": [
             {
                 "itemName": "Modular Frame",
@@ -3132,7 +3132,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_HighSpeedConnector_C",
+        "name": "Alternate: Silicon High-Speed Connector",
         "inputs": [
             {
                 "itemName": "Quickwire",
@@ -3155,7 +3155,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_IngotIron_C",
+        "name": "Alternate: Iron Alloy Ingot",
         "inputs": [
             {
                 "itemName": "Iron Ore",
@@ -3174,7 +3174,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_IngotSteel_1_C",
+        "name": "Alternate: Solid Steel Ingot",
         "inputs": [
             {
                 "itemName": "Iron Ingot",
@@ -3193,7 +3193,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_IngotSteel_2_C",
+        "name": "Alternate: Compacted Steel Ingot",
         "inputs": [
             {
                 "itemName": "Iron Ore",
@@ -3212,7 +3212,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_ModularFrame_C",
+        "name": "Alternate: Steeled Frame",
         "inputs": [
             {
                 "itemName": "Reinforced Iron Plate",
@@ -3231,7 +3231,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_Motor_1_C",
+        "name": "Alternate: Rigour Motor",
         "inputs": [
             {
                 "itemName": "Rotor",
@@ -3254,7 +3254,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_NuclearFuelRod_1_C",
+        "name": "Alternate: Uranium Fuel Unit",
         "inputs": [
             {
                 "itemName": "Encased Uranium Cell",
@@ -3281,7 +3281,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_Plastic_1_C",
+        "name": "Alternate: Recycled Plastic",
         "inputs": [
             {
                 "itemName": "Rubber",
@@ -3300,7 +3300,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_Quickwire_C",
+        "name": "Alternate: Fused Quickwire",
         "inputs": [
             {
                 "itemName": "Caterium Ingot",
@@ -3319,7 +3319,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_RadioControlUnit_1_C",
+        "name": "Alternate: Radio Connection Unit",
         "inputs": [
             {
                 "itemName": "Heat Sink",
@@ -3342,7 +3342,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_ReinforcedIronPlate_1_C",
+        "name": "Alternate: Bolted Iron Plate",
         "inputs": [
             {
                 "itemName": "Iron Plate",
@@ -3361,7 +3361,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_ReinforcedIronPlate_2_C",
+        "name": "Alternate: Stitched Iron Plate",
         "inputs": [
             {
                 "itemName": "Iron Plate",
@@ -3380,7 +3380,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_EncasedIndustrialBeam_C",
+        "name": "Alternate: Encased Industrial Pipe",
         "inputs": [
             {
                 "itemName": "Steel Pipe",
@@ -3399,7 +3399,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_Rotor_C",
+        "name": "Alternate: Steel Rotor",
         "inputs": [
             {
                 "itemName": "Steel Pipe",
@@ -3418,7 +3418,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_Screw_C",
+        "name": "Alternate: Cast Screw",
         "inputs": [
             {
                 "itemName": "Iron Ingot",
@@ -3433,7 +3433,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_Screw_2_C",
+        "name": "Alternate: Steel Screw",
         "inputs": [
             {
                 "itemName": "Steel Beam",
@@ -3448,7 +3448,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_Silica_C",
+        "name": "Alternate: Cheap Silica",
         "inputs": [
             {
                 "itemName": "Raw Quartz",
@@ -3467,7 +3467,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_Stator_C",
+        "name": "Alternate: Quickwire Stator",
         "inputs": [
             {
                 "itemName": "Steel Pipe",
@@ -3486,7 +3486,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_Turbofuel_C",
+        "name": "Turbofuel",
         "inputs": [
             {
                 "itemName": "Fuel",
@@ -3505,7 +3505,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_TurboMotor_1_C",
+        "name": "Alternate: Turbo Electric Motor",
         "inputs": [
             {
                 "itemName": "Motor",
@@ -3532,7 +3532,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_MotorTurbo_C",
+        "name": "Turbo Motor",
         "inputs": [
             {
                 "itemName": "Cooling System",
@@ -3559,7 +3559,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_SpaceElevatorPart_8_C",
+        "name": "Thermal Propulsion Rocket",
         "inputs": [
             {
                 "itemName": "Modular Engine",
@@ -3586,7 +3586,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_UraniumCell_1_C",
+        "name": "Alternate: Infused Uranium Cell",
         "inputs": [
             {
                 "itemName": "Uranium",
@@ -3613,7 +3613,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_Wire_1_C",
+        "name": "Alternate: Iron Wire",
         "inputs": [
             {
                 "itemName": "Iron Ingot",
@@ -3628,7 +3628,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_Wire_2_C",
+        "name": "Alternate: Caterium Wire",
         "inputs": [
             {
                 "itemName": "Caterium Ingot",
@@ -3643,7 +3643,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Beacon_C",
+        "name": "Beacon",
         "inputs": [
             {
                 "itemName": "Iron Plate",
@@ -3670,7 +3670,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Biofuel_C",
+        "name": "Solid Biofuel",
         "inputs": [
             {
                 "itemName": "Biomass",
@@ -3685,7 +3685,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_FilterGasMask_C",
+        "name": "Gas Filter",
         "inputs": [
             {
                 "itemName": "Coal",
@@ -3708,7 +3708,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_FilterHazmat_C",
+        "name": "Iodine Infused Filter",
         "inputs": [
             {
                 "itemName": "Gas Filter",
@@ -3731,7 +3731,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Protein_Hog_C",
+        "name": "Hog Protein",
         "inputs": [
             {
                 "itemName": "Hog Remains",
@@ -3746,7 +3746,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_SpikedRebar_C",
+        "name": "Iron Rebar",
         "inputs": [
             {
                 "itemName": "Iron Rod",
@@ -3761,7 +3761,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Protein_Spitter_C",
+        "name": "Spitter Protein",
         "inputs": [
             {
                 "itemName": "Plasma Spitter Remains",
@@ -3776,7 +3776,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_AlienDNACapsule_C",
+        "name": "Alien DNA Capsule",
         "inputs": [
             {
                 "itemName": "Alien Protein",
@@ -3791,7 +3791,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Biomass_AlienProtein_C",
+        "name": "Biomass (Alien Protein)",
         "inputs": [
             {
                 "itemName": "Alien Protein",
@@ -3806,7 +3806,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Protein_Crab_C",
+        "name": "Hatcher Protein",
         "inputs": [
             {
                 "itemName": "Hatcher Remains",
@@ -3821,7 +3821,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Protein_Stinger_C",
+        "name": "Stinger Protein",
         "inputs": [
             {
                 "itemName": "Stinger Remains",
@@ -3836,7 +3836,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Quickwire_C",
+        "name": "Quickwire",
         "inputs": [
             {
                 "itemName": "Caterium Ingot",
@@ -3851,7 +3851,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Rebar_Stunshot_C",
+        "name": "Stun Rebar",
         "inputs": [
             {
                 "itemName": "Iron Rebar",
@@ -3870,7 +3870,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_CartridgeSmart_C",
+        "name": "Homing Rifle Ammo",
         "inputs": [
             {
                 "itemName": "Rifle Ammo",
@@ -3889,7 +3889,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Biomass_Mycelia_C",
+        "name": "Biomass (Mycelia)",
         "inputs": [
             {
                 "itemName": "Mycelia",
@@ -3904,7 +3904,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Fabric_C",
+        "name": "Fabric",
         "inputs": [
             {
                 "itemName": "Mycelia",
@@ -3923,7 +3923,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Alternate_PolyesterFabric_C",
+        "name": "Alternate: Polyester Fabric",
         "inputs": [
             {
                 "itemName": "Polymer Resin",
@@ -3942,7 +3942,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_NobeliskGas_C",
+        "name": "Gas Nobelisk",
         "inputs": [
             {
                 "itemName": "Nobelisk",
@@ -3961,7 +3961,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_PowerCrystalShard_1_C",
+        "name": "Power Shard (1)",
         "inputs": [
             {
                 "itemName": "Blue Power Slug",
@@ -3976,7 +3976,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_PowerCrystalShard_2_C",
+        "name": "Power Shard (2)",
         "inputs": [
             {
                 "itemName": "Yellow Power Slug",
@@ -3991,7 +3991,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_PowerCrystalShard_3_C",
+        "name": "Power Shard (5)",
         "inputs": [
             {
                 "itemName": "Purple Power Slug",
@@ -4006,7 +4006,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Rebar_Spreadshot_C",
+        "name": "Shatter Rebar",
         "inputs": [
             {
                 "itemName": "Iron Rebar",
@@ -4025,7 +4025,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_NobeliskShockwave_C",
+        "name": "Pulse Nobelisk",
         "inputs": [
             {
                 "itemName": "Nobelisk",
@@ -4044,7 +4044,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Gunpowder_C",
+        "name": "Black Powder",
         "inputs": [
             {
                 "itemName": "Coal",
@@ -4063,7 +4063,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_GunpowderMK2_C",
+        "name": "Smokeless Powder",
         "inputs": [
             {
                 "itemName": "Black Powder",
@@ -4082,7 +4082,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Nobelisk_C",
+        "name": "Nobelisk",
         "inputs": [
             {
                 "itemName": "Black Powder",
@@ -4101,7 +4101,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_NobeliskCluster_C",
+        "name": "Cluster Nobelisk",
         "inputs": [
             {
                 "itemName": "Nobelisk",
@@ -4120,7 +4120,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Cartridge_C",
+        "name": "Rifle Ammo",
         "inputs": [
             {
                 "itemName": "Copper Sheet",
@@ -4139,7 +4139,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Rebar_Explosive_C",
+        "name": "Explosive Rebar",
         "inputs": [
             {
                 "itemName": "Iron Rebar",
@@ -4162,7 +4162,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_NobeliskNuke_C",
+        "name": "Nuke Nobelisk",
         "inputs": [
             {
                 "itemName": "Nobelisk",
@@ -4189,7 +4189,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_CartridgeChaos_C",
+        "name": "Turbo Rifle Ammo",
         "inputs": [
             {
                 "itemName": "Rifle Ammo",
@@ -4212,7 +4212,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_CartridgeChaos_Packaged_C",
+        "name": "Turbo Rifle Ammo",
         "inputs": [
             {
                 "itemName": "Rifle Ammo",
@@ -4235,7 +4235,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_CandyCane_C",
+        "name": "Candy Cane",
         "inputs": [
             {
                 "itemName": "FICSMAS Gift",
@@ -4250,7 +4250,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_XmasBow_C",
+        "name": "FICSMAS Bow",
         "inputs": [
             {
                 "itemName": "FICSMAS Gift",
@@ -4265,7 +4265,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Snow_C",
+        "name": "Actual Snow",
         "inputs": [
             {
                 "itemName": "FICSMAS Gift",
@@ -4280,7 +4280,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_XmasBall3_C",
+        "name": "Copper FICSMAS Ornament",
         "inputs": [
             {
                 "itemName": "Red FICSMAS Ornament",
@@ -4299,7 +4299,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_XmasBall4_C",
+        "name": "Iron FICSMAS Ornament",
         "inputs": [
             {
                 "itemName": "Blue FICSMAS Ornament",
@@ -4318,7 +4318,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_XmasBall1_C",
+        "name": "Red FICSMAS Ornament",
         "inputs": [
             {
                 "itemName": "FICSMAS Gift",
@@ -4333,7 +4333,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_XmasBall2_C",
+        "name": "Blue FICSMAS Ornament",
         "inputs": [
             {
                 "itemName": "FICSMAS Gift",
@@ -4348,7 +4348,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_XmasBallCluster_C",
+        "name": "FICSMAS Ornament Bundle",
         "inputs": [
             {
                 "itemName": "Copper FICSMAS Ornament",
@@ -4367,7 +4367,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_XmasWreath_C",
+        "name": "FICSMAS Decoration",
         "inputs": [
             {
                 "itemName": "FICSMAS Tree Branch",
@@ -4386,7 +4386,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_XmasStar_C",
+        "name": "FICSMAS Wonder Star",
         "inputs": [
             {
                 "itemName": "FICSMAS Decoration",
@@ -4405,7 +4405,7 @@ export const recipesData = [
         ]
     },
     {
-        "name": "Recipe_Snowball_C",
+        "name": "Snowball",
         "inputs": [
             {
                 "itemName": "Actual Snow",
