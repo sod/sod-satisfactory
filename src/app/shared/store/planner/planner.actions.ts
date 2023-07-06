@@ -8,7 +8,7 @@ import {
 import {ProductionDto} from 'src/app/shared/entities/production-dto';
 import {RecipeDataDto} from 'src/app/shared/entities/recipe-data-item-dto';
 import {RecipeTarget} from 'src/app/shared/entities/recipe-dto';
-import {PlannerState} from './planner.reducer';
+import {InputCoveredDto, PlannerState} from './planner.reducer';
 
 export const plannerStoreRestored = createAction('[Planner] Store Restored', props<{state: PlannerState}>());
 
@@ -51,3 +51,5 @@ export const productionUpNextClicked = createAction(
 );
 
 export const editProductionClicked = createAction('[Planner] Edit Production Clicked', props<{index: number}>());
+
+export const inputCoveredClicked = createAction('[Planner] Input Covered Clicked', props<InputCoveredDto>());

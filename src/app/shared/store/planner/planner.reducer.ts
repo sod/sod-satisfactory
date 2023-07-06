@@ -1,5 +1,5 @@
 import {createReducer, on} from '@ngrx/store';
-import {without} from 'lodash-es';
+import {pick, without} from 'lodash-es';
 import {ItemPackage} from 'src/app/shared/entities/item-package';
 import {Production} from 'src/app/shared/entities/production';
 import {ProductionDto} from 'src/app/shared/entities/production-dto';
@@ -9,21 +9,30 @@ import * as PlannerActions from './planner.actions';
 
 export const plannerFeatureKey = 'planner';
 
+export interface InputCoveredDto {
+    name: string;
+    amount: number;
+}
+
 export interface PlannerState {
     edit?: {index: number};
     productions: ProductionDto[];
+    inputCovered: InputCoveredDto[];
 }
 
 export const initialState: PlannerState = {
     edit: undefined,
     productions: [],
+    inputCovered: [],
 };
 
 export const reducer = createReducer(
     initialState,
 
     on(PlannerActions.plannerStoreRestored, (state, action) => ({
-        ...action.state,
+        edit: action.state.edit,
+        productions: action.state.productions || [],
+        inputCovered: action.state.inputCovered || [],
     })),
 
     on(PlannerActions.addProduction, (state) => ({
@@ -109,4 +118,14 @@ export const reducer = createReducer(
         ...state,
         edit: action.index === state.edit?.index ? undefined : {index: action.index},
     })),
+
+    on(PlannerActions.inputCoveredClicked, (state, action) => {
+        const without = state.inputCovered.filter((input) => input.name !== action.name);
+        const remove = state.inputCovered.some((input) => input.name === action.name && input.amount === action.amount);
+
+        return {
+            ...state,
+            inputCovered: remove ? without : without.concat(pick(action, ['name', 'amount'])),
+        };
+    }),
 );

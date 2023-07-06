@@ -12,6 +12,7 @@ import {
     addProductionWithOutputNameClicked,
     clearProduction,
     editProductionClicked,
+    inputCoveredClicked,
     plannerStoreRestored,
     productionBuiltClicked,
     productionUpNextClicked,
@@ -41,6 +42,7 @@ export class AppEffects {
                     recipeSelected,
                     productionBuiltClicked,
                     productionUpNextClicked,
+                    inputCoveredClicked,
                 ),
                 switchMapTo(this.store.pipe(take(1))),
                 tap((store: GlobalState) => {

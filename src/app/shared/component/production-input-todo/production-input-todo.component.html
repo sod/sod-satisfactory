@@ -9,8 +9,8 @@
         </thead>
         <tbody>
             <tr *ngFor="let data of fixedTable.data; trackBy: trackByService.index">
-                <td [class.complete]="!data.isMissing()" [class.text-danger]="data.isMissing()">
-                    <i nz-icon [nzType]="data.isMissing() ? 'close-circle' : 'check-circle'" nzTheme="outline"></i>
+                <td [class.complete]="data.isMissing() !== 'yes'" [class.text-danger]="data.isMissing() === 'yes'">
+                    <i nz-icon [nzType]="data.isMissing() === 'yes' ? 'close-circle' : 'check-circle'" nzTheme="outline"></i>
                     {{ data.amount.toFixed(1) }}
                 </td>
                 <td [class.complete]="!data.isMissing()">{{ data.itemName }}</td>

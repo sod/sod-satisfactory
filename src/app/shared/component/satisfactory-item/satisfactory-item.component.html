@@ -1,19 +1,26 @@
 <div class="text-center"><app-satisfactory-item-image [itemPackage]="itemPackage"></app-satisfactory-item-image></div>
 <div class="text-center mt-2" *ngIf="{input: productionInputs?.get(itemPackage.itemName)} as state">
-    <ng-container *ngIf="state.input?.isMissing(); else amount">
-        <span
-            class="text-danger"
-            [nz-tooltip]="state.input?.amount! + ' missing, click to add.'"
-            nzTooltipPlacement="right"
-            [nzTooltipMouseEnterDelay]="0"
-        >
-            <i nz-icon [nzType]="'close-circle'" nzTheme="outline"></i>
+    <ng-container [ngSwitch]="state.input?.isMissing()">
+        <ng-container *ngSwitchCase="'yes'">
+            <span
+                class="text-danger"
+                [nz-tooltip]="state.input?.amount! + ' missing, click to add.'"
+                nzTooltipPlacement="right"
+                [nzTooltipMouseEnterDelay]="0"
+            >
+                <i nz-icon [nzType]="'close-circle'" nzTheme="outline"></i>
+                {{ itemPackage | amountWithModifiers }}
+            </span>
+        </ng-container>
+        <ng-container *ngSwitchCase="'covered'">
+            <span class="text-success">
+                <i nz-icon [nzType]="'check-circle'" nzTheme="outline"></i>
+                {{ itemPackage | amountWithModifiers }}
+            </span>
+        </ng-container>
+        <ng-container *ngSwitchDefault>
             {{ itemPackage | amountWithModifiers }}
-        </span>
+        </ng-container>
     </ng-container>
 </div>
 <div class="text-center text-muted">{{ itemPackage.itemName }}</div>
-
-<ng-template #amount>
-    {{ itemPackage | amountWithModifiers }}
-</ng-template>

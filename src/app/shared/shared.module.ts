@@ -10,24 +10,27 @@ import {SatisfactoriyItemImagePipe} from 'src/app/shared/pipe/satisfactoriy-item
 import {SharedNgZorroModule} from '../shared-ng-zorro/shared-ng-zorro.module';
 import {ItemPackageComponent} from './component/item-package/item-package.component';
 import {ItemComponent} from './component/item/item.component';
+import {MissingInputComponent} from './component/missing-input/missing-input.component';
+import {PackageImagesComponent} from './component/package-images/package-images.component';
 import {ProductionInputOrOutputComponent} from './component/production-input-or-output/production-input-or-output.component';
 import {ProductionInputTodoComponent} from './component/production-input-todo/production-input-todo.component';
 import {ProductionOverviewComponent} from './component/production-overview/production-overview.component';
 import {ProductionComponent} from './component/production/production.component';
 import {RecipeComponent} from './component/recipe/recipe.component';
+import {SatisfactoryItemImageComponent} from './component/satisfactory-item-image/satisfactory-item-image.component';
+import {SatisfactoryItemComponent} from './component/satisfactory-item/satisfactory-item.component';
+import {SatisfactoryItemsComponent} from './component/satisfactory-items/satisfactory-items.component';
+import {AbsolutePipe} from './pipe/absolute.pipe';
 import {FilterCaseInsensitivePipe} from './pipe/filter-case-insensitive.pipe';
 import {PlusOneUndefinedPipe} from './pipe/plus-one-undefined.pipe';
 import {ProductionTitlePipe} from './pipe/production-title.pipe';
+import {RecipeDataSummaryPipe} from './pipe/recipe-data-summary.pipe';
 import {ResolveProductionPipe} from './pipe/resolve-production.pipe';
 import {AppEffects} from './store/app/app.effects';
 import * as fromApp from './store/app/app.reducer';
 import {PlannerEffects} from './store/planner/planner.effects';
 import * as fromPlanner from './store/planner/planner.reducer';
-import { SatisfactoryItemImageComponent } from './component/satisfactory-item-image/satisfactory-item-image.component';
-import { SatisfactoryItemComponent } from './component/satisfactory-item/satisfactory-item.component';
-import { SatisfactoryItemsComponent } from './component/satisfactory-items/satisfactory-items.component';
-import { RecipeDataSummaryPipe } from './pipe/recipe-data-summary.pipe';
-import { PackageImagesComponent } from './component/package-images/package-images.component';
+import { ToFixedPipe } from './pipe/to-fixed.pipe';
 
 @NgModule({
     declarations: [
@@ -51,6 +54,9 @@ import { PackageImagesComponent } from './component/package-images/package-image
         SatisfactoryItemsComponent,
         RecipeDataSummaryPipe,
         PackageImagesComponent,
+        MissingInputComponent,
+        AbsolutePipe,
+        ToFixedPipe,
     ],
     imports: [
         CommonModule,
@@ -83,6 +89,7 @@ import { PackageImagesComponent } from './component/package-images/package-image
         SatisfactoryItemsComponent,
         RecipeDataSummaryPipe,
         PackageImagesComponent,
+        MissingInputComponent,
     ],
 })
 export class SharedModule {}
