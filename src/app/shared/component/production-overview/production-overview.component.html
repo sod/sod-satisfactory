@@ -31,9 +31,7 @@
         </nz-page-header-extra>
     </nz-page-header>
 
-    <div class="text-center text-muted mb-3" *ngIf="!production.recipe.inputs.length && !production.recipe.outputs.length">
-        Not inputs and outputs yet.
-    </div>
+    <div class="text-center text-muted mb-3" *ngIf="!production.hasRecipes()">Not inputs and outputs yet.</div>
     <div class="row position-relative align-items-center">
         <div class="text-center arrow-center" *ngIf="production.recipe.inputs.length && production.recipe.outputs.length">
             <i nz-icon nzType="arrow-right" nzTheme="outline"></i>

@@ -43,6 +43,6 @@ export class ItemComponent {
     }
 
     stringifyRecipe(object?: RecipeDataDto): string {
-        return 'Recipe ' + object?.outputs?.map((output) => output.itemName).join(' ') ?? 'unknown';
+        return 'Recipe ' + object?.[this.target]?.map((output) => output.itemName).join(' ') ?? 'unknown';
     }
 }

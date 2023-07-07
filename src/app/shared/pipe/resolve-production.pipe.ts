@@ -19,7 +19,9 @@ export class ProductionInput {
     }
 
     getMissingAmount(): number {
-        return this.amount > 0 ? this.amount - (this.inputCoveredAmount ?? 0) : 0;
+        const missingAmount = this.amount - (this.inputCoveredAmount ?? 0);
+
+        return missingAmount > 0 ? missingAmount : 0;
     }
 
     isMissing(): 'yes' | 'covered' | undefined {

@@ -14,7 +14,7 @@
 
 <nz-autocomplete #auto [nzWidth]="450" [nzBackfill]="false">
     <nz-auto-option
-        *ngFor="let option of items | filterCaseInsensitive: itemPackage?.itemName; trackBy: trackByService.index"
+        *ngFor="let option of items | filterCaseInsensitive : itemPackage?.itemName; trackBy: trackByService.index"
         [nzValue]="option"
         [nzLabel]="option"
     >
@@ -22,7 +22,7 @@
     </nz-auto-option>
     <nz-auto-option
         *ngFor="
-            let option of recipesData | filterCaseInsensitive: itemPackage?.itemName:$any(stringifyRecipe);
+            let option of recipesData | filterCaseInsensitive : itemPackage?.itemName : $any(stringifyRecipe.bind(this));
             trackBy: trackByService.index
         "
         [nzValue]="option"

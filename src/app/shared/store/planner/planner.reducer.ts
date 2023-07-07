@@ -35,11 +35,17 @@ export const reducer = createReducer(
         inputCovered: action.state.inputCovered || [],
     })),
 
-    on(PlannerActions.addProduction, (state) => ({
-        ...state,
-        edit: {index: state.productions.length},
-        productions: state.productions.concat(Production.createDto()),
-    })),
+    on(PlannerActions.addProduction, (state) => {
+        const newProductions = state.productions
+            .filter((production) => new Production(production, 0).hasRecipes())
+            .concat(Production.createDto());
+
+        return {
+            ...state,
+            edit: {index: newProductions.length - 1},
+            productions: newProductions,
+        };
+    }),
 
     on(PlannerActions.addProductionWithOutputNameClicked, (state, action) => ({
         ...state,
