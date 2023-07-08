@@ -1,8 +1,10 @@
 <div
     *ngIf="{edit: edit$ | async} as state"
-    class="bg-light border rounded p-3 py-2"
+    class="box bg-light border rounded p-3 py-2"
     [class.built]="production.built"
     [class.sod-shadow-lg]="state.edit && production.index === state.edit.index"
+    [class.border-primary-subtle]="state.edit && production.index === state.edit.index"
+    [class.box--active]="state.edit && production.index === state.edit.index"
 >
     <nz-page-header class="p-0" *ngIf="{title: production | productionTitle} as header">
         <nz-page-header-title>{{ header.title.title }}</nz-page-header-title>

@@ -9,3 +9,14 @@
 .built {
     background-color: #eefbee !important;
 }
+
+.box {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border 0.3s ease;
+}
+
+.box--active {
+    transform: translateY(-4px);
+}

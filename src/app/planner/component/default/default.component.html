@@ -29,6 +29,11 @@
     </div>
 
     <div class="col-md-6">
-        <app-production class="sticky" [production]="production" *ngIf="edit$ | async as production"></app-production>
+        <app-production
+            class="sticky d-block"
+            @inOutAnimation
+            [production]="production"
+            *ngIf="edit$ | async as production"
+        ></app-production>
     </div>
 </div>
