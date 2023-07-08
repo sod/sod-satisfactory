@@ -8,4 +8,5 @@ import {ItemPackage} from 'src/app/shared/entities/item-package';
 })
 export class SatisfactoryItemImageComponent {
     @Input() itemPackage!: ItemPackage;
+    @Input() heightPercent = 100;
 }

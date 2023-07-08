@@ -1,4 +1,4 @@
-<div class="text-center"><app-satisfactory-item-image [itemPackage]="itemPackage"></app-satisfactory-item-image></div>
+<app-satisfactory-item-image [heightPercent]="70" [itemPackage]="itemPackage"></app-satisfactory-item-image>
 <div class="text-center mt-2" *ngIf="{input: productionInputs?.get(itemPackage.itemName)} as state">
     <ng-container [ngSwitch]="state.input?.isMissing()">
         <ng-container *ngSwitchCase="'yes'">

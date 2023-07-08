@@ -1,11 +1,14 @@
-<div style="padding-top: 100%" class="position-relative">
-    <div class="position-absolute d-flex align-items-center justify-content-center" style="top: 0; right: 0; bottom: 0; left: 0">
-        <ng-container *ngIf="itemPackage | satisfactoriyItemImage as source; else fallback">
-            <img class="img-fluid" [src]="source" [alt]="itemPackage.itemName" />
-        </ng-container>
+<div
+    [style.padding-top.%]="heightPercent"
+    class="position-relative image"
+    [style.background-image]="'url(' + source + ')'"
+    *ngIf="itemPackage | satisfactoriyItemImage as source; else fallback"
+></div>
 
-        <ng-template #fallback>
+<ng-template #fallback>
+    <div [style.padding-top.%]="heightPercent" class="position-relative">
+        <div class="position-absolute d-flex align-items-center justify-content-center" style="top: 0; right: 0; bottom: 0; left: 0">
             <i nz-icon nzType="build" nzTheme="outline" style="font-size: 40px; color: #eee"></i>
-        </ng-template>
+        </div>
     </div>
-</div>
+</ng-template>
