@@ -10,18 +10,18 @@
         <nz-page-header-subtitle>{{ header.title.subtitle }}</nz-page-header-subtitle>
         <nz-page-header-extra>
             <ng-container *ngIf="production.hasRecipes()">
-                <button nz-button class="ml-0" nzType="link" (click)="moveUp(production)" *ngIf="positionInList > 0 && !production.built">
+                <button nz-button class="ms-0" nzType="link" (click)="moveUp(production)" *ngIf="positionInList > 0 && !production.built">
                     <i nz-icon nzType="arrow-up" nzTheme="outline"></i>
                     Up next
                 </button>
-                <button nz-button class="ml-0" nzType="link" (click)="built(production)">
+                <button nz-button class="ms-0" nzType="link" (click)="built(production)">
                     <i nz-icon [nzType]="production.built ? 'check' : 'clock-circle'" nzTheme="outline"></i>
                     Built
                 </button>
             </ng-container>
             <button
                 nz-button
-                class="ml-0"
+                class="ms-0"
                 [nzType]="state.edit && production.index === state.edit.index ? 'primary' : 'link'"
                 (click)="edit(production.index)"
             >

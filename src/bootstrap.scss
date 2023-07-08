@@ -1,37 +1,25 @@
-@import 'bootstrap/scss/functions';
-@import 'bootstrap/scss/variables';
-@import 'bootstrap/scss/mixins';
-//@import "bootstrap/scss/root";
-//@import "bootstrap/scss/reboot";
-@import 'bootstrap/scss/type';
-@import 'bootstrap/scss/images';
-@import 'bootstrap/scss/code';
-@import 'bootstrap/scss/grid';
-@import 'bootstrap/scss/tables';
-@import 'bootstrap/scss/forms';
-@import 'bootstrap/scss/buttons';
-@import 'bootstrap/scss/transitions';
-@import 'bootstrap/scss/dropdown';
-@import 'bootstrap/scss/button-group';
-@import 'bootstrap/scss/input-group';
-@import 'bootstrap/scss/custom-forms';
-@import 'bootstrap/scss/nav';
-@import 'bootstrap/scss/navbar';
-@import 'bootstrap/scss/card';
-@import 'bootstrap/scss/breadcrumb';
-@import 'bootstrap/scss/pagination';
-@import 'bootstrap/scss/badge';
-@import 'bootstrap/scss/jumbotron';
-@import 'bootstrap/scss/alert';
-@import 'bootstrap/scss/progress';
-@import 'bootstrap/scss/media';
-@import 'bootstrap/scss/list-group';
-@import 'bootstrap/scss/close';
-@import 'bootstrap/scss/toasts';
-@import 'bootstrap/scss/modal';
-@import 'bootstrap/scss/tooltip';
-@import 'bootstrap/scss/popover';
-@import 'bootstrap/scss/carousel';
-@import 'bootstrap/scss/spinners';
-@import 'bootstrap/scss/utilities';
-@import 'bootstrap/scss/print';
+@import 'bootstrap/scss/bootstrap';
+
+img,
+svg {
+    // fix svg icons misaligned with "middle" from bs5 reboot
+    vertical-align: unset;
+}
+
+:root {
+    --shadow-color: 0deg 0% 0%;
+    --shadow-elevation-low: 0px 0.2px 0.2px hsl(var(--shadow-color) / 0.28), 0.1px 0.9px 0.8px -3.8px hsl(var(--shadow-color) / 0.18);
+    --shadow-elevation-medium: 0px 0.2px 0.2px hsl(var(--shadow-color) / 0.26), 0.1px 1px 0.9px -1.9px hsl(var(--shadow-color) / 0.2),
+        0.4px 4.6px 4.3px -3.8px hsl(var(--shadow-color) / 0.14);
+    --shadow-elevation-high: 0px 0.2px 0.2px hsl(var(--shadow-color) / 0.24), 0.1px 1.1px 1px -0.8px hsl(var(--shadow-color) / 0.21),
+        0.3px 2.8px 2.6px -1.5px hsl(var(--shadow-color) / 0.19), 0.6px 6.6px 6.1px -2.3px hsl(var(--shadow-color) / 0.16),
+        1.3px 13.6px 12.6px -3.1px hsl(var(--shadow-color) / 0.13), 2.3px 25px 23.2px -3.8px hsl(var(--shadow-color) / 0.1);
+}
+
+.sod-shadow-lg {
+    box-shadow: var(--shadow-elevation-high);
+}
+
+.sod-shadow {
+    box-shadow: var(--shadow-elevation-medium);
+}

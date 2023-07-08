@@ -1,5 +1,5 @@
-<div class="row mx-n1" [class.justify-content-end]="align === 'right'">
-    <div class="col-6 px-1 d-flex mb-2" *ngFor="let itemPackage of values; trackBy: trackByService.index">
+<div class="row gx-2" [class.justify-content-end]="align === 'right'">
+    <div class="col-6 d-flex mb-2" *ngFor="let itemPackage of values; trackBy: trackByService.index">
         <div
             *ngIf="{input: productionInputs?.get(itemPackage.itemName)} as state"
             class="border rounded shadow-sm d-flex p-2 bg-white w-100"

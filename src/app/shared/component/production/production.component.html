@@ -1,4 +1,7 @@
-<div class="shadow" *ngIf="production.recipe.outputs.length || production.recipe.inputs.length ? 'active' : 'new' as current">
+<div
+    class="sod-shadow-lg rounded border"
+    *ngIf="production.recipe.outputs.length || production.recipe.inputs.length ? 'active' : 'new' as current"
+>
     <div [style.opacity]="current === 'active' ? 1 : 0.5">
         <app-production-input-or-output [production]="production" [target]="'inputs'"></app-production-input-or-output>
     </div>
@@ -9,41 +12,41 @@
         [autofocus]="current === 'new'"
     ></app-production-input-or-output>
 
-    <ng-container *ngIf="current === 'active'">
-        <nz-card nzTitle="Modifier" nzSize="small" nzBorderless>
-            <nz-input-group nzCompact [nzAddOnAfter]="'Machines'" class="mb-2">
-                <nz-input-number
-                    [nzMin]="1"
-                    style="width: 100%"
-                    [ngModel]="production.machines"
-                    (ngModelChange)="updateProduction(production, {machines: $event || undefined})"
-                ></nz-input-number>
-            </nz-input-group>
-            <br />
-            <nz-input-group nzCompact [nzAddOnAfter]="'% from Slugs'" class="mb-2">
-                <nz-input-number
-                    [nzMin]="50"
-                    [nzStep]="50"
-                    [nzMax]="250"
-                    style="width: 100%"
-                    [ngModel]="production.clockSpeed1"
-                    (ngModelChange)="updateProduction(production, {clockSpeed1: $event || undefined})"
-                ></nz-input-number>
-            </nz-input-group>
-            <br />
-            <nz-input-group nzCompact [nzAddOnAfter]="'% from MK Upgrade'">
-                <nz-input-number
-                    [nzMin]="50"
-                    [nzStep]="50"
-                    style="width: 100%"
-                    [ngModel]="production.clockSpeed2"
-                    (ngModelChange)="updateProduction(production, {clockSpeed2: $event || undefined})"
-                ></nz-input-number>
-            </nz-input-group>
-        </nz-card>
-    </ng-container>
+    <div *ngIf="current === 'active'" class="p-3">
+        <h6>Modifier</h6>
 
-    <div style="padding: 0 12px 12px" class="text-right mt-3">
+        <nz-input-group nzCompact [nzAddOnAfter]="'Machines'" class="mb-2">
+            <nz-input-number
+                [nzMin]="1"
+                style="width: 100%"
+                [ngModel]="production.machines"
+                (ngModelChange)="updateProduction(production, {machines: $event || undefined})"
+            ></nz-input-number>
+        </nz-input-group>
+        <br />
+        <nz-input-group nzCompact [nzAddOnAfter]="'% from Slugs'" class="mb-2">
+            <nz-input-number
+                [nzMin]="50"
+                [nzStep]="50"
+                [nzMax]="250"
+                style="width: 100%"
+                [ngModel]="production.clockSpeed1"
+                (ngModelChange)="updateProduction(production, {clockSpeed1: $event || undefined})"
+            ></nz-input-number>
+        </nz-input-group>
+        <br />
+        <nz-input-group nzCompact [nzAddOnAfter]="'% from MK Upgrade'">
+            <nz-input-number
+                [nzMin]="50"
+                [nzStep]="50"
+                style="width: 100%"
+                [ngModel]="production.clockSpeed2"
+                (ngModelChange)="updateProduction(production, {clockSpeed2: $event || undefined})"
+            ></nz-input-number>
+        </nz-input-group>
+    </div>
+
+    <div class="d-flex align-items-end p-3">
         <button nz-button [nzType]="'default'" nzDanger (click)="removeProduction(production)">
             <i nz-icon nzType="delete" nzTheme="outline"></i>
             Remove

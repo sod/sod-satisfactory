@@ -3,9 +3,9 @@
 <div class="text-muted">All input & output values are normalized to "N units/m³ per 60 seconds"</div>
 
 <div class="row my-4" *ngIf="productions$ | async as productions">
-    <div class="col-md-6" *ngIf="productions | resolveProduction : (inputCovered$ | async) ?? [] as productionInputs">
+    <div class="col-md-6" *ngIf="productions | resolveProduction: (inputCovered$ | async) ?? [] as productionInputs">
         <ng-container *ngIf="productions.length">
-            <h5 class="my-3">Belts and Machines</h5>
+            <h4>Machines</h4>
             <ng-container *ngFor="let production of productions; trackBy: trackByService.index; let index = index">
                 <app-production-overview
                     *ngIf="production.hasRecipes()"
@@ -17,15 +17,15 @@
             </ng-container>
 
             <ng-container *ngIf="isMissing(productionInputs) as missingInputs">
-                <nz-divider></nz-divider>
-                <h5 class="my-3">Inputs</h5>
+                <h4 class="mt-5">Inputs</h4>
                 <app-missing-input [input]="input" *ngFor="let input of missingInputs"></app-missing-input>
             </ng-container>
-            <nz-divider></nz-divider>
         </ng-container>
 
-        <app-action-add-production class="mr-2"></app-action-add-production>
-        <app-action-clear-production *ngIf="productions.length"></app-action-clear-production>
+        <div class="mt-5">
+            <app-action-add-production class="me-2"></app-action-add-production>
+            <app-action-clear-production *ngIf="productions.length"></app-action-clear-production>
+        </div>
     </div>
 
     <div class="col-md-6">
