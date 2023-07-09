@@ -7,6 +7,6 @@ import {ItemPackage} from 'src/app/shared/entities/item-package';
     styleUrls: ['./satisfactory-item-image.component.scss'],
 })
 export class SatisfactoryItemImageComponent {
-    @Input() itemPackage!: ItemPackage;
+    @Input() itemPackage!: Pick<ItemPackage, 'itemName'>;
     @Input() heightPercent = 100;
 }

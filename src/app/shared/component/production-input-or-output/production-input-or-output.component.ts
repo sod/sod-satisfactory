@@ -2,6 +2,7 @@ import {AfterViewInit, Component, Input} from '@angular/core';
 import {Production} from 'src/app/shared/entities/production';
 import {RecipeTarget} from 'src/app/shared/entities/recipe-dto';
 import {TrackByService} from 'src/app/shared/service/track-by-service';
+import {triggerFocus} from '../../function/trigger-focus';
 
 @Component({
     selector: 'app-production-input-or-output',
@@ -21,7 +22,8 @@ export class ProductionInputOrOutputComponent implements AfterViewInit {
         if (this.autofocus) {
             const query = `.${this.selector + this.target}:last-child input`;
             const inputElement: HTMLInputElement | null = document.querySelector(query);
-            inputElement?.focus();
+
+            setTimeout(() => triggerFocus(inputElement), 1);
         }
     }
 }

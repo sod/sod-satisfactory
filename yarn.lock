@@ -297,23 +297,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/cdk@npm:^16.0.0":
-  version: 16.1.0
-  resolution: "@angular/cdk@npm:16.1.0"
-  dependencies:
-    parse5: ^7.1.2
-    tslib: ^2.3.0
-  peerDependencies:
-    "@angular/common": ^16.0.0 || ^17.0.0
-    "@angular/core": ^16.0.0 || ^17.0.0
-    rxjs: ^6.5.3 || ^7.4.0
-  dependenciesMeta:
-    parse5:
-      optional: true
-  checksum: d5c5101780e25352d777181556a6005b717be8a1ff6d311ccc239a82bc16082e62a44ae6387bc9c8a2f4adcd8cc6dc76f817c5846d56cfff9cda32e1b0083b00
-  languageName: node
-  linkType: hard
-
 "@angular/cli@npm:^16.1.4":
   version: 16.1.4
   resolution: "@angular/cli@npm:16.1.4"
@@ -458,30 +441,6 @@ __metadata:
     "@angular/platform-browser": 16.1.4
     rxjs: ^6.5.3 || ^7.4.0
   checksum: f0e1d02b94e01a4516956851cfa6ec5f90371d72e594d77e4eb446bcc80a5ba2c4591b478a6b9a55d2c5f61b368304c0133fb074c3297cff2eda7c07517645a7
-  languageName: node
-  linkType: hard
-
-"@ant-design/colors@npm:^7.0.0":
-  version: 7.0.0
-  resolution: "@ant-design/colors@npm:7.0.0"
-  dependencies:
-    "@ctrl/tinycolor": ^3.4.0
-  checksum: 419e98d9cb823ff0935024f4278f7b9c5896805dce4c93d667b5a4d76b03f5fa969b32d1998ee761113da43063e2b23a94c330ad6e865f03fbbb2579907e7fdb
-  languageName: node
-  linkType: hard
-
-"@ant-design/icons-angular@npm:^16, @ant-design/icons-angular@npm:^16.0.0":
-  version: 16.0.0
-  resolution: "@ant-design/icons-angular@npm:16.0.0"
-  dependencies:
-    "@ant-design/colors": ^7.0.0
-    tslib: ^2.0.0
-  peerDependencies:
-    "@angular/common": ^16.0.0
-    "@angular/core": ^16.0.0
-    "@angular/platform-browser": ^16.0.0
-    rxjs: ^6.4.0 || ^7.4.0
-  checksum: 2664a991e293de9125fb80ff969c01a0bb1a1d066d27200dc7e467d35e503c0b8b35282a45314995faf962045ef3168f5bd8235a83359910efe2dfc96a132a61
   languageName: node
   linkType: hard
 
@@ -2245,13 +2204,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ctrl/tinycolor@npm:^3.4.0":
-  version: 3.6.0
-  resolution: "@ctrl/tinycolor@npm:3.6.0"
-  checksum: 4d1e481b4d7f9bb23d21b5436726034d37c2a1bc751b5169ef29ead0237e96443dbccbcfa887e20c3a65ba1b5e270063bb21b4034eac97561b980cbbd5e92a16
-  languageName: node
-  linkType: hard
-
 "@discoveryjs/json-ext@npm:0.5.7":
   version: 0.5.7
   resolution: "@discoveryjs/json-ext@npm:0.5.7"
@@ -2653,6 +2605,19 @@ __metadata:
   version: 2.0.4
   resolution: "@leichtgewicht/ip-codec@npm:2.0.4"
   checksum: 468de1f04d33de6d300892683d7c8aecbf96d1e2c5fe084f95f816e50a054d45b7c1ebfb141a1447d844b86a948733f6eebd92234da8581c84a1ad4de2946a2d
+  languageName: node
+  linkType: hard
+
+"@ngrx/component@npm:^16.1.0":
+  version: 16.1.0
+  resolution: "@ngrx/component@npm:16.1.0"
+  dependencies:
+    tslib: ^2.0.0
+  peerDependencies:
+    "@angular/common": ^16.0.0
+    "@angular/core": ^16.0.0
+    rxjs: ^6.5.3 || ^7.5.0
+  checksum: ff9570c57d522b13cc70c464fda1a544df4af58fd70d201294ec626e5d0995f04d47f9bca44d24d6a05d48a395850ad02dbe1cbc302859c9481ba61c383065aa
   languageName: node
   linkType: hard
 
@@ -4311,12 +4276,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"bootstrap-icons@npm:^1.10.5":
+  version: 1.10.5
+  resolution: "bootstrap-icons@npm:1.10.5"
+  checksum: 8a0cfbd237723793dfb04106fdeed7f86bb59249a01a1623b325bf84d61306c22bb46d3df0795f80f0e77d43cd7485273571c253ee7910eb67fae9489691daad
+  languageName: node
+  linkType: hard
+
 "bootstrap@npm:^5":
   version: 5.3.0
   resolution: "bootstrap@npm:5.3.0"
   peerDependencies:
     "@popperjs/core": ^2.11.7
   checksum: 29a83cc8cac96d70051e265a5da342cc488df8fc76dff6746ef7d155698286cd5bdfa3e52c6ebf09f8e5a97f25929ee97aee36237117732e52b0d3276a72c45c
+  languageName: node
+  linkType: hard
+
+"bootswatch@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "bootswatch@npm:5.3.0"
+  checksum: e1c38cb24d6489c067125a0973b57a399e3e770099dfcb359320e5033f6594152b7556212d2945225cd37fdc525cd9d600af7b56d5f87ea9a18207bf761e7f91
   languageName: node
   linkType: hard
 
@@ -5005,13 +4984,6 @@ __metadata:
   bin:
     cssesc: bin/cssesc
   checksum: f8c4ababffbc5e2ddf2fa9957dda1ee4af6048e22aeda1869d0d00843223c1b13ad3f5d88b51caa46c994225eacb636b764eb807a8883e2fb6f99b4f4e8c48b2
-  languageName: node
-  linkType: hard
-
-"date-fns@npm:^2.16.1":
-  version: 2.28.0
-  resolution: "date-fns@npm:2.28.0"
-  checksum: a0516b2e4f99b8bffc6cc5193349f185f195398385bdcaf07f17c2c4a24473c99d933eb0018be4142a86a6d46cb0b06be6440ad874f15e795acbedd6fd727a1f
   languageName: node
   linkType: hard
 
@@ -8231,25 +8203,6 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"ng-zorro-antd@npm:16.0.0":
-  version: 16.0.0
-  resolution: "ng-zorro-antd@npm:16.0.0"
-  dependencies:
-    "@angular/cdk": ^16.0.0
-    "@ant-design/icons-angular": ^16.0.0
-    date-fns: ^2.16.1
-    tslib: ^2.3.0
-  peerDependencies:
-    "@angular/animations": ^16.0.0
-    "@angular/common": ^16.0.0
-    "@angular/core": ^16.0.0
-    "@angular/forms": ^16.0.0
-    "@angular/platform-browser": ^16.0.0
-    "@angular/router": ^16.0.0
-  checksum: 46ef5f31d3f4b408e6f04908ccc5f628421d7010dd9014ee363584d3e89068d99afad7af13f353ca2dd0915566d3dd39bad78400e5609104eb85e26edc0dcc12
-  languageName: node
-  linkType: hard
-
 "nice-napi@npm:^1.0.2":
   version: 1.0.2
   resolution: "nice-napi@npm:1.0.2"
@@ -8888,7 +8841,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"parse5@npm:^7.0.0, parse5@npm:^7.1.2":
+"parse5@npm:^7.0.0":
   version: 7.1.2
   resolution: "parse5@npm:7.1.2"
   dependencies:
@@ -10140,7 +10093,7 @@ resolve@^1.14.2:
     "@angular/platform-browser": ^16.1.4
     "@angular/platform-browser-dynamic": ^16.1.4
     "@angular/router": ^16.1.4
-    "@ant-design/icons-angular": ^16
+    "@ngrx/component": ^16.1.0
     "@ngrx/effects": ^16.1.0
     "@ngrx/entity": ^16.1.0
     "@ngrx/schematics": ^16.1.0
@@ -10151,10 +10104,11 @@ resolve@^1.14.2:
     "@typescript-eslint/eslint-plugin": 5.61.0
     "@typescript-eslint/parser": 5.61.0
     bootstrap: ^5
+    bootstrap-icons: ^1.10.5
+    bootswatch: ^5.3.0
     eslint: ^8.44.0
     glob: ^10.3.1
     lodash-es: ^4.17.21
-    ng-zorro-antd: 16.0.0
     prettier: ^3.0.0
     prettier-plugin-organize-imports: ^3.2.2
     rxjs: ^7.8.1

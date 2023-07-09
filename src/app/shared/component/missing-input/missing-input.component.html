@@ -1,20 +1,12 @@
 <button
-    nz-button
-    class="w-100 rounded p-2 my-2 d-flex align-items-center cursor-pointer"
-    [nzDanger]="missing === 'yes'"
+    class="btn w-100 rounded mb-2 d-flex align-items-center cursor-pointer btn-sm"
+    [ngClass]="missing === 'yes' ? 'btn-outline-danger' : 'btn-outline-success'"
     (click)="toggle()"
     *ngIf="input.isMissing() as missing"
 >
-    <span
-        class="{{ missing === 'yes' ? 'text-danger' : 'text-success' }} me-2"
-        [nz-tooltip]="input.amount + ' missing, click to add.'"
-        nzTooltipPlacement="right"
-        [nzTooltipMouseEnterDelay]="0"
-    >
-        <i nz-icon [nzType]="missing === 'yes' ? 'close-circle' : 'check-circle'" nzTheme="outline"></i>
-    </span>
+    <i class="bi" [ngClass]="missing === 'yes' ? 'bi-x-circle' : 'bi-check2-circle'"></i>
 
-    <app-satisfactory-item-image [heightPercent]="100" [itemPackage]="input.inputs[0]" class="image me-2"></app-satisfactory-item-image>
+    <app-satisfactory-item-image [heightPercent]="100" [itemPackage]="input.inputs[0]" class="image mx-2"></app-satisfactory-item-image>
     <div class="flex-grow-1 text-start">{{ input.itemName }}</div>
     <div>
         <ng-container *ngIf="input.getMissingAmount() !== input.amount">

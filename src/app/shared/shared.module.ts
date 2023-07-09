@@ -7,13 +7,11 @@ import {ActionAddProductionComponent} from 'src/app/shared/component/action-add-
 import {ActionClearProductionComponent} from 'src/app/shared/component/action-clear-production/action-clear-production.component';
 import {AmountWithModifiersPipe} from 'src/app/shared/pipe/amount-with-modifiers.pipe';
 import {SatisfactoriyItemImagePipe} from 'src/app/shared/pipe/satisfactoriy-item-image.pipe';
-import {SharedNgZorroModule} from '../shared-ng-zorro/shared-ng-zorro.module';
 import {ItemPackageComponent} from './component/item-package/item-package.component';
 import {ItemComponent} from './component/item/item.component';
 import {MissingInputComponent} from './component/missing-input/missing-input.component';
 import {PackageImagesComponent} from './component/package-images/package-images.component';
 import {ProductionInputOrOutputComponent} from './component/production-input-or-output/production-input-or-output.component';
-import {ProductionInputTodoComponent} from './component/production-input-todo/production-input-todo.component';
 import {ProductionOverviewComponent} from './component/production-overview/production-overview.component';
 import {ProductionComponent} from './component/production/production.component';
 import {RecipeComponent} from './component/recipe/recipe.component';
@@ -30,7 +28,11 @@ import {AppEffects} from './store/app/app.effects';
 import * as fromApp from './store/app/app.reducer';
 import {PlannerEffects} from './store/planner/planner.effects';
 import * as fromPlanner from './store/planner/planner.reducer';
-import { ToFixedPipe } from './pipe/to-fixed.pipe';
+import {ToFixedPipe} from './pipe/to-fixed.pipe';
+import {PushModule} from '@ngrx/component';
+import {InputComponent} from './component/input/input.component';
+import {InputControlDirective} from './directive/input-control.directive';
+import {DropdownComponent} from './component/dropdown/dropdown.component';
 
 @NgModule({
     declarations: [
@@ -46,7 +48,6 @@ import { ToFixedPipe } from './pipe/to-fixed.pipe';
         AmountWithModifiersPipe,
         ProductionOverviewComponent,
         ProductionTitlePipe,
-        ProductionInputTodoComponent,
         ResolveProductionPipe,
         SatisfactoriyItemImagePipe,
         SatisfactoryItemImageComponent,
@@ -57,17 +58,20 @@ import { ToFixedPipe } from './pipe/to-fixed.pipe';
         MissingInputComponent,
         AbsolutePipe,
         ToFixedPipe,
+        InputComponent,
+        InputControlDirective,
+        DropdownComponent,
     ],
     imports: [
+        PushModule,
         CommonModule,
-        SharedNgZorroModule,
         EffectsModule.forFeature([AppEffects, PlannerEffects, PlannerEffects, AppEffects]),
         StoreModule.forFeature(fromPlanner.plannerFeatureKey, fromPlanner.reducer),
         StoreModule.forFeature(fromApp.appFeatureKey, fromApp.reducer),
         FormsModule,
     ],
     exports: [
-        SharedNgZorroModule,
+        PushModule,
         RecipeComponent,
         ActionAddProductionComponent,
         ProductionComponent,
@@ -81,7 +85,6 @@ import { ToFixedPipe } from './pipe/to-fixed.pipe';
         AmountWithModifiersPipe,
         ProductionOverviewComponent,
         ProductionTitlePipe,
-        ProductionInputTodoComponent,
         ResolveProductionPipe,
         SatisfactoriyItemImagePipe,
         SatisfactoryItemImageComponent,
@@ -90,6 +93,9 @@ import { ToFixedPipe } from './pipe/to-fixed.pipe';
         RecipeDataSummaryPipe,
         PackageImagesComponent,
         MissingInputComponent,
+        InputComponent,
+        InputControlDirective,
+        DropdownComponent,
     ],
 })
 export class SharedModule {}

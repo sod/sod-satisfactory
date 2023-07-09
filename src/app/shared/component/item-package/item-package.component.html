@@ -1,21 +1,17 @@
 <div class="row gx-2">
     <app-item class="col" [itemPackage]="itemPackage" [recipe]="recipe" [target]="target"></app-item>
     <div class="col-5 col-lg-4" *ngIf="itemPackage">
-        <nz-input-group [nzSuffix]="amountSuffix">
+        <app-input class="position-relative" [label]="'per minute'">
             <input
-                nz-input
+                appInputControl
                 type="number"
-                class="number-input"
-                [placeholder]="'Amount'"
                 [ngModel]="itemPackage.amount"
                 (ngModelChange)="itemPackage && +$event > 0 && updateItemPackageAmount(+$event, itemPackage)"
             />
-        </nz-input-group>
+
+            <ng-container *ngIf="(itemPackage?.parent?.parent?.getModifier() ?? 1) !== 1">
+                <span class="input-suffix text-muted">= {{ itemPackage | amountWithModifiers }}</span>
+            </ng-container>
+        </app-input>
     </div>
 </div>
-
-<ng-template #amountSuffix>
-    <ng-container *ngIf="(itemPackage?.parent?.parent?.getModifier() ?? 1) !== 1">
-        <span class="text-muted">= {{ itemPackage | amountWithModifiers }}</span>
-    </ng-container>
-</ng-template>

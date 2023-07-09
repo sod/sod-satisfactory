@@ -1,37 +1,64 @@
-<nz-input-group [nzPrefix]="searchIcon">
-    <input
-        nz-input
-        type="search"
-        [placeholder]="labels[target]"
-        [ngModel]="itemPackage?.itemName ?? ''"
-        (ngModelChange)="itemSelected($event, itemPackage)"
-        (blur)="itemPackage?.itemName === '' && remove(itemPackage!)"
-        [nzAutocomplete]="auto"
-    />
-</nz-input-group>
+<app-dropdown [dropdown]="dropdown" [element]="element">
+    <app-input [label]="labels[target]">
+        <input
+            #element
+            appInputControl
+            type="search"
+            [ngModel]="itemPackage?.itemName ?? ''"
+            (ngModelChange)="itemSelected($event, itemPackage)"
+            (blur)="itemPackage?.itemName === '' && remove(itemPackage!)"
+        />
+    </app-input>
+</app-dropdown>
 
-<ng-template #searchIcon><i nz-icon class="text-muted" nzType="search" nzTheme="outline"></i></ng-template>
-
-<nz-autocomplete #auto [nzWidth]="450" [nzBackfill]="false">
-    <nz-auto-option
-        *ngFor="let option of items | filterCaseInsensitive : itemPackage?.itemName; trackBy: trackByService.index"
-        [nzValue]="option"
-        [nzLabel]="option"
+<ng-template #dropdown>
+    <li
+        *ngFor="let option of items | filterCaseInsensitive: itemPackage?.itemName | slice: 0 : 5; trackBy: trackByService.index"
+        (click)="itemSelected(option, itemPackage)"
     >
-        {{ option }}
-    </nz-auto-option>
-    <nz-auto-option
+        <span class="dropdown-item">
+            {{ option }}
+        </span>
+    </li>
+    <li
         *ngFor="
-            let option of recipesData | filterCaseInsensitive : itemPackage?.itemName : $any(stringifyRecipe.bind(this));
+            let option of recipesData | filterCaseInsensitive: itemPackage?.itemName : $any(stringifyRecipe.bind(this)) | slice: 0 : 10;
             trackBy: trackByService.index
         "
-        [nzValue]="option"
-        [nzLabel]="option.name"
+        (click)="itemSelected(option, itemPackage)"
     >
-        <div>{{ option.name }}</div>
-        <div class="row my-2">
-            <app-package-images class="col px-2" [items]="option.inputs"></app-package-images>
-            <app-package-images class="col px-2 justify-content-end d-flex" [items]="option.outputs"></app-package-images>
-        </div>
-    </nz-auto-option>
-</nz-autocomplete>
+        <span class="dropdown-item">
+            <div>{{ option.name }}</div>
+            <div class="row my-2">
+                <app-package-images class="col px-2" [items]="option.inputs"></app-package-images>
+                <app-package-images class="col px-2 justify-content-end d-flex" [items]="option.outputs"></app-package-images>
+            </div>
+        </span>
+    </li>
+</ng-template>
+
+<!--<nz-autocomplete #auto [nzWidth]="450" [nzBackfill]="false">-->
+<!--    <ng-container *ngIf="auto.isOpen | ngrxPush">-->
+<!--        <nz-auto-option-->
+<!--            *ngFor="let option of items | filterCaseInsensitive: itemPackage?.itemName; trackBy: trackByService.index"-->
+<!--            [nzValue]="option"-->
+<!--            [nzLabel]="option"-->
+<!--        >-->
+<!--            {{ option }}-->
+<!--        </nz-auto-option>-->
+<!--        <nz-auto-option-->
+<!--            *ngFor="-->
+<!--                let option of recipesData | filterCaseInsensitive: itemPackage?.itemName : $any(stringifyRecipe.bind(this));-->
+<!--                trackBy: trackByService.index-->
+<!--            "-->
+<!--            [nzValue]="option"-->
+<!--            [nzLabel]="option.name"-->
+<!--        >-->
+<!--            <div>{{ option.name }}</div>-->
+<!--            <div class="row my-2">-->
+<!--                <app-package-images class="col px-2" [items]="option.inputs"></app-package-images>-->
+<!--                <app-package-images class="col px-2 justify-content-end d-flex" [items]="option.outputs"></app-package-images>-->
+<!--            </div>-->
+<!--        </nz-auto-option>-->
+<!--    </ng-container>-->
+<!--</nz-autocomplete>-->

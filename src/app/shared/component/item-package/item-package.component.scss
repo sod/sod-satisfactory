@@ -1,4 +1,12 @@
+@import '../../../../variables';
+
 .number-input {
     appearance: none;
     -moz-appearance: textfield;
+}
+
+.input-suffix {
+    position: absolute;
+    bottom: $input-padding-y + 0.2rem;
+    right: $input-padding-x;
 }

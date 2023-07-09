@@ -2,8 +2,8 @@
     <div class="col-6 d-flex mb-2" *ngFor="let itemPackage of values; trackBy: trackByService.index">
         <div
             *ngIf="{input: productionInputs?.get(itemPackage.itemName)} as state"
-            class="border rounded shadow-sm d-flex p-2 bg-white w-100"
-            [class.border-danger]="state.input?.isMissing() === 'yes'"
+            class="item rounded border shadow-sm d-flex p-2 bg-dark w-100"
+            [ngClass]="state.input?.isMissing() === 'yes' ? 'border-danger' : 'border-dark'"
             [class.clickable]="!!productionInputs"
             (click)="productionInputs && inputClicked(itemPackage, state.input)"
         >

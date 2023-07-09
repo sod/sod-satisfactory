@@ -2,8 +2,8 @@
 
 <div class="text-muted">All input & output values are normalized to "N units/m³ per 60 seconds"</div>
 
-<div class="row my-4" *ngIf="productions$ | async as productions">
-    <div class="col-md-6" *ngIf="productions | resolveProduction: (inputCovered$ | async) ?? [] as productionInputs">
+<div class="row my-4" *ngIf="productions$ | ngrxPush as productions">
+    <div class="col-md-6" *ngIf="productions | resolveProduction: (inputCovered$ | ngrxPush) ?? [] as productionInputs">
         <ng-container *ngIf="productions.length">
             <h4>Machines</h4>
             <ng-container *ngFor="let production of productions; trackBy: trackByService.index; let index = index">
@@ -33,7 +33,7 @@
             class="sticky d-block"
             @inOutAnimation
             [production]="production"
-            *ngIf="edit$ | async as production"
+            *ngIf="edit$ | ngrxPush as production"
         ></app-production>
     </div>
 </div>

@@ -6,11 +6,8 @@
     user-select: none;
 }
 
-.built {
-    background-color: #eefbee !important;
-}
-
 .box {
+    transform: translateY(0px);
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease,

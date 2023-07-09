@@ -2,19 +2,14 @@
 <div class="text-center mt-2" *ngIf="{input: productionInputs?.get(itemPackage.itemName)} as state">
     <ng-container [ngSwitch]="state.input?.isMissing()">
         <ng-container *ngSwitchCase="'yes'">
-            <span
-                class="text-danger"
-                [nz-tooltip]="state.input?.amount! + ' missing, click to add.'"
-                nzTooltipPlacement="right"
-                [nzTooltipMouseEnterDelay]="0"
-            >
-                <i nz-icon [nzType]="'close-circle'" nzTheme="outline"></i>
+            <span class="text-danger">
+                <i class="bi bi-x-circle"></i>
                 {{ itemPackage | amountWithModifiers }}
             </span>
         </ng-container>
         <ng-container *ngSwitchCase="'covered'">
             <span class="text-success">
-                <i nz-icon [nzType]="'check-circle'" nzTheme="outline"></i>
+                <i class="bi bi-check2-circle"></i>
                 {{ itemPackage | amountWithModifiers }}
             </span>
         </ng-container>

@@ -1,0 +1,7 @@
+<div class="dropdown">
+    <ng-content></ng-content>
+
+    <ul class="dropdown-menu show" *ngIf="open$ | ngrxPush">
+        <ng-container *ngTemplateOutlet="dropdown"></ng-container>
+    </ul>
+</div>

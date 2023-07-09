@@ -59,8 +59,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/bootstrap.scss",
-              "src/ant-design.scss"
+              "src/bootstrap.scss"
             ],
             "scripts": []
           },
