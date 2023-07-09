@@ -5,7 +5,7 @@
             appInputControl
             type="search"
             [ngModel]="itemPackage?.itemName ?? ''"
-            (ngModelChange)="itemSelected($event, itemPackage)"
+            (input)="itemSelected(element.value, itemPackage)"
             (blur)="itemPackage?.itemName === '' && remove(itemPackage!)"
         />
     </app-input>
@@ -13,52 +13,39 @@
 
 <ng-template #dropdown>
     <li
-        *ngFor="let option of items | filterCaseInsensitive: itemPackage?.itemName | slice: 0 : 5; trackBy: trackByService.index"
-        (click)="itemSelected(option, itemPackage)"
-    >
-        <span class="dropdown-item">
-            {{ option }}
-        </span>
-    </li>
-    <li
         *ngFor="
-            let option of recipesData | filterCaseInsensitive: itemPackage?.itemName : $any(stringifyRecipe.bind(this)) | slice: 0 : 10;
-            trackBy: trackByService.index
+            let option of items | filterCaseInsensitive: itemPackage?.itemName | slice: 0 : 5;
+            trackBy: trackByService.index;
+            let first = first
         "
         (click)="itemSelected(option, itemPackage)"
     >
-        <span class="dropdown-item">
-            <div>{{ option.name }}</div>
-            <div class="row my-2">
-                <app-package-images class="col px-2" [items]="option.inputs"></app-package-images>
-                <app-package-images class="col px-2 justify-content-end d-flex" [items]="option.outputs"></app-package-images>
-            </div>
+        <span
+            class="dropdown-item"
+            [class.text-decoration-underline]="first && option?.toLowerCase() === itemPackage?.itemName?.toLowerCase()"
+        >
+            {{ option }}
         </span>
     </li>
+    <li><h6 class="dropdown-header">Recipes</h6></li>
+    <ng-container
+        *ngIf="
+            recipesData
+                | filterCaseInsensitive
+                    : itemPackage?.itemName
+                    : $any(stringifyRecipe.bind(this))
+                    : $any(itemNamesAsArray.bind(this)) as options
+        "
+    >
+        <li *ngIf="!options.length"><span class="dropdown-item disabled">none</span></li>
+        <li *ngFor="let option of options; trackBy: trackByService.index" (click)="itemSelected(option, itemPackage)">
+            <span class="dropdown-item">
+                <div>{{ option.name }}</div>
+                <div class="row my-2">
+                    <app-package-images class="col px-2" [items]="option.inputs"></app-package-images>
+                    <app-package-images class="col px-2 justify-content-end d-flex" [items]="option.outputs"></app-package-images>
+                </div>
+            </span>
+        </li>
+    </ng-container>
 </ng-template>
-
-<!--<nz-autocomplete #auto [nzWidth]="450" [nzBackfill]="false">-->
-<!--    <ng-container *ngIf="auto.isOpen | ngrxPush">-->
-<!--        <nz-auto-option-->
-<!--            *ngFor="let option of items | filterCaseInsensitive: itemPackage?.itemName; trackBy: trackByService.index"-->
-<!--            [nzValue]="option"-->
-<!--            [nzLabel]="option"-->
-<!--        >-->
-<!--            {{ option }}-->
-<!--        </nz-auto-option>-->
-<!--        <nz-auto-option-->
-<!--            *ngFor="-->
-<!--                let option of recipesData | filterCaseInsensitive: itemPackage?.itemName : $any(stringifyRecipe.bind(this));-->
-<!--                trackBy: trackByService.index-->
-<!--            "-->
-<!--            [nzValue]="option"-->
-<!--            [nzLabel]="option.name"-->
-<!--        >-->
-<!--            <div>{{ option.name }}</div>-->
-<!--            <div class="row my-2">-->
-<!--                <app-package-images class="col px-2" [items]="option.inputs"></app-package-images>-->
-<!--                <app-package-images class="col px-2 justify-content-end d-flex" [items]="option.outputs"></app-package-images>-->
-<!--            </div>-->
-<!--        </nz-auto-option>-->
-<!--    </ng-container>-->
-<!--</nz-autocomplete>-->

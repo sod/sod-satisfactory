@@ -51,12 +51,7 @@ export class ItemComponent {
         return 'Recipe ' + object?.[this.target]?.map((output) => output.itemName).join(' ') ?? 'unknown';
     }
 
-    render(): void {
-        console.log('render');
-        this.renderScheduler.schedule();
-    }
-
-    log(x: any) {
-        console.log(x);
+    itemNamesAsArray(object?: RecipeDataDto): string[] {
+        return object?.[this.target]?.map((output) => output.itemName) ?? [];
     }
 }

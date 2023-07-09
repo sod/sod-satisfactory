@@ -1,11 +1,13 @@
 import {Component, Input, OnDestroy, OnInit, TemplateRef} from '@angular/core';
 import {BehaviorSubject, delay, fromEvent, merge, Subject, takeUntil} from 'rxjs';
 import {tap} from 'rxjs/operators';
+import {fadeAnimation} from '../../animation/fade-animation';
 
 @Component({
     selector: 'app-dropdown',
     templateUrl: './dropdown.component.html',
     styleUrls: ['./dropdown.component.scss'],
+    animations: [fadeAnimation],
 })
 export class DropdownComponent implements OnInit, OnDestroy {
     @Input({required: true}) element!: Element;
@@ -29,7 +31,7 @@ export class DropdownComponent implements OnInit, OnDestroy {
             }),
         );
         const close$ = blur$.pipe(
-            delay(1),
+            delay(100),
             tap(() => {
                 this.open$.next(false);
             }),

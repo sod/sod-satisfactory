@@ -8,18 +8,13 @@ import {Production} from '../../../shared/entities/production';
 import {ProductionInput, ProductionInputs} from '../../../shared/pipe/resolve-production.pipe';
 import {GlobalState} from '../../../shared/store/global-state';
 import {selectInputCovered, selectPlannerEditProduction, selectProductions} from '../../../shared/store/planner/planner.selectors';
-import {animate, state, style, transition, trigger} from '@angular/animations';
-
-const off = style({opacity: 0, transform: 'translateY(0)'});
-const on = style({opacity: 1, transform: 'translateY(-4px)'});
+import {fadeAnimation} from '../../../shared/animation/fade-animation';
 
 @Component({
     selector: 'app-default',
     templateUrl: './default.component.html',
     styleUrls: ['./default.component.scss'],
-    animations: [
-        trigger('inOutAnimation', [transition(':enter', [off, animate('.2s ease', on)]), transition(':leave', [animate('.2s ease', off)])]),
-    ],
+    animations: [fadeAnimation],
 })
 export class DefaultComponent {
     public productions$: Observable<Production[]> = this.store.select(selectProductions).pipe(

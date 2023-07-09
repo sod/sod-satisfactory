@@ -2,9 +2,7 @@
     class="sod-shadow-lg rounded-3 bg-dark-subtle"
     *ngIf="production.recipe.outputs.length || production.recipe.inputs.length ? 'active' : 'new' as current"
 >
-    <div [style.opacity]="current === 'active' ? 1 : 0.5">
-        <app-production-input-or-output [production]="production" [target]="'inputs'"></app-production-input-or-output>
-    </div>
+    <app-production-input-or-output [production]="production" [target]="'inputs'"></app-production-input-or-output>
 
     <app-production-input-or-output
         [production]="production"

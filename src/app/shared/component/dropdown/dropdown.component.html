@@ -1,7 +1,7 @@
 <div class="dropdown">
     <ng-content></ng-content>
 
-    <ul class="dropdown-menu show" *ngIf="open$ | ngrxPush">
+    <ul class="dropdown-menu show" *ngIf="open$ | ngrxPush" @fadeAnimation>
         <ng-container *ngTemplateOutlet="dropdown"></ng-container>
     </ul>
 </div>

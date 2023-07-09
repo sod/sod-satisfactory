@@ -31,7 +31,7 @@
     <div class="col-md-6">
         <app-production
             class="sticky d-block"
-            @inOutAnimation
+            @fadeAnimation
             [production]="production"
             *ngIf="edit$ | ngrxPush as production"
         ></app-production>
