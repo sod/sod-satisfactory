@@ -8,7 +8,6 @@ import {RecipeDataDto} from 'src/app/shared/entities/recipe-data-item-dto';
 import {RecipeTarget} from 'src/app/shared/entities/recipe-dto';
 import {TrackByService} from 'src/app/shared/service/track-by-service';
 import {addItemPackage, recipeSelected, removeItemPackage, updateItemPackage} from 'src/app/shared/store/planner/planner.actions';
-import {RenderScheduler} from '@ngrx/component';
 
 @Component({
     selector: 'app-item',
@@ -23,11 +22,7 @@ export class ItemComponent {
     labels: Record<RecipeTarget, string> = {inputs: 'Input', outputs: 'Output or recipe'};
     recipesData: typeof recipesData = recipesData;
 
-    constructor(
-        public store: Store,
-        public trackByService: TrackByService,
-        private readonly renderScheduler: RenderScheduler,
-    ) {}
+    constructor(public store: Store) {}
 
     itemSelected(itemName: string | RecipeDataDto, itemPackage?: ItemPackage): void {
         if (typeof itemName !== 'string') {

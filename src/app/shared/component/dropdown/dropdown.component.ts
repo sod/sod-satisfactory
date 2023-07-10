@@ -1,7 +1,10 @@
 import {Component, Input, OnDestroy, OnInit, TemplateRef} from '@angular/core';
-import {BehaviorSubject, delay, fromEvent, merge, Subject, takeUntil} from 'rxjs';
-import {tap} from 'rxjs/operators';
+import {BehaviorSubject, delay, filter, fromEvent, merge, Subject, takeUntil} from 'rxjs';
+import {map, tap} from 'rxjs/operators';
 import {fadeAnimation} from '../../animation/fade-animation';
+
+let id = 0;
+const open$ = new BehaviorSubject(0);
 
 @Component({
     selector: 'app-dropdown',
@@ -13,31 +16,34 @@ export class DropdownComponent implements OnInit, OnDestroy {
     @Input({required: true}) element!: Element;
     @Input({required: true}) dropdown!: TemplateRef<unknown>;
 
-    public open$ = new BehaviorSubject(false);
+    private id = ++id;
+    public open$ = open$.pipe(map((open) => open === this.id));
     public destroy$ = new Subject<void>();
 
-    toggle(): void {
-        this.open$.next(!this.open$.value);
+    close(): void {
+        if (open$.value === this.id) {
+            open$.next(0);
+        }
     }
 
     ngOnInit() {
         const focus$ = fromEvent(this.element, 'focus');
         const click$ = fromEvent(this.element, 'click');
-        const blur$ = fromEvent(this.element, 'blur');
+        const esc$ = fromEvent<KeyboardEvent>(window, 'keydown').pipe(filter((event) => event.key === 'Escape'));
 
-        const open$ = merge(focus$, click$).pipe(
+        const onopen$ = merge(focus$, click$).pipe(
             tap(() => {
-                this.open$.next(true);
+                open$.next(this.id);
             }),
         );
-        const close$ = blur$.pipe(
+        const close$ = esc$.pipe(
             delay(100),
             tap(() => {
-                this.open$.next(false);
+                this.close();
             }),
         );
 
-        merge(open$, close$).pipe(takeUntil(this.destroy$)).subscribe();
+        merge(onopen$, close$).pipe(takeUntil(this.destroy$)).subscribe();
     }
 
     ngOnDestroy() {

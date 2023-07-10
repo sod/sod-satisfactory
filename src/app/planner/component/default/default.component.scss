@@ -1,5 +1,10 @@
-.sticky {
+.production {
     position: sticky;
     top: 1rem;
     transform: translateY(0);
+}
+
+// on rapid clicking on edit, prevent from showing more then one while animating
+.production + .production {
+    display: none !important;
 }

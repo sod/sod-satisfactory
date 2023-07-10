@@ -33,6 +33,7 @@ import {PushModule} from '@ngrx/component';
 import {InputComponent} from './component/input/input.component';
 import {InputControlDirective} from './directive/input-control.directive';
 import {DropdownComponent} from './component/dropdown/dropdown.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
     declarations: [
@@ -61,6 +62,7 @@ import {DropdownComponent} from './component/dropdown/dropdown.component';
         InputComponent,
         InputControlDirective,
         DropdownComponent,
+        ModalComponent,
     ],
     imports: [
         PushModule,
@@ -96,6 +98,7 @@ import {DropdownComponent} from './component/dropdown/dropdown.component';
         InputComponent,
         InputControlDirective,
         DropdownComponent,
+        ModalComponent,
     ],
 })
 export class SharedModule {}

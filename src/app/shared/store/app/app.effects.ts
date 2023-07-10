@@ -11,6 +11,7 @@ import {
     addProduction,
     addProductionWithOutputNameClicked,
     clearProduction,
+    closeProductionClicked,
     editProductionClicked,
     inputCoveredClicked,
     plannerStoreRestored,
@@ -37,6 +38,7 @@ export class AppEffects {
                     updateItemPackage,
                     updateProductionClicked,
                     editProductionClicked,
+                    closeProductionClicked,
                     removeProductionClicked,
                     addProductionWithOutputNameClicked,
                     recipeSelected,
@@ -66,5 +68,9 @@ export class AppEffects {
         ),
     );
 
-    constructor(private actions$: Actions, private store: Store<GlobalState>, private persistAppService: PersistAppService) {}
+    constructor(
+        private actions$: Actions,
+        private store: Store<GlobalState>,
+        private persistAppService: PersistAppService,
+    ) {}
 }

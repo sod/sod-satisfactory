@@ -6,6 +6,7 @@ import {ProductionDto} from 'src/app/shared/entities/production-dto';
 import {Recipe} from 'src/app/shared/entities/recipe';
 import {removeFromArray} from 'src/app/shared/function/remove-from-array';
 import * as PlannerActions from './planner.actions';
+import {closeProductionClicked} from './planner.actions';
 
 export const plannerFeatureKey = 'planner';
 
@@ -123,6 +124,11 @@ export const reducer = createReducer(
     on(PlannerActions.editProductionClicked, (state, action) => ({
         ...state,
         edit: action.index === state.edit?.index ? undefined : {index: action.index},
+    })),
+
+    on(PlannerActions.closeProductionClicked, (state) => ({
+        ...state,
+        edit: undefined,
     })),
 
     on(PlannerActions.inputCoveredClicked, (state, action) => {

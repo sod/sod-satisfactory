@@ -3,7 +3,7 @@ import {Store} from '@ngrx/store';
 import {Production} from 'src/app/shared/entities/production';
 import {ProductionDto} from 'src/app/shared/entities/production-dto';
 import {GlobalState} from 'src/app/shared/store/global-state';
-import {removeProductionClicked, updateProductionClicked} from 'src/app/shared/store/planner/planner.actions';
+import {closeProductionClicked, removeProductionClicked, updateProductionClicked} from 'src/app/shared/store/planner/planner.actions';
 
 @Component({
     selector: 'app-production',
@@ -21,5 +21,9 @@ export class ProductionComponent {
 
     removeProduction(production: Production): void {
         this.store.dispatch(removeProductionClicked({relation: production.unwrap()}));
+    }
+
+    closeProduction(): void {
+        this.store.dispatch(closeProductionClicked());
     }
 }

@@ -29,11 +29,10 @@
     </div>
 
     <div class="col-md-6">
-        <app-production
-            class="sticky d-block"
-            @fadeAnimation
-            [production]="production"
-            *ngIf="edit$ | ngrxPush as production"
-        ></app-production>
+        <ng-container *ngIf="edit$ | ngrxPush as production">
+            <app-modal>
+                <app-production class="production d-block" @fadeAnimation [production]="production"></app-production>
+            </app-modal>
+        </ng-container>
     </div>
 </div>

@@ -51,5 +51,6 @@ export const productionUpNextClicked = createAction(
 );
 
 export const editProductionClicked = createAction('[Planner] Edit Production Clicked', props<{index: number}>());
+export const closeProductionClicked = createAction('[Planner] Close Production Clicked');
 
 export const inputCoveredClicked = createAction('[Planner] Input Covered Clicked', props<InputCoveredDto>());

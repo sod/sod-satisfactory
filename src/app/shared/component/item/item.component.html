@@ -1,4 +1,4 @@
-<app-dropdown [dropdown]="dropdown" [element]="element">
+<app-dropdown [dropdown]="dropdown" [element]="element" #dropdownController>
     <app-input [label]="labels[target]">
         <input
             #element
@@ -13,12 +13,8 @@
 
 <ng-template #dropdown>
     <li
-        *ngFor="
-            let option of items | filterCaseInsensitive: itemPackage?.itemName | slice: 0 : 5;
-            trackBy: trackByService.index;
-            let first = first
-        "
-        (click)="itemSelected(option, itemPackage)"
+        *ngFor="let option of items | filterCaseInsensitive: itemPackage?.itemName | slice: 0 : 5; let first = first"
+        (click)="itemSelected(option, itemPackage); dropdownController.close()"
     >
         <span
             class="dropdown-item"
@@ -38,7 +34,7 @@
         "
     >
         <li *ngIf="!options.length"><span class="dropdown-item disabled">none</span></li>
-        <li *ngFor="let option of options; trackBy: trackByService.index" (click)="itemSelected(option, itemPackage)">
+        <li *ngFor="let option of options" (click)="itemSelected(option, itemPackage); dropdownController.close()">
             <span class="dropdown-item">
                 <div>{{ option.name }}</div>
                 <div class="row my-2">

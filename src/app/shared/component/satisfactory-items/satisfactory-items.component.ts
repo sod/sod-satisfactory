@@ -2,7 +2,6 @@ import {Component, Input} from '@angular/core';
 import {Store} from '@ngrx/store';
 import {ItemPackage} from 'src/app/shared/entities/item-package';
 import {ProductionInput, ProductionInputs} from 'src/app/shared/pipe/resolve-production.pipe';
-import {TrackByService} from 'src/app/shared/service/track-by-service';
 import {GlobalState} from 'src/app/shared/store/global-state';
 import {addProductionWithOutputNameClicked, editProductionClicked} from 'src/app/shared/store/planner/planner.actions';
 import {animate, query, stagger, style, transition, trigger} from '@angular/animations';
