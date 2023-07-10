@@ -2,7 +2,7 @@
 <div class="text-center mt-2" *ngIf="{input: productionInputs?.get(itemPackage.itemName)} as state">
     <ng-container [ngSwitch]="state.input?.isMissing()">
         <ng-container *ngSwitchCase="'yes'">
-            <span class="text-danger">
+            <span class="text-warning">
                 <i class="bi bi-x-circle"></i>
                 {{ itemPackage | amountWithModifiers }}
             </span>

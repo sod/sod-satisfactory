@@ -3,7 +3,7 @@
         <div
             *ngIf="{input: productionInputs?.get(itemPackage.itemName)} as state"
             class="item rounded border shadow-sm d-flex p-2 bg-dark w-100"
-            [ngClass]="state.input?.isMissing() === 'yes' ? 'border-danger' : 'border-dark'"
+            [ngClass]="state.input?.isMissing() === 'yes' ? 'border-warning' : 'border-dark'"
             [class.clickable]="!!productionInputs"
             (click)="productionInputs && inputClicked(itemPackage, state.input)"
         >

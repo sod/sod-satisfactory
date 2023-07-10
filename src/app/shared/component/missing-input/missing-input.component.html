@@ -1,6 +1,6 @@
 <button
     class="btn w-100 rounded mb-2 d-flex align-items-center cursor-pointer btn-sm"
-    [ngClass]="missing === 'yes' ? 'btn-outline-danger' : 'btn-outline-success'"
+    [ngClass]="missing === 'yes' ? 'btn-outline-warning' : 'btn-outline-success'"
     (click)="toggle()"
     *ngIf="input.isMissing() as missing"
 >

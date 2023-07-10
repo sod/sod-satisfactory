@@ -3,6 +3,53 @@ $form-floating-height: 3rem;
 $dropdown-min-width: 23rem;
 $input-border-width: none;
 
+// Default (Dark) https://developer.apple.com/design/human-interface-guidelines/color#Specifications
+$blue: rgb(10, 132, 255);
+$indigo: rgb(94, 92, 230);
+$purple: rgb(191, 90, 242);
+$pink: rgb(255, 55, 95);
+$red: rgb(255, 69, 58);
+$orange: rgb(255, 159, 10);
+$yellow: rgb(255, 214, 10);
+$green: rgb(48, 209, 88);
+$teal: rgb(64, 200, 224);
+$cyan: rgb(100, 210, 255);
+
+$white: #fff;
+$gray-100: rgb(242, 252, 257);
+$gray-200: rgb(229, 229, 234);
+$gray-300: rgb(209, 209, 214);
+$gray-400: rgb(199, 199, 204);
+$gray-500: rgb(174, 174, 178);
+$gray-600: rgb(142, 142, 147);
+$gray-700: rgb(58, 58, 60);
+$gray-800: rgb(44, 44, 46);
+$gray-900: rgb(28, 28, 30);
+
+$body-color-dark: $gray-500;
+
+//$gray-400: rgb(142, 142, 147);
+//$gray-500: rgb(99, 99, 102);
+//$gray-600: rgb(72, 72, 74);
+//$gray-700: rgb(58, 58, 60);
+//$gray-800: rgb(44, 44, 46);
+//$gray-900: rgb(28, 28, 30);
+$black: #000;
+
+$warning: $orange;
+
+// Accessible (Dark) https://developer.apple.com/design/human-interface-guidelines/color#Specifications
+//$blue: rgb(64, 156, 255);
+//$indigo: rgb(125, 122, 255);
+//$purple: rgb(218, 143, 255);
+//$pink: rgb(255, 100, 130);
+//$red: rgb(255, 100, 130);
+//$orange: rgb(255, 179, 64);
+//$yellow: rgb(255, 212, 38);
+//$green: rgb(48, 219, 91);
+//$teal: rgb(93, 230, 255);
+//$cyan: rgb(112, 215, 255);
+
 //@import 'bootswatch/dist/flatly/variables';
 @import 'bootstrap/scss/functions';
 @import 'bootstrap/scss/variables';
