@@ -10,4 +10,5 @@ import {ProductionInputs} from 'src/app/shared/pipe/resolve-production.pipe';
 export class SatisfactoryItemComponent {
     @Input() itemPackage!: ItemPackage;
     @Input() productionInputs?: ProductionInputs;
+    @Input() theme: 'name-inline' | 'name-tooltip' = 'name-inline';
 }

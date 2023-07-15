@@ -14,7 +14,7 @@ export class SatisfactoriyItemImagePipe implements PipeTransform {
             return undefined;
         }
 
-        const baseUrl = document.baseURI;
+        const baseUrl = document.location.origin + document.location.pathname;
 
         return trimEnd(baseUrl, '/') + '/' + trimStart(source, '/');
     }

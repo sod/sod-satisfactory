@@ -1,0 +1,9 @@
+<ng-container *ngTemplateOutlet="(modal$ | ngrxPush) ? modal : ngContent"></ng-container>
+
+<ng-template #modal>
+    <app-modal [content]="ngContent"></app-modal>
+</ng-template>
+
+<ng-template #ngContent>
+    <ng-content></ng-content>
+</ng-template>

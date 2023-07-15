@@ -6,7 +6,6 @@ import {ItemPackage} from 'src/app/shared/entities/item-package';
 import {Recipe} from 'src/app/shared/entities/recipe';
 import {RecipeDataDto} from 'src/app/shared/entities/recipe-data-item-dto';
 import {RecipeTarget} from 'src/app/shared/entities/recipe-dto';
-import {TrackByService} from 'src/app/shared/service/track-by-service';
 import {addItemPackage, recipeSelected, removeItemPackage, updateItemPackage} from 'src/app/shared/store/planner/planner.actions';
 
 @Component({

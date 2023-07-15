@@ -4,11 +4,11 @@ import {sortBy} from 'lodash-es';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {TrackByService} from 'src/app/shared/service/track-by-service';
+import {fadeAnimation} from '../../../shared/animation/fade-animation';
 import {Production} from '../../../shared/entities/production';
 import {ProductionInput, ProductionInputs} from '../../../shared/pipe/resolve-production.pipe';
 import {GlobalState} from '../../../shared/store/global-state';
 import {selectInputCovered, selectPlannerEditProduction, selectProductions} from '../../../shared/store/planner/planner.selectors';
-import {fadeAnimation} from '../../../shared/animation/fade-animation';
 
 @Component({
     selector: 'app-default',
@@ -17,6 +17,8 @@ import {fadeAnimation} from '../../../shared/animation/fade-animation';
     animations: [fadeAnimation],
 })
 export class DefaultComponent {
+    protected breakpoint = {md: 768} as const;
+
     public productions$: Observable<Production[]> = this.store.select(selectProductions).pipe(
         map((productions) =>
             sortBy(

@@ -12,7 +12,10 @@ export class Production {
     readonly machines: number = this.dto.machines ?? 1;
     readonly built: boolean = this.dto.built ?? false;
 
-    constructor(private dto: ProductionDto, public readonly index: number) {}
+    constructor(
+        private dto: ProductionDto,
+        public readonly index: number,
+    ) {}
 
     unwrap(): ItemParentRelationForProduction {
         return {production: this.dto};
@@ -48,5 +51,13 @@ export class Production {
         return {
             recipe: {inputs: [], outputs},
         };
+    }
+
+    static connectDependencies(productions: Production[]): Production[] {
+        for (let production of productions) {
+            // production.recipe;
+        }
+
+        return productions;
     }
 }

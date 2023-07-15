@@ -6,7 +6,7 @@ import {ProductionDto} from 'src/app/shared/entities/production-dto';
 import {Recipe} from 'src/app/shared/entities/recipe';
 import {removeFromArray} from 'src/app/shared/function/remove-from-array';
 import * as PlannerActions from './planner.actions';
-import {closeProductionClicked} from './planner.actions';
+import {generateShortUuid} from '../../service/persist-app.service';
 
 export const plannerFeatureKey = 'planner';
 
@@ -16,27 +16,33 @@ export interface InputCoveredDto {
 }
 
 export interface PlannerState {
+    uuid: string;
     edit?: {index: number};
     productions: ProductionDto[];
     inputCovered: InputCoveredDto[];
 }
 
-export const initialState: PlannerState = {
+export const createInitialState = (): PlannerState => ({
+    uuid: generateShortUuid(),
     edit: undefined,
     productions: [],
     inputCovered: [],
-};
+});
 
 export const reducer = createReducer(
-    initialState,
+    createInitialState(),
 
     on(PlannerActions.plannerStoreRestored, (state, action) => ({
+        uuid: action.state.uuid,
         edit: action.state.edit,
         productions: action.state.productions || [],
         inputCovered: action.state.inputCovered || [],
     })),
+    on(PlannerActions.createProductionClicked, (state, action) => ({
+        ...createInitialState(),
+    })),
 
-    on(PlannerActions.addProduction, (state) => {
+    on(PlannerActions.addItemToProductionClicked, (state) => {
         const newProductions = state.productions
             .filter((production) => new Production(production, 0).hasRecipes())
             .concat(Production.createDto());
@@ -60,8 +66,9 @@ export const reducer = createReducer(
         productions: without(state.productions, relation.production),
     })),
 
-    on(PlannerActions.clearProduction, () => ({
-        ...initialState,
+    on(PlannerActions.deleteProductionClicked, (state) => ({
+        ...createInitialState(),
+        uuid: state.uuid,
     })),
 
     on(PlannerActions.addItemPackage, (state, action) => ({

@@ -2647,6 +2647,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ngrx/router-store@npm:^16.1.0":
+  version: 16.1.0
+  resolution: "@ngrx/router-store@npm:16.1.0"
+  dependencies:
+    tslib: ^2.0.0
+  peerDependencies:
+    "@angular/common": ^16.0.0
+    "@angular/core": ^16.0.0
+    "@angular/router": ^16.0.0
+    "@ngrx/store": 16.1.0
+    rxjs: ^6.5.3 || ^7.5.0
+  checksum: 5d9bd1e9a76bdec4d58c30f7a895c1725433ba10f73834ea620e3afc8b5ba998c16a8278ce6877ffedb8bbbd2775f485c0e9f202d3ab6942db0e48c833ec6855
+  languageName: node
+  linkType: hard
+
 "@ngrx/schematics@npm:^16.1.0":
   version: 16.1.0
   resolution: "@ngrx/schematics@npm:16.1.0"
@@ -3235,6 +3250,13 @@ __metadata:
   dependencies:
     "@types/node": "*"
   checksum: b9bbb2b5c5ead2fb884bb019f61a014e37410bddd295de28184e1b2e71ee6b04120c5ba7b9954617f0bdf962c13d06249ce65004490889c747c80d3f628ea842
+  languageName: node
+  linkType: hard
+
+"@types/uuid@npm:^9.0.2":
+  version: 9.0.2
+  resolution: "@types/uuid@npm:9.0.2"
+  checksum: 1754bcf3444e1e3aeadd6e774fc328eb53bc956665e2e8fb6ec127aa8e1f43d9a224c3d22a9a6233dca8dd81a12dc7fed4d84b8876dd5ec82d40f574f7ff8b68
   languageName: node
   linkType: hard
 
@@ -9083,9 +9105,9 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"prettier-plugin-organize-imports@npm:^3.2.2":
-  version: 3.2.2
-  resolution: "prettier-plugin-organize-imports@npm:3.2.2"
+"prettier-plugin-organize-imports@npm:^3.2.3":
+  version: 3.2.3
+  resolution: "prettier-plugin-organize-imports@npm:3.2.3"
   peerDependencies:
     "@volar/vue-language-plugin-pug": ^1.0.4
     "@volar/vue-typescript": ^1.0.4
@@ -9096,7 +9118,7 @@ fsevents@~2.3.2:
       optional: true
     "@volar/vue-typescript":
       optional: true
-  checksum: 28620ea73a0a518c93200c7ea17d38a26132db3f55a75954983dff3422d4dd2155515518422b7a68935736aa333b0406a51778053bd30133a57718090272bb5d
+  checksum: e97dd707ce88960885df9598c2c0b8187169ff4664e7a5083a8603eabfb457aa0a0eafdf5cb60877a1085e2da5f9cb19fa441061227aa23524e5fe1709bae0cf
   languageName: node
   linkType: hard
 
@@ -10096,11 +10118,13 @@ resolve@^1.14.2:
     "@ngrx/component": ^16.1.0
     "@ngrx/effects": ^16.1.0
     "@ngrx/entity": ^16.1.0
+    "@ngrx/router-store": ^16.1.0
     "@ngrx/schematics": ^16.1.0
     "@ngrx/store": ^16.1.0
     "@ngrx/store-devtools": ^16.1.0
     "@types/lodash-es": ^4.17.7
     "@types/node": ^20.4.1
+    "@types/uuid": ^9.0.2
     "@typescript-eslint/eslint-plugin": 5.61.0
     "@typescript-eslint/parser": 5.61.0
     bootstrap: ^5
@@ -10110,12 +10134,13 @@ resolve@^1.14.2:
     glob: ^10.3.1
     lodash-es: ^4.17.21
     prettier: ^3.0.0
-    prettier-plugin-organize-imports: ^3.2.2
+    prettier-plugin-organize-imports: ^3.2.3
     rxjs: ^7.8.1
     satisfactory-docs-parser: ^7.0.1
     ts-node: ^10.9.1
     tslib: ^2.6.0
     typescript: ~5.1.6
+    uuid: ^9.0.0
     zone.js: ~0.13.1
   languageName: unknown
   linkType: soft
@@ -10978,6 +11003,15 @@ resolve@^1.14.2:
   bin:
     uuid: dist/bin/uuid
   checksum: 5575a8a75c13120e2f10e6ddc801b2c7ed7d8f3c8ac22c7ed0c7b2ba6383ec0abda88c905085d630e251719e0777045ae3236f04c812184b7c765f63a70e58df
+  languageName: node
+  linkType: hard
+
+"uuid@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "uuid@npm:9.0.0"
+  bin:
+    uuid: dist/bin/uuid
+  checksum: 8dd2c83c43ddc7e1c71e36b60aea40030a6505139af6bee0f382ebcd1a56f6cd3028f7f06ffb07f8cf6ced320b76aea275284b224b002b289f89fe89c389b028
   languageName: node
   linkType: hard
 

@@ -1,4 +1,8 @@
-<app-satisfactory-item-image [heightPercent]="70" [itemPackage]="itemPackage"></app-satisfactory-item-image>
+<app-satisfactory-item-image
+    [heightPercent]="70"
+    [itemPackage]="itemPackage"
+    [attr.title]="itemPackage.itemName"
+></app-satisfactory-item-image>
 <div class="text-center mt-2" *ngIf="{input: productionInputs?.get(itemPackage.itemName)} as state">
     <ng-container [ngSwitch]="state.input?.isMissing()">
         <ng-container *ngSwitchCase="'yes'">
@@ -18,4 +22,4 @@
         </ng-container>
     </ng-container>
 </div>
-<div class="text-center text-muted">{{ itemPackage.itemName }}</div>
+<div class="text-center text-muted" *ngIf="theme === 'name-inline'">{{ itemPackage.itemName }}</div>

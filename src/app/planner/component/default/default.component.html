@@ -24,15 +24,15 @@
 
         <div class="mt-5">
             <app-action-add-production class="mb-4 d-block"></app-action-add-production>
-            <app-action-clear-production *ngIf="productions.length"></app-action-clear-production>
+            <app-action-production *ngIf="productions.length"></app-action-production>
         </div>
     </div>
 
     <div class="col-md-6">
         <ng-container *ngIf="edit$ | ngrxPush as production">
-            <app-modal>
+            <app-modal-or-inline [modalUpToWidth]="breakpoint.md">
                 <app-production class="production d-block" @fadeAnimation [production]="production"></app-production>
-            </app-modal>
+            </app-modal-or-inline>
         </ng-container>
     </div>
 </div>

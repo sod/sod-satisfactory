@@ -12,7 +12,9 @@ import {InputCoveredDto, PlannerState} from './planner.reducer';
 
 export const plannerStoreRestored = createAction('[Planner] Store Restored', props<{state: PlannerState}>());
 
-export const addProduction = createAction('[Planner] Add Production');
+export const addItemToProductionClicked = createAction('[Planner] Add Item To Production Clicked');
+export const createProductionClicked = createAction('[Planner] Create Production Clicked');
+export const loadProductionClicked = createAction('[Planner] Load Production Clicked');
 export const addProductionWithOutputNameClicked = createAction(
     '[Planner] Add Production With Output Name Clicked',
     props<{itemPackage: Partial<ItemPackageDto>}>(),
@@ -21,7 +23,7 @@ export const removeProductionClicked = createAction(
     '[Planner] Remove Production Clicked',
     props<{relation: ItemParentRelationForProduction}>(),
 );
-export const clearProduction = createAction('[Planner] Clear Production');
+export const deleteProductionClicked = createAction('[Planner] Delete Production Clicked');
 
 export const addItemPackage = createAction(
     '[Planner] Add Item Package',

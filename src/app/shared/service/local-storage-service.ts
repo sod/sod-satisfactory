@@ -4,6 +4,7 @@ import {JsonService} from './json-service';
 export interface LocalStorageStore<T> {
     set: (data: T) => void;
     get: () => T | undefined;
+    delete: () => void;
 }
 
 @Injectable({providedIn: 'root'})
@@ -14,6 +15,7 @@ export class LocalStorageService {
         return {
             set: (data) => this.set(namespace, data),
             get: () => this.get<T>(namespace),
+            delete: () => this.delete(namespace),
         };
     }
 
@@ -22,6 +24,14 @@ export class LocalStorageService {
     }
 
     get<T = unknown>(key: string): T | undefined {
-        return (this.jsonService.fromJson(localStorage.getItem(key)) ?? undefined) as T | undefined;
+        return (this.jsonService.fromJson(this.getRaw(key)) ?? undefined) as T | undefined;
+    }
+
+    getRaw(key: string): string | undefined {
+        return localStorage.getItem(key) || undefined;
+    }
+
+    delete(key: string): void {
+        localStorage.removeItem(key);
     }
 }

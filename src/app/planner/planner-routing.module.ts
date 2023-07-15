@@ -4,6 +4,10 @@ import {DefaultComponent} from './component/default/default.component';
 
 const routes: Routes = [
     {
+        path: 'id/:id',
+        component: DefaultComponent,
+    },
+    {
         path: '',
         component: DefaultComponent,
     },

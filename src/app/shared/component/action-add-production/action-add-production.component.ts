@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {Store} from '@ngrx/store';
-import {addProduction} from '../../store/planner/planner.actions';
+import {addItemToProductionClicked} from '../../store/planner/planner.actions';
 
 @Component({
     selector: 'app-action-add-production',
@@ -8,7 +8,7 @@ import {addProduction} from '../../store/planner/planner.actions';
     styleUrls: ['./action-add-production.component.scss'],
 })
 export class ActionAddProductionComponent {
-    addProduction = addProduction;
+    addProductionClicked = addItemToProductionClicked;
 
     constructor(public store: Store) {}
 }

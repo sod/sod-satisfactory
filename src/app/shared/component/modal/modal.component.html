@@ -1,0 +1,10 @@
+<ng-container *ngIf="active$ | sodAnimate | ngrxPush as active">
+    <div class="modal fade d-block non-interactive" [class.show]="active.enter && !active.leave" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content interactive">
+                <ng-container *ngTemplateOutlet="content"></ng-container>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop fade interactive" [class.show]="active.enter && !active.leave" (click)="active$.next(false)"></div>
+</ng-container>

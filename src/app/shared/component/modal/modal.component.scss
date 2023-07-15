@@ -1,0 +1,9 @@
+.non-interactive,
+.interactive {
+    pointer-events: none;
+}
+
+.show.interactive,
+.show .interactive {
+    pointer-events: all;
+}
