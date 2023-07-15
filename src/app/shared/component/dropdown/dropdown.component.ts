@@ -1,7 +1,6 @@
 import {Component, Input, OnDestroy, OnInit, TemplateRef} from '@angular/core';
-import {BehaviorSubject, delay, filter, fromEvent, merge, Subject, takeUntil} from 'rxjs';
+import {BehaviorSubject, Subject, delay, filter, fromEvent, merge, takeUntil} from 'rxjs';
 import {map, tap} from 'rxjs/operators';
-import {fadeAnimation} from '../../animation/fade-animation';
 
 let id = 0;
 const open$ = new BehaviorSubject(0);
@@ -10,7 +9,6 @@ const open$ = new BehaviorSubject(0);
     selector: 'app-dropdown',
     templateUrl: './dropdown.component.html',
     styleUrls: ['./dropdown.component.scss'],
-    animations: [fadeAnimation],
 })
 export class DropdownComponent implements OnInit, OnDestroy {
     @Input({required: true}) element!: Element;

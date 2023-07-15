@@ -29,9 +29,13 @@
     </div>
 
     <div class="col-md-6">
-        <ng-container *ngIf="edit$ | ngrxPush as production">
+        <ng-container *ngIf="edit$ | sodAnimate | ngrxPush as state">
             <app-modal-or-inline [modalUpToWidth]="breakpoint.md">
-                <app-production class="production d-block" @fadeAnimation [production]="production"></app-production>
+                <app-production
+                    class="production d-block sod-animate--fade"
+                    [production]="state.value!"
+                    [class.show]="state.enter && !state.leave"
+                ></app-production>
             </app-modal-or-inline>
         </ng-container>
     </div>

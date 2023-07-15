@@ -1,7 +1,11 @@
 <div class="dropdown">
     <ng-content></ng-content>
 
-    <ul class="dropdown-menu show" *ngIf="open$ | ngrxPush" @fadeAnimation>
+    <ul
+        class="dropdown-menu sod-animate--fade"
+        *ngIf="open$ | sodAnimate | ngrxPush as animate"
+        [class.show]="animate.enter && !animate.leave"
+    >
         <ng-container *ngTemplateOutlet="dropdown"></ng-container>
     </ul>
 </div>

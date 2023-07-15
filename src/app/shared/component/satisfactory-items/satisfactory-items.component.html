@@ -1,11 +1,12 @@
 <div class="row gx-2" [class.justify-content-end]="align === 'right'">
-    <div class="col-6 d-flex mb-2" *ngFor="let itemPackage of values; trackBy: name" @stagger>
+    <div class="col-6 d-flex mb-2" *ngFor="let itemPackage of values; trackBy: name">
         <div
-            *ngIf="{input: productionInputs?.get(itemPackage.itemName)} as state"
-            class="item rounded border shadow-sm d-flex p-2 bg-dark w-100"
-            [ngClass]="state.input?.isMissing() === 'yes' ? 'border-warning' : 'border-dark'"
+            *ngIf="{input: productionInputs?.get(itemPackage.itemName)} | sodAnimate | ngrxPush as state"
+            class="item rounded border shadow-sm d-flex p-2 bg-dark w-100 sod-animate--fade"
+            [class.show]="state.enter && !state.leave"
+            [ngClass]="state.value.input?.isMissing() === 'yes' ? 'border-warning' : 'border-dark'"
             [class.clickable]="!!productionInputs"
-            (click)="productionInputs && inputClicked(itemPackage, state.input)"
+            (click)="productionInputs && inputClicked(itemPackage, state.value.input)"
         >
             <app-satisfactory-item
                 class="d-block w-100"

@@ -1,7 +1,3 @@
-@import './variables';
-@import 'bootstrap/scss/bootstrap';
-@import 'bootstrap-icons';
-
 img,
 svg {
     // fix svg icons misaligned with "middle" from bs5 reboot
@@ -24,4 +20,18 @@ svg {
 
 .sod-shadow {
     box-shadow: var(--shadow-elevation-medium);
+}
+
+.sod-animate--fade {
+    display: block;
+    will-change: opacity, box-shadow;
+    transition:
+        opacity 0.2s ease-out,
+        box-shadow 0.2s ease-out;
+    opacity: 1;
+
+    &:not(.show) {
+        opacity: 0;
+        box-shadow: none;
+    }
 }

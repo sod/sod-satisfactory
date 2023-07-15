@@ -85,6 +85,7 @@ import * as fromPlanner from './store/planner/planner.reducer';
         RecipeComponent,
         ActionAddProductionComponent,
         ProductionComponent,
+        SodAnimateModule,
         FormsModule,
         ItemComponent,
         ItemPackageComponent,

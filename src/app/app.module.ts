@@ -4,7 +4,6 @@ import en from '@angular/common/locales/en';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {EffectsModule} from '@ngrx/effects';
 import {NavigationActionTiming, routerReducer, StoreRouterConnectingModule} from '@ngrx/router-store';
 import {StoreModule} from '@ngrx/store';
@@ -25,7 +24,6 @@ registerLocaleData(en);
         AppRoutingModule,
         FormsModule,
         HttpClientModule,
-        BrowserAnimationsModule,
         StoreModule.forRoot(reducers, {metaReducers}),
         StoreRouterConnectingModule.forRoot({
             stateKey: 'router',

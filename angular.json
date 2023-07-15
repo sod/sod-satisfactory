@@ -59,7 +59,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/bootstrap.scss"
+              "src/styles/styles.scss"
             ],
             "scripts": []
           },

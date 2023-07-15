@@ -4,7 +4,6 @@ import {sortBy} from 'lodash-es';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {TrackByService} from 'src/app/shared/service/track-by-service';
-import {fadeAnimation} from '../../../shared/animation/fade-animation';
 import {Production} from '../../../shared/entities/production';
 import {ProductionInput, ProductionInputs} from '../../../shared/pipe/resolve-production.pipe';
 import {GlobalState} from '../../../shared/store/global-state';
@@ -14,7 +13,6 @@ import {selectInputCovered, selectPlannerEditProduction, selectProductions} from
     selector: 'app-default',
     templateUrl: './default.component.html',
     styleUrls: ['./default.component.scss'],
-    animations: [fadeAnimation],
 })
 export class DefaultComponent {
     protected breakpoint = {md: 768} as const;
