@@ -1,7 +1,7 @@
 <div class="row gx-2" [class.justify-content-end]="align === 'right'">
     <div class="col-6 d-flex mb-2" *ngFor="let itemPackage of values; trackBy: name">
         <div
-            *ngIf="{input: productionInputs?.get(itemPackage.itemName)} | sodAnimate | ngrxPush as state"
+            *ngIf="{input: productionInputs?.get(itemPackage.itemName)} | sodAnimate: {strategy: 'truthy'} | ngrxPush as state"
             class="item rounded border shadow-sm d-flex p-2 bg-dark w-100 sod-animate--fade"
             [class.show]="state.enter && !state.leave"
             [ngClass]="state.value.input?.isMissing() === 'yes' ? 'border-warning' : 'border-dark'"

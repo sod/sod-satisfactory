@@ -55,12 +55,15 @@ export class AnimatePipe implements PipeTransform, OnDestroy {
 
     constructor(private animationService: AnimationService) {}
 
-    public transform<T>(value$: Observable<T> | T): Observable<ElevatedMixed<T> | undefined> {
+    public transform<T>(
+        value$: Observable<T> | T,
+        options?: {strategy: 'any-change' | 'truthy'},
+    ): Observable<ElevatedMixed<T> | undefined> {
         if (isObservable(value$)) {
-            return this.animationService.animate(value$);
+            return this.animationService.animate(value$, options);
         }
 
-        this.nonObservableMode = this.animationService.animateSync(value$, this.nonObservableMode);
+        this.nonObservableMode = this.animationService.animateSync(value$, this.nonObservableMode, options);
 
         return this.nonObservableMode.animation$;
     }

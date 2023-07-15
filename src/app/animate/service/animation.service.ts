@@ -84,13 +84,17 @@ export class AnimationService {
         );
     }
 
-    public animate<T>(value$: Observable<T>): Observable<ElevatedMixed<T> | undefined> {
+    public animate<T>(value$: Observable<T>, options?: {strategy: 'any-change' | 'truthy'}): Observable<ElevatedMixed<T> | undefined> {
         // if (environment_ssr) {
         //     return value$.pipe(map((value) => (value ? this.elevate(value, true) : undefined)));
         // }
 
         return value$.pipe(
-            distinctUntilChanged(),
+            options?.strategy === 'truthy'
+                ? distinctUntilChanged((prev, next) => {
+                      return !prev !== !next;
+                  })
+                : distinctUntilChanged(),
             scan<T, {next?: T; old?: T}>((old, next) => ({next, old: old.next}), {}),
             switchMap(({next, old}) => {
                 if (next) {
@@ -114,14 +118,14 @@ export class AnimationService {
         );
     }
 
-    public animateSync<T>(value: T, wrapped?: AnimationWrapped<T>): AnimationWrapped<T> {
+    public animateSync<T>(value: T, wrapped?: AnimationWrapped<T>, options?: {strategy: 'any-change' | 'truthy'}): AnimationWrapped<T> {
         if (wrapped) {
             wrapped.subject$.next(value);
             return wrapped;
         }
 
         const subject$ = new BehaviorSubject<any>(value);
-        const animation$ = this.animate(subject$);
+        const animation$ = this.animate(subject$, options);
 
         return {subject$, animation$};
     }

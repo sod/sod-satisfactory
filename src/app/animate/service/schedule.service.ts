@@ -75,7 +75,7 @@ export class ScheduleService {
         return observable;
     }
 
-    private static forceReflow(element: HTMLElement): number {
-        return element.offsetWidth;
+    private static forceReflow(element: HTMLElement): void {
+        void window.getComputedStyle(element);
     }
 }
