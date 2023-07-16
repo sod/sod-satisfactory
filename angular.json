@@ -46,8 +46,12 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
+            "customWebpackConfig": {
+              "path": "./webpack.config.js",
+              "mergeRules": {}
+            },
             "outputPath": "dist/sod-satisfactory",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -95,12 +99,6 @@
             }
           },
           "defaultConfiguration": "development"
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "sod-satisfactory:build"
-          }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",

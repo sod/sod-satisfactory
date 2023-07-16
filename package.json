@@ -12,6 +12,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-builders/custom-webpack": "^16.0.0",
     "@angular/animations": "^16.1.5",
     "@angular/common": "^16.1.5",
     "@angular/compiler": "^16.1.5",
@@ -36,6 +37,7 @@
     "lodash-es": "^4.17.21",
     "prettier": "^3.0.0",
     "prettier-plugin-organize-imports": "^3.2.3",
+    "purgecss-webpack-plugin": "^5.0.0",
     "rxjs": "^7.8.1",
     "satisfactory-docs-parser": "^7.0.1",
     "ts-node": "^10.9.1",
