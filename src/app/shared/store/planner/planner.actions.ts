@@ -11,10 +11,10 @@ import {RecipeTarget} from 'src/app/shared/entities/recipe-dto';
 import {InputCoveredDto, PlannerState} from './planner.reducer';
 
 export const plannerStoreRestored = createAction('[Planner] Store Restored', props<{state: PlannerState}>());
+export const plannerStoreNotFound = createAction('[Planner] Store Not Found', props<{uuid: string; navigationId: number}>());
 
 export const addItemToProductionClicked = createAction('[Planner] Add Item To Production Clicked');
 export const createProductionClicked = createAction('[Planner] Create Production Clicked');
-export const loadProductionClicked = createAction('[Planner] Load Production Clicked');
 export const addProductionWithOutputNameClicked = createAction(
     '[Planner] Add Production With Output Name Clicked',
     props<{itemPackage: Partial<ItemPackageDto>}>(),

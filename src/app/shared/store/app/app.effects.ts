@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Router} from '@angular/router';
 import {Actions, createEffect, ofType} from '@ngrx/effects';
-import {ROUTER_NAVIGATED} from '@ngrx/router-store';
+import {routerNavigatedAction} from '@ngrx/router-store';
 import {Store} from '@ngrx/store';
 import {pick} from 'lodash-es';
 import {EMPTY} from 'rxjs';
@@ -14,9 +14,11 @@ import {
     addItemToProductionClicked,
     addProductionWithOutputNameClicked,
     closeProductionClicked,
+    createProductionClicked,
     deleteProductionClicked,
     editProductionClicked,
     inputCoveredClicked,
+    plannerStoreNotFound,
     plannerStoreRestored,
     productionBuiltClicked,
     productionUpNextClicked,
@@ -31,6 +33,7 @@ import {selectRouterParam} from '../router/router.selector';
 
 @Injectable()
 export class AppEffects {
+    private navigationId = 0;
     private id$ = this.store.select(selectRouterParam('id'));
 
     persist$ = createEffect(
@@ -54,6 +57,7 @@ export class AppEffects {
                 switchMapTo(this.store.pipe(take(1))),
                 tap((store: GlobalState) => {
                     this.persistAppService.persist(pick(store, [plannerFeatureKey]));
+                    this.productionsService.update();
                 }),
             ),
         {dispatch: false},
@@ -67,7 +71,19 @@ export class AppEffects {
                 tap((store: GlobalState) => {
                     this.persistAppService.delete(pick(store, [plannerFeatureKey]));
                     this.productionsService.update();
-                    this.router.navigate(['/']);
+                    const uuid = this.persistAppService.getPersistedUuid();
+                    this.router.navigate([uuid ? `/id/${uuid}` : '/']);
+                }),
+            ),
+        {dispatch: false},
+    );
+
+    new$ = createEffect(
+        () =>
+            this.actions$.pipe(
+                ofType(createProductionClicked),
+                tap(() => {
+                    this.router.navigate([`/id/${this.persistAppService.getNewUuid()}`]);
                 }),
             ),
         {dispatch: false},
@@ -75,21 +91,31 @@ export class AppEffects {
 
     restore$ = createEffect(() =>
         this.actions$.pipe(
-            ofType(ROUTER_NAVIGATED),
+            ofType(routerNavigatedAction),
             take(1),
-            switchMap(() =>
-                this.id$.pipe(
-                    mergeMap((id) => {
-                        const data = this.persistAppService.restore(id);
+            switchMap(() => {
+                return this.id$.pipe(
+                    mergeMap((uuid) => {
+                        const data = uuid ? this.persistAppService.restore(uuid) : undefined;
+                        const navigationId = (this.navigationId += 1);
+
+                        if (!data && !this.persistAppService.isUuid(uuid)) {
+                            this.router.navigate([
+                                `/id/${this.persistAppService.getPersistedUuid() ?? this.persistAppService.getNewUuid()}`,
+                            ]);
+                            return EMPTY;
+                        }
+
+                        this.productionsService.update();
 
                         if (!data) {
-                            return EMPTY;
+                            return [plannerStoreNotFound({uuid: uuid!, navigationId})];
                         }
 
                         return [plannerStoreRestored({state: {...data[plannerFeatureKey]}})];
                     }),
-                ),
-            ),
+                );
+            }),
         ),
     );
 

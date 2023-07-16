@@ -6,7 +6,6 @@ import {ProductionDto} from 'src/app/shared/entities/production-dto';
 import {Recipe} from 'src/app/shared/entities/recipe';
 import {removeFromArray} from 'src/app/shared/function/remove-from-array';
 import * as PlannerActions from './planner.actions';
-import {generateShortUuid} from '../../service/persist-app.service';
 
 export const plannerFeatureKey = 'planner';
 
@@ -16,14 +15,14 @@ export interface InputCoveredDto {
 }
 
 export interface PlannerState {
-    uuid: string;
+    uuid?: string;
     edit?: {index: number};
     productions: ProductionDto[];
     inputCovered: InputCoveredDto[];
 }
 
 export const createInitialState = (): PlannerState => ({
-    uuid: generateShortUuid(),
+    uuid: undefined,
     edit: undefined,
     productions: [],
     inputCovered: [],
@@ -38,8 +37,11 @@ export const reducer = createReducer(
         productions: action.state.productions || [],
         inputCovered: action.state.inputCovered || [],
     })),
-    on(PlannerActions.createProductionClicked, (state, action) => ({
+
+    on(PlannerActions.plannerStoreNotFound, (state, action) => ({
         ...createInitialState(),
+        uuid: action.uuid,
+        ...(action.navigationId === 1 ? {} : edit([])),
     })),
 
     on(PlannerActions.addItemToProductionClicked, (state) => {
@@ -49,8 +51,7 @@ export const reducer = createReducer(
 
         return {
             ...state,
-            edit: {index: newProductions.length - 1},
-            productions: newProductions,
+            ...edit(state.productions),
         };
     }),
 
@@ -148,3 +149,13 @@ export const reducer = createReducer(
         };
     }),
 );
+
+function edit(productions: PlannerState['productions']) {
+    const newProductions = productions.filter((production) => new Production(production, 0).hasRecipes()).concat(Production.createDto());
+    const state = {
+        edit: {index: newProductions.length - 1},
+        productions: newProductions,
+    } satisfies Partial<PlannerState>;
+
+    return state;
+}

@@ -11,10 +11,6 @@ export interface PersistAppData {
     planner: PlannerState;
 }
 
-export function generateShortUuid(): string {
-    return uuidv4().substring(0, 8);
-}
-
 @Injectable({providedIn: 'root'})
 export class PersistAppService {
     private uuids = this.localStorageService.getStore<{uuid: string}[]>('sod-satisfactory__uuids');
@@ -37,7 +33,12 @@ export class PersistAppService {
     }
 
     persist(data: PersistAppData) {
-        this.getStore(data.planner.uuid).set(data);
+        const uuid = data.planner.uuid;
+
+        if (uuid) {
+            this.getStore(uuid).set(data);
+            this.ensureUuid(uuid);
+        }
     }
 
     delete(data: PersistAppData) {
@@ -50,11 +51,19 @@ export class PersistAppService {
         }
     }
 
-    restore(uuid?: string): PersistAppData | undefined {
-        if (!uuid) {
-            uuid = this.uuids.get()?.[0]?.uuid;
-        }
+    getPersistedUuid(): string | undefined {
+        return this.uuids.get()?.[0]?.uuid;
+    }
 
+    getNewUuid(): string {
+        return uuidv4().substring(0, 8);
+    }
+
+    isUuid(uuid?: string): boolean {
+        return /^[a-f0-9]{8}$/.test(uuid ?? '');
+    }
+
+    restore(uuid?: string): PersistAppData | undefined {
         const data = uuid ? this.getStore(uuid).get() : undefined;
 
         if (data?.planner) {
@@ -81,18 +90,16 @@ export class PersistAppService {
     }
 
     private getStore(uuid: string) {
-        return this.localStorageService.getStore<PersistAppData>(this.key(this.getUuid(uuid)));
+        return this.localStorageService.getStore<PersistAppData>(this.key(uuid));
     }
 
-    private getUuid(uuid: string = generateShortUuid()): string {
+    private ensureUuid(uuid: string): void {
         const uuids = this.uuids.get() ?? [];
         const has = uuids.some((inner) => inner.uuid === uuid);
 
         if (!has) {
             this.uuids.set(uuids.concat({uuid}));
         }
-
-        return uuid;
     }
 
     private key(uuid: string): string {
