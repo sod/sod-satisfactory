@@ -55,7 +55,13 @@ export class PersistAppService {
             uuid = this.uuids.get()?.[0]?.uuid;
         }
 
-        return uuid ? this.getStore(uuid).get() : undefined;
+        const data = uuid ? this.getStore(uuid).get() : undefined;
+
+        if (data?.planner) {
+            return {...data, planner: {...data.planner, uuid: uuid!}};
+        }
+
+        return undefined;
     }
 
     getAll(tick$: Observable<void>): Observable<PersistAppData[]> {

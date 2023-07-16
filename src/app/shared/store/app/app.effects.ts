@@ -6,7 +6,7 @@ import {Store} from '@ngrx/store';
 import {pick} from 'lodash-es';
 import {EMPTY} from 'rxjs';
 import {mergeMap, switchMap, switchMapTo, take, tap} from 'rxjs/operators';
-import {PersistAppService, generateShortUuid} from '../../service/persist-app.service';
+import {PersistAppService} from '../../service/persist-app.service';
 import {ProductionsService} from '../../service/productions-service';
 import {GlobalState} from '../global-state';
 import {
@@ -86,8 +86,7 @@ export class AppEffects {
                             return EMPTY;
                         }
 
-                        const planner = data[plannerFeatureKey];
-                        return [plannerStoreRestored({state: {...planner, uuid: planner.uuid ?? generateShortUuid()}})];
+                        return [plannerStoreRestored({state: {...data[plannerFeatureKey]}})];
                     }),
                 ),
             ),
