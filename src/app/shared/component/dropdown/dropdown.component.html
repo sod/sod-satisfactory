@@ -1,4 +1,4 @@
-<div class="dropdown">
+<div class="dropdown" [class.active]="open$ | ngrxPush">
     <ng-content></ng-content>
 
     <ul
@@ -9,3 +9,9 @@
         <ng-container *ngTemplateOutlet="dropdown"></ng-container>
     </ul>
 </div>
+<div
+    class="modal-backdrop fade"
+    [class.show]="animate.enter && !animate.leave"
+    *ngIf="open$ | sodAnimate | ngrxPush as animate"
+    (click)="close()"
+></div>
