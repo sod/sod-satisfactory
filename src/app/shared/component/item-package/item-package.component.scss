@@ -7,6 +7,17 @@
 
 .input-suffix {
     position: absolute;
-    bottom: $input-padding-y + 0.2rem;
+    bottom: $input-padding-y;
     right: $input-padding-x;
+}
+
+.input--has-suffix::-webkit-outer-spin-button,
+.input--has-suffix::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+.input--has-suffix[type='number'] {
+    -moz-appearance: textfield;
 }
