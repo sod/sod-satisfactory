@@ -29,14 +29,19 @@
     </div>
 
     <div class="col-md-6">
-        <ng-container *ngIf="edit$ | sodAnimate | ngrxPush as state">
-            <app-modal-or-inline [modalUpToWidth]="breakpoint.md">
-                <app-production
-                    class="production d-block sod-animate--fade"
-                    [production]="state.value!"
-                    [class.show]="state.enter && !state.leave"
-                ></app-production>
-            </app-modal-or-inline>
+        <ng-container [ngSwitch]="breakpoint.md | modalOrInline | ngrxPush">
+            <ng-container *ngSwitchCase="'modal'">
+                <app-modal [active$]="edit$" [content]="content"></app-modal>
+            </ng-container>
+            <ng-container *ngSwitchCase="'inline'">
+                <div *ngIf="edit$ | sodAnimate | ngrxPush as state" class="sod-animate--fade" [class.show]="state.enter && !state.leave">
+                    <ng-container *ngTemplateOutlet="content; context: {$implicit: state.value}"></ng-container>
+                </div>
+            </ng-container>
         </ng-container>
+
+        <ng-template #content let-value>
+            <app-production class="production d-block" [production]="value"></app-production>
+        </ng-template>
     </div>
 </div>

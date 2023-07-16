@@ -16,7 +16,6 @@ import {ItemPackageComponent} from './component/item-package/item-package.compon
 import {ItemComponent} from './component/item/item.component';
 import {LoadProductionComponent} from './component/load-production/load-production.component';
 import {MissingInputComponent} from './component/missing-input/missing-input.component';
-import {ModalOrInlineComponent} from './component/modal-or-inline/modal-or-inline.component';
 import {ModalComponent} from './component/modal/modal.component';
 import {PackageImagesComponent} from './component/package-images/package-images.component';
 import {ProductionInputOrOutputComponent} from './component/production-input-or-output/production-input-or-output.component';
@@ -29,6 +28,7 @@ import {SatisfactoryItemsComponent} from './component/satisfactory-items/satisfa
 import {InputControlDirective} from './directive/input-control.directive';
 import {AbsolutePipe} from './pipe/absolute.pipe';
 import {FilterCaseInsensitivePipe} from './pipe/filter-case-insensitive.pipe';
+import {ModalOrInlinePipe} from './pipe/modal-or-inline.pipe';
 import {PlusOneUndefinedPipe} from './pipe/plus-one-undefined.pipe';
 import {ProductionTitlePipe} from './pipe/production-title.pipe';
 import {RecipeDataSummaryPipe} from './pipe/recipe-data-summary.pipe';
@@ -68,7 +68,7 @@ import * as fromPlanner from './store/planner/planner.reducer';
         ModalComponent,
         ActionProductionComponent,
         LoadProductionComponent,
-        ModalOrInlineComponent,
+        ModalOrInlinePipe,
     ],
     imports: [
         PushModule,
@@ -109,7 +109,7 @@ import * as fromPlanner from './store/planner/planner.reducer';
         ModalComponent,
         ActionProductionComponent,
         LoadProductionComponent,
-        ModalOrInlineComponent,
+        ModalOrInlinePipe,
     ],
 })
 export class SharedModule {}

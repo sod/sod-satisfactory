@@ -1,5 +1,5 @@
 import {Component, Input, TemplateRef} from '@angular/core';
-import {BehaviorSubject} from 'rxjs';
+import {BehaviorSubject, Observable} from 'rxjs';
 
 @Component({
     selector: 'app-modal',
@@ -7,6 +7,12 @@ import {BehaviorSubject} from 'rxjs';
     styleUrls: ['./modal.component.scss'],
 })
 export class ModalComponent {
-    @Input({required: true}) content!: TemplateRef<unknown>;
-    @Input() active$: BehaviorSubject<boolean> = new BehaviorSubject(true);
+    @Input({required: true}) content!: TemplateRef<any>;
+    @Input() active$: BehaviorSubject<any> | Observable<any> = new BehaviorSubject(true);
+
+    close(): void {
+        if (this.active$ instanceof BehaviorSubject) {
+            this.active$.next(false);
+        }
+    }
 }
