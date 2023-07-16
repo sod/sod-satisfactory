@@ -34,7 +34,11 @@
                 <app-modal [active$]="edit$" [content]="content"></app-modal>
             </ng-container>
             <ng-container *ngSwitchCase="'inline'">
-                <div *ngIf="edit$ | sodAnimate | ngrxPush as state" class="sod-animate--fade" [class.show]="state.enter && !state.leave">
+                <div
+                    *ngIf="edit$ | sodAnimate: {strategy: 'truthy'} | ngrxPush as state"
+                    class="sod-animate--fade"
+                    [class.show]="state.enter && !state.leave"
+                >
                     <ng-container *ngTemplateOutlet="content; context: {$implicit: state.value}"></ng-container>
                 </div>
             </ng-container>

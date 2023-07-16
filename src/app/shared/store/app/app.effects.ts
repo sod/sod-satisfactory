@@ -5,7 +5,8 @@ import {routerNavigatedAction} from '@ngrx/router-store';
 import {Store} from '@ngrx/store';
 import {pick} from 'lodash-es';
 import {EMPTY} from 'rxjs';
-import {mergeMap, switchMap, switchMapTo, take, tap} from 'rxjs/operators';
+import {delay, mergeMap, switchMap, switchMapTo, take, tap} from 'rxjs/operators';
+import {InitialRenderService} from '../../service/initial-render-service';
 import {PersistAppService} from '../../service/persist-app.service';
 import {ProductionsService} from '../../service/productions-service';
 import {GlobalState} from '../global-state';
@@ -119,11 +120,25 @@ export class AppEffects {
         ),
     );
 
+    firstRenderDone$ = createEffect(
+        () =>
+            this.actions$.pipe(
+                ofType(routerNavigatedAction),
+                take(1),
+                delay(1),
+                tap(() => {
+                    this.initialRenderService.setDone();
+                }),
+            ),
+        {dispatch: false},
+    );
+
     constructor(
         private actions$: Actions,
         private store: Store<GlobalState>,
         private persistAppService: PersistAppService,
         private productionsService: ProductionsService,
         private router: Router,
+        protected readonly initialRenderService: InitialRenderService,
     ) {}
 }

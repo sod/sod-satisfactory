@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, HostBinding, HostListener, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, HostListener, OnInit} from '@angular/core';
 import {NavigationEnd, Router} from '@angular/router';
 import {RenderScheduler} from '@ngrx/component';
 import {filter} from 'rxjs';

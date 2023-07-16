@@ -1,6 +1,7 @@
 import {Injectable, IterableDiffer, IterableDiffers} from '@angular/core';
 import {BehaviorSubject, Observable, OperatorFunction, Subject, merge, of, timer} from 'rxjs';
 import {delay, distinctUntilChanged, finalize, map, mapTo, mergeAll, scan, startWith, switchMap} from 'rxjs/operators';
+import {InitialRenderService} from '../../shared/service/initial-render-service';
 import {ScheduleService} from './schedule.service';
 
 /**
@@ -90,13 +91,13 @@ export class AnimationService {
         // }
 
         return value$.pipe(
-            options?.strategy === 'truthy'
-                ? distinctUntilChanged((prev, next) => {
-                      return !prev !== !next;
-                  })
-                : distinctUntilChanged(),
+            distinctUntilChanged(),
             scan<T, {next?: T; old?: T}>((old, next) => ({next, old: old.next}), {}),
             switchMap(({next, old}) => {
+                if ((options?.strategy === 'truthy' && !!next === !!old) || !this.initialRenderService.done) {
+                    return !next ? this.undefined$ : of(this.elevate(next, true));
+                }
+
                 if (next) {
                     return merge(of(this.elevate(next)), this.scheduleService.immediateForceReflow().pipe(mapTo(this.elevate(next, true))));
                 }
@@ -133,6 +134,7 @@ export class AnimationService {
     constructor(
         private iterableDiffers: IterableDiffers,
         private scheduleService: ScheduleService,
+        private initialRenderService: InitialRenderService,
     ) {}
 
     private undefined$ = of(undefined);

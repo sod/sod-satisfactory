@@ -11,6 +11,10 @@ export interface RouterState {
     navigationId: number;
 }
 
+export interface RouterStateOnGlobalState {
+    router: RouterState;
+}
+
 const selectRouterState = createFeatureSelector<RouterState>('router');
 
 export const selectRouterParam = (key: string) =>
