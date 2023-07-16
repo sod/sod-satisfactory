@@ -4,7 +4,7 @@ import {RouterModule, Routes} from '@angular/router';
 const routes: Routes = [
     {
         path: '',
-        loadChildren: () => import('./planner/planner.module').then((m) => m.PlannerModule),
+        loadChildren: () => import(/* webpackMode:'eager' */ './planner/planner.module').then((m) => m.PlannerModule),
     },
 ];
 
