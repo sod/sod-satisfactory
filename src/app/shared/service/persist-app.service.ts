@@ -2,14 +2,18 @@ import {Injectable} from '@angular/core';
 import {distinctUntilKeyChanged, Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {v4 as uuidv4} from 'uuid';
+import {z} from 'zod';
 import {isDefined} from '../function/is-defined';
-import {PlannerState} from '../store/planner/planner.reducer';
+import {validateSchema} from '../function/validate-schema';
+import {plannerStateSchema} from '../store/planner/planner.reducer';
 import {JsonService} from './json-service';
 import {LocalStorageService} from './local-storage-service';
 
-export interface PersistAppData {
-    planner: PlannerState;
-}
+export const persistAppDataSchema = z.object({
+    planner: plannerStateSchema,
+});
+
+export type PersistAppData = z.infer<typeof persistAppDataSchema>;
 
 @Injectable({providedIn: 'root'})
 export class PersistAppService {
@@ -64,10 +68,17 @@ export class PersistAppService {
     }
 
     restore(uuid?: string): PersistAppData | undefined {
-        const data = uuid ? this.getStore(uuid).get() : undefined;
+        const store = uuid ? this.getStore(uuid) : undefined;
+        const data = store?.get();
 
         if (data?.planner) {
-            return {...data, planner: {...data.planner, uuid: uuid!}};
+            const result = {...data, planner: {...data.planner, uuid: uuid!}};
+
+            if (validateSchema('app store', persistAppDataSchema, result)) {
+                return result;
+            }
+
+            store?.delete();
         }
 
         return undefined;

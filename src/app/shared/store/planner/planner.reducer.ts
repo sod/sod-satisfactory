@@ -2,24 +2,28 @@ import {createReducer, on} from '@ngrx/store';
 import {pick, without} from 'lodash-es';
 import {ItemPackage} from 'src/app/shared/entities/item-package';
 import {Production} from 'src/app/shared/entities/production';
-import {ProductionDto} from 'src/app/shared/entities/production-dto';
+import {productionDtoSchema} from 'src/app/shared/entities/production-dto';
 import {Recipe} from 'src/app/shared/entities/recipe';
 import {removeFromArray} from 'src/app/shared/function/remove-from-array';
+import {z} from 'zod';
 import * as PlannerActions from './planner.actions';
 
 export const plannerFeatureKey = 'planner';
 
-export interface InputCoveredDto {
-    name: string;
-    amount: number;
-}
+export const inputCoveredDtoSchema = z.object({
+    name: z.string(),
+    amount: z.number(),
+});
 
-export interface PlannerState {
-    uuid?: string;
-    edit?: {index: number};
-    productions: ProductionDto[];
-    inputCovered: InputCoveredDto[];
-}
+export const plannerStateSchema = z.object({
+    uuid: z.string().optional(),
+    edit: z.object({index: z.number()}).optional(),
+    productions: z.array(productionDtoSchema),
+    inputCovered: z.array(inputCoveredDtoSchema),
+});
+
+export type InputCoveredDto = z.infer<typeof inputCoveredDtoSchema>;
+export type PlannerState = z.infer<typeof plannerStateSchema>;
 
 export const createInitialState = (): PlannerState => ({
     uuid: undefined,
