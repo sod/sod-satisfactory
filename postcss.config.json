@@ -1,0 +1,12 @@
+{
+  "plugins": [
+    [
+      "@fullhuman/postcss-purgecss",
+      {
+        "safelist": ["form-control", "form-floating"],
+        "skippedContentGlobs": ["node_modules/**", "**/*.component.*"],
+        "content": ["./src/**/*.html"]
+      }
+    ]
+  ]
+}
