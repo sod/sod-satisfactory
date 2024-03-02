@@ -92,10 +92,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "sod-satisfactory:build:production"
+              "buildTarget": "sod-satisfactory:build:production"
             },
             "development": {
-              "browserTarget": "sod-satisfactory:build:development"
+              "buildTarget": "sod-satisfactory:build:development"
             }
           },
           "defaultConfiguration": "development"

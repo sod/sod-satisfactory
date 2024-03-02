@@ -33,7 +33,7 @@ registerLocaleData(en);
         StoreModule.forFeature('router', routerReducer),
         EffectsModule.forRoot(),
         SharedModule,
-        !environment.production ? StoreDevtoolsModule.instrument() : [],
+        !environment.production ? StoreDevtoolsModule.instrument({connectInZone: true}) : [],
     ],
     bootstrap: [AppComponent],
 })

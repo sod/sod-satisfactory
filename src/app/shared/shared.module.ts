@@ -2,7 +2,7 @@ import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {RouterLink} from '@angular/router';
-import {PushModule} from '@ngrx/component';
+import {PushPipe} from '@ngrx/component';
 import {EffectsModule} from '@ngrx/effects';
 import {StoreModule} from '@ngrx/store';
 import {ActionAddProductionComponent} from 'src/app/shared/component/action-add-production/action-add-production.component';
@@ -71,7 +71,7 @@ import * as fromPlanner from './store/planner/planner.reducer';
         ModalOrInlinePipe,
     ],
     imports: [
-        PushModule,
+        PushPipe,
         CommonModule,
         EffectsModule.forFeature([AppEffects, PlannerEffects, PlannerEffects, AppEffects]),
         StoreModule.forFeature(fromPlanner.plannerFeatureKey, fromPlanner.reducer),
@@ -81,7 +81,7 @@ import * as fromPlanner from './store/planner/planner.reducer';
         RouterLink,
     ],
     exports: [
-        PushModule,
+        PushPipe,
         RecipeComponent,
         ActionAddProductionComponent,
         ProductionComponent,
