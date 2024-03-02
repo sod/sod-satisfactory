@@ -9,7 +9,7 @@ fi
 
 rm -rf docs
 yarn run build
-cp -R dist/sod-satisfactory docs
+cp -R dist/sod-satisfactory/browser docs
 git add docs
 git commit -m "deploy current source to github pages"
 git push
