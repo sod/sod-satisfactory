@@ -1,5 +1,5 @@
 <div
-    class="sod-shadow-lg rounded-3 bg-dark-subtle"
+    class="sod-shadow-lg rounded-3 bg-dark-subtle text-dark-emphasis"
     *ngIf="production.recipe.outputs.length || production.recipe.inputs.length ? 'active' : 'new' as current"
 >
     <app-production-input-or-output [production]="production" [target]="'inputs'"></app-production-input-or-output>

@@ -1,7 +1,7 @@
 <div
     *ngIf="{edit: edit$ | ngrxPush} as state"
-    class="box p-2 pb-0 border bg-dark-subtle rounded-3"
-    [ngClass]="production.built ? 'border-success' : 'border-dark'"
+    class="box p-2 pb-0 border bg-dark-subtle text-dark-emphasis rounded-3"
+    [ngClass]="production.built ? 'border-success' : 'border-dark-subtle'"
     [class.sod-shadow-lg]="state.edit && production.index === state.edit.index"
     [class.border-primary-subtle]="state.edit && production.index === state.edit.index"
     [class.box--active]="state.edit && production.index === state.edit.index"

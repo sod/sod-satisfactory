@@ -28,6 +28,9 @@ $gray-800: rgb(44, 44, 46);
 $gray-900: rgb(28, 28, 30);
 
 $body-color-dark: $gray-500;
+$dark-bg-subtle: #f7f7f7;
+$dark-border-subtle: #f7f7f7;
+$dark-border-subtle-dark: $gray-900;
 
 //$gray-400: rgb(142, 142, 147);
 //$gray-500: rgb(99, 99, 102);
@@ -51,7 +54,6 @@ $warning: $orange;
 //$teal: rgb(93, 230, 255);
 //$cyan: rgb(112, 215, 255);
 
-//@import 'bootswatch/dist/flatly/variables';
 @import 'bootstrap/scss/functions';
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/variables-dark';
