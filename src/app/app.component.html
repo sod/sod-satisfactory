@@ -6,5 +6,20 @@
         <a href="https://github.com/sod/sod-satisfactory" target="_blank"> https://github.com/sod/sod-satisfactory </a>
         <br />
         Recipes based on update7
+        <br />
+        Theme:
+        <ng-container *ngTemplateOutlet="themeTemplate; context: {$implicit: 'dark'}"></ng-container>
+        or
+        <ng-container *ngTemplateOutlet="themeTemplate; context: {$implicit: 'light'}"></ng-container>
     </div>
 </div>
+
+<ng-template #themeTemplate let-value>
+    <a
+        role="button"
+        (click)="$event.preventDefault(); theme.set(value)"
+        href="#"
+        [class.link-secondary]="(theme.observable | ngrxPush) !== value"
+        >{{ value }}</a
+    >
+</ng-template>
