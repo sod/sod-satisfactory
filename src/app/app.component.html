@@ -8,18 +8,17 @@
         Recipes based on update7
         <br />
         Theme:
-        <ng-container *ngTemplateOutlet="themeTemplate; context: {$implicit: 'dark'}"></ng-container>
+        <ng-container
+            *ngTemplateOutlet="themeTemplate; context: {$implicit: 'dark', checked: (theme.observable | ngrxPush) === 'dark'}"
+        ></ng-container>
         or
-        <ng-container *ngTemplateOutlet="themeTemplate; context: {$implicit: 'light'}"></ng-container>
+        <ng-container
+            *ngTemplateOutlet="themeTemplate; context: {$implicit: 'light', checked: (theme.observable | ngrxPush) === 'light'}"
+        ></ng-container>
     </div>
 </div>
 
-<ng-template #themeTemplate let-value>
-    <a
-        role="button"
-        (click)="$event.preventDefault(); theme.set(value)"
-        href="#"
-        [class.link-secondary]="(theme.observable | ngrxPush) !== value"
-        >{{ value }}</a
-    >
+<ng-template #themeTemplate let-value let-checked="checked">
+    <a role="button" (click)="$event.preventDefault(); theme.set(value)" href="#" [class.link-secondary]="!checked">{{ value }}</a>
+    <i class="bi bi bi-check2-circle text-success" *ngIf="checked"></i>
 </ng-template>

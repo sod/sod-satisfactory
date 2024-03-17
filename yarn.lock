@@ -2794,6 +2794,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@self/postcss@workspace:packages/postcss":
+  version: 0.0.0-use.local
+  resolution: "@self/postcss@workspace:packages/postcss"
+  languageName: unknown
+  linkType: soft
+
 "@sigstore/bundle@npm:^2.2.0":
   version: 2.2.0
   resolution: "@sigstore/bundle@npm:2.2.0"

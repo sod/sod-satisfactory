@@ -2,8 +2,10 @@
   "name": "sod-satisfactory",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "serve": "ng serve --host 0.0.0.0",
+    "ng": "POSTCSS_ENV=prod ng",
+    "serve": "POSTCSS_ENV=dev ng serve --host 0.0.0.0",
+    "serve-inspect": "POSTCSS_ENV=dev node --inspect -- node_modules/.bin/ng serve --host 0.0.0.0",
+    "serve-inspect-brk": "POSTCSS_ENV=dev node --inspect-brk -- node_modules/.bin/ng serve --host 0.0.0.0",
     "build": "ng build --base-href=/sod-satisfactory/",
     "deploy": "bin/deploy",
     "watch": "ng build --watch --configuration development",
@@ -60,5 +62,8 @@
     "eslint": "^8.57.0",
     "typescript": "5.4"
   },
+  "workspaces": [
+    "packages/postcss"
+  ],
   "packageManager": "yarn@4.1.1"
 }
