@@ -6,7 +6,7 @@
     "serve": "POSTCSS_ENV=dev ng serve --host 0.0.0.0",
     "serve-inspect": "POSTCSS_ENV=dev node --inspect -- node_modules/.bin/ng serve --host 0.0.0.0",
     "serve-inspect-brk": "POSTCSS_ENV=dev node --inspect-brk -- node_modules/.bin/ng serve --host 0.0.0.0",
-    "build": "ng build --base-href=/sod-satisfactory/",
+    "build": "ng build --base-href=/satisfactory/",
     "deploy": "bin/deploy",
     "watch": "ng build --watch --configuration development",
     "pret": "bin/prettier-changed",

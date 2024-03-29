@@ -1,9 +1,8 @@
 # SodSatisfactory
 
-Satisfactory planner. Visible on https://sod.github.io/sod-satisfactory/
+Satisfactory planner. Visible on https://soddi.de/satisfactory
 
 ## Usage Demo
-
 
 https://user-images.githubusercontent.com/905328/133603862-fd83411f-c623-4995-9091-d20baae18e60.mov
 
@@ -11,12 +10,13 @@ https://user-images.githubusercontent.com/905328/133603862-fd83411f-c623-4995-90
 
 ```bash
 yarn
-yarn run serve
+make serve
 ```
 
 ## Deploy
 
 ```bash
-yarn
-yarn run deploy
+# needs `SOD_SERVER`, `SOD_PATH_SOURCES` and `SOD_PATH_PUBLIC` environment variables
+make deploy
 ```
+
