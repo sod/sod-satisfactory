@@ -1,9 +1,0 @@
-<div class="p-3">
-    <h6>{{ title[target] }}</h6>
-    <div
-        class="mb-2 {{ selector + target }}"
-        *ngFor="let input of production.recipe[target] | plusOneUndefined; trackBy: trackByService.index"
-    >
-        <app-item-package [itemPackage]="input" [recipe]="production.recipe" [target]="target"></app-item-package>
-    </div>
-</div>

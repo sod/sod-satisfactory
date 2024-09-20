@@ -1,9 +1,0 @@
-@import '../../../../styles/variables';
-
-.clickable {
-    cursor: pointer;
-
-    &:hover {
-        border: 1px solid $dark-border-subtle !important;
-    }
-}
